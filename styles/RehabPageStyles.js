@@ -1,70 +1,62 @@
 import { StyleSheet } from 'react-native';
+import Constants from 'expo-constants';
 
 
 const  RehabPageStyles = StyleSheet.create({
 
-    inputStyle: {
-        alignSelf: "center",
-        justifyContent: "center",
-        textAlign: "left",
-        width: 250,
-        borderBottomColor: 'white',
-        borderBottomWidth: 1,
-        marginBottom: 15,
-        
-      
-    },  
-
-
-    buttonsText: {
-        fontSize: 15,
-        color: "white",
-    },
-
-    buttons: {
-        borderWidth: 2.5,
-        borderColor:"white",
-        borderRadius: 40,
-        fontSize: 10,
-        alignItems:"center",
-        justifyContent: "center",
-        marginTop:30,
-        marginBottom:20,
-        height: 40,
-        width:250,
-        backgroundColor:'#002F43',     
-    },
-
-    LoginImage: {
-        flex:1
-    },
-    
-    LoginBottamHalf: {
-    alignItems:'center',
-    justifyContent:'center',
-    flex: 0.75,
-    backgroundColor:'#002F43',      
-    },
-
-
-    container: {
-        flex:1, 
-    
-    },
-
-    SignUpText:{
-     color:'white', 
-    textAlign:'center',
-     fontSize:20, 
-     flex:0.5,
-    fontWeight:'bold'
-    },
-
-    scrollView: {
-    marginHorizontal: 15,
-        
+    HeaderText: {
+        color: "#568C9E",
+        fontSize: 24,
+        marginTop: 18,
+        marginBottom: 18,
      
-      },
-})
+    },
+    
+    HeaderTextSmall: {
+        fontSize:14,
+        textAlign: 'left',
+        left: 5,
+        width: 310,
+    },
 
+ 
+
+        inputTextHeader: {
+            color: "#568C9E",
+            fontSize: 15,
+            marginLeft:18.5,
+            fontWeight:"bold",
+            margin:5,
+        },
+
+
+
+
+        containertwo: {
+            flex: 1,
+            marginTop: Constants.statusBarHeight,
+            flexDirection: 'column'
+       
+          },
+          
+          scrollView: {
+            marginHorizontal: 15,
+     
+          },
+
+          ImageStyles:{
+              flex:0.9,
+              borderBottomRightRadius: 50,
+          },
+
+          searchIcon: {
+            width:30,
+            height:30,
+         
+         
+        },
+
+          
+
+})
 export default RehabPageStyles;

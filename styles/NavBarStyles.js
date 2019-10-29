@@ -12,6 +12,7 @@ const NavBarStyles = StyleSheet.create({
         flexDirection: 'row',
         borderTopLeftRadius: 40,
         borderTopRightRadius: 40,
+  
     },
 
     icons: {
