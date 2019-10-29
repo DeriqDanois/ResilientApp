@@ -1,12 +1,10 @@
+
 import React from 'react';
 import { useState } from 'react';
-import { View, Text, TextInput, TouchableOpacity, Image, SafeAreaView, ScrollView } from 'react-native';
+import { View, Text, TextInput, TouchableOpacity, Image, SafeAreaView, ScrollView} from 'react-native';
 import  RehabPageStyles from '../styles/RehabPageStyles';
+import NavBar from '../comps/NavBar';
 import {KeyboardAvoidingView} from 'react-native';
-import NavBar from '../comps/NavBar'
-
-
-
 
 
 
@@ -15,52 +13,48 @@ import NavBar from '../comps/NavBar'
 const RehabPage = props => {
     const [login, checkLogin] = useState(false);
 
+    const name = "Rehab";
+    const title = "Rehab1";
+
+
 
     return (
 
-      <KeyboardAvoidingView style={{flex:1}} behavior='padding'  enabled>
 
+   
+     
  
 
-
+        <SafeAreaView style={RehabPageStyles.containertwo}>
+     
+        
+        
 
     
-        
-        <View style={ RehabPageStyles.container}>
+              <View style={{flex: 1, width:'100%'}}>
+              <Image style={RehabPageStyles.ImageStyles} source={{uri: 'https://lonelyplanetimages.imgix.net/a/g/hi/t/3cb45f6e59190e8213ce0a35394d0e11-nice.jpg?sharp=10&vib=20&w=1200'}}></Image>
 
-          <Image style={{alignContent:'center', justifyContent:'center'}}>
+              <View style={{flex:1, alignItems:'center', justifyContent: 'center'}}>
 
-          </Image>
-           
-  
-         <Image
-          style={ RehabPageStyles.LoginImage}
-          source={{uri:'https://cdn.pixabay.com/photo/2015/03/26/09/41/mountain-690104_960_720.jpg'}}>
-        </Image>
-
-          <View style={ RehabPageStyles.LoginBottamHalf}>
-      
-                  <TextInput style={ RehabPageStyles.inputStyle}
-                  placeholder="Username or Email"
-                  placeholderTextColor="rgba(255, 255, 255, 0.9)">
-                  </TextInput>
-          
-               
-                  <TextInput style={ RehabPageStyles.inputStyle}
-                  placeholder="Password"
-                  placeholderTextColor="rgba(255, 255, 255, 0.9)">
-                  </TextInput>
+                <Text style={RehabPageStyles.HeaderText}>Hello</Text>
               
-                
+                <Text>Hello this is a message</Text>
+                <Text>Hello this is a message</Text>
+                <Text>Hello this is a message</Text>
+                <Text>Hello this is a message</Text>
+      
+
               </View>
-          </View >
 
-     < NavBar />
-
-   </KeyboardAvoidingView>
-
+              </View>
+             
    
-   
+       
+     
+       < NavBar />
+      </SafeAreaView>
+
+
    
     )
 }
