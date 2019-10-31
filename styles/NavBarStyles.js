@@ -1,17 +1,21 @@
-import { StyleSheet } from 'react-native';
-
+import { StyleSheet } from 'react-native'; 
 
 const NavBarStyles = StyleSheet.create({
     NavBarBody: {
         textAlign: "center",
         width: "100%",
-        height: 80,
+        height: 75,
         backgroundColor: 'white',
-        borderWidth: 1,
-        borderColor: 'grey',
+        borderWidth: 0.5,
+        borderColor: '#568C9E',
         flexDirection: 'row',
         borderTopLeftRadius: 40,
         borderTopRightRadius: 40,
+        shadowColor: 'black',
+        shadowOpacity: 1,
+        elevation: 20,
+        shadowRadius: 50 ,
+        shadowOffset : { width: 56, height: 23},    
   
     },
 
@@ -21,18 +25,21 @@ const NavBarStyles = StyleSheet.create({
         alignItems:'center',
         justifyContent: 'center',
         flex: 1,
+        width:20,
+        
     },
     
     sosButton: {
         height: 95,
-        backgroundColor: 'teal',
+        backgroundColor: '#568C9E',
         borderRadius: 50,
         alignItems:'center',
         justifyContent: 'center',
         margin: 0,
         top: -25,
-        flex: 1,
+        flex: 1,   
     },
+    
     sosText: {
         fontSize: 16,
         color: 'white',
