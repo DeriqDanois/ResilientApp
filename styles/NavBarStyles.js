@@ -1,20 +1,29 @@
-import { StyleSheet } from 'react-native';
-
+import { StyleSheet } from 'react-native'; 
 
 const NavBarStyles = StyleSheet.create({
     NavBarBody: {
         textAlign: "center",
         width: "100%",
-        height: 80,
-        backgroundColor: 'white',
-        position:'absolute',
-        bottom:0,
-        borderWidth: 1,
-        borderColor: 'grey',
+        height: 75,
+        backgroundColor: '#E7F7FC',
+        borderWidth: 0.5,
+        borderColor: '#ECEAED',
         flexDirection: 'row',
         borderTopLeftRadius: 40,
         borderTopRightRadius: 40,
-  
+        // shadowColor: 'black',
+        // shadowOpacity: 1,
+        // elevation: 20,
+        // shadowRadius: 50 ,
+        // shadowOffset : { width: 56, height: 23},
+        shadowColor: "black",
+        shadowOffset: {
+            width: 2,
+            height: 5,
+        },
+        shadowOpacity: 1,
+        shadowRadius: 3,
+        elevation: 6
     },
 
     icons: {
@@ -23,22 +32,29 @@ const NavBarStyles = StyleSheet.create({
         alignItems:'center',
         justifyContent: 'center',
         flex: 1,
+        width:20,
+        
     },
     
     sosButton: {
         height: 95,
-        backgroundColor: 'teal',
+        backgroundColor: '#568C9E',
         borderRadius: 50,
         alignItems:'center',
         justifyContent: 'center',
         margin: 0,
         top: -25,
-        flex: 1,
+        flex: 1,   
     },
+    
     sosText: {
-        fontSize: 16,
+        fontSize: 20,
         color: 'white',
         fontWeight: 'bold',
+        fontFamily:'NunitoSans-ExtraBold',
+        textShadowColor: 'black',
+       textShadowOffset: { width: 0.5, height: 1 },
+       textShadowRadius: 5
     },
     Image: {
         width:45,
