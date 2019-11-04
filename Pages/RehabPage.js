@@ -5,6 +5,7 @@ import { View, Text, TextInput, TouchableOpacity, Image, SafeAreaView, ScrollVie
 import  RehabPageStyles from '../styles/RehabPageStyles';
 import NavBar from '../comps/NavBar';
 import {KeyboardAvoidingView} from 'react-native';
+import DetailsCard from '../comps/DetailsCard';
 
 
 
@@ -19,43 +20,20 @@ const RehabPage = props => {
 
 
     return (
-
-
-   
+  
      
- 
-
         <SafeAreaView style={RehabPageStyles.containertwo}>
-     
-        
-        
 
-    
               <View style={{flex: 1, width:'100%'}}>
               <Image style={RehabPageStyles.ImageStyles} source={{uri: 'https://lonelyplanetimages.imgix.net/a/g/hi/t/3cb45f6e59190e8213ce0a35394d0e11-nice.jpg?sharp=10&vib=20&w=1200'}}></Image>
 
-              <View style={{flex:1, alignItems:'center', justifyContent: 'center'}}>
-
-                <Text style={RehabPageStyles.HeaderText}>Hello</Text>
-              
-                <Text>Hello this is a message</Text>
-                <Text>Hello this is a message</Text>
-                <Text>Hello this is a message</Text>
-                <Text>Hello this is a message</Text>
-      
-
+              <DetailsCard />
               </View>
-
-              </View>
-             
-   
-       
-     
+            
        < NavBar />
+       
       </SafeAreaView>
 
-
-   
     )
 }
 

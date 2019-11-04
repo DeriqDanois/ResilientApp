@@ -36,7 +36,9 @@ const styles = StyleSheet.create({
     },
 
     LoginImage: {
-        flex:1
+        position:"absolute",
+        width:500,
+        height:520,
     },
     
     LoginBottamHalf: {
@@ -57,7 +59,17 @@ const styles = StyleSheet.create({
     textAlign:'center',
      fontSize:20, 
      flex:0.5,
-    fontWeight:'bold'} 
+    fontWeight:'bold'} ,
+
+    OpaqueView: {
+        flex: 1,
+        opacity:0.70,
+        margin:'auto',
+        alignItems:'center',
+        justifyContent:'center',
+        flexDirection:'row',
+        backgroundColor:'#002F43',  
+        }
 })
 
 export default styles;

@@ -45,8 +45,9 @@ const  RehabPageStyles = StyleSheet.create({
           },
 
           ImageStyles:{
-              flex:0.9,
+              flex:1,
               borderBottomRightRadius: 50,
+
           },
 
           searchIcon: {
