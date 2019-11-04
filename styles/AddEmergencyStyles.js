@@ -20,7 +20,6 @@ const EmergencyContactStyles = StyleSheet.create({
 
     },
 
-
     inputStyle: {
         alignSelf: "center",
         justifyContent: "center",
@@ -42,7 +41,7 @@ const EmergencyContactStyles = StyleSheet.create({
     },
 
     buttonsText: {
-        fontSize: 15,
+        fontSize: 18,
         color: "white",
     },
 
@@ -55,9 +54,14 @@ const EmergencyContactStyles = StyleSheet.create({
         justifyContent: "center",
         marginTop:30,
         marginBottom:20,
-        height: 40,
+        height: 50,
         width:250,
-        backgroundColor:"#568C9E",     
+        backgroundColor:"#568C9E",
+        shadowColor: 'black',
+        shadowOpacity: 1,
+        elevation: 6,
+        shadowRadius: 15 ,
+        shadowOffset : { width: 56, height: 13},     
     },
 
     LoginImage: {
@@ -70,6 +74,7 @@ const EmergencyContactStyles = StyleSheet.create({
     justifyContent:'center',
     flex: 1,
     width:'100%',
+    textAlign: 'center'
     },
 
     container: {
@@ -87,7 +92,7 @@ const EmergencyContactStyles = StyleSheet.create({
     RecommendedInput: {
         alignSelf: "center",
         justifyContent: "center",
-        textAlign: "left",
+        textAlign: "center",
         width: 320,
         height:95,
         borderColor: "#568C9E",
