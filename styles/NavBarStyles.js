@@ -7,6 +7,8 @@ const NavBarStyles = StyleSheet.create({
         width: "100%",
         height: 80,
         backgroundColor: 'white',
+        position:'absolute',
+        bottom:0,
         borderWidth: 1,
         borderColor: 'grey',
         flexDirection: 'row',

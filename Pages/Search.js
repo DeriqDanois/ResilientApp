@@ -23,7 +23,7 @@ const Search = props => {
     return (
 
 
-        <KeyboardAvoidingView style={{flex:1}}  enabled>
+ <KeyboardAvoidingView style={{flex:1}}  enabled>
  
 
    <SafeAreaView style={SearchStyles.containertwo}>
