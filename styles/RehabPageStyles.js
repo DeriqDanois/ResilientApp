@@ -9,7 +9,7 @@ const  RehabPageStyles = StyleSheet.create({
         fontSize: 24,
         marginTop: 18,
         marginBottom: 18,
-     
+
     },
     
     HeaderTextSmall: {
@@ -19,33 +19,28 @@ const  RehabPageStyles = StyleSheet.create({
         width: 310,
     },
 
- 
-
-        inputTextHeader: {
-            color: "#568C9E",
-            fontSize: 15,
-            marginLeft:18.5,
-            fontWeight:"bold",
-            margin:5,
-        },
-
-
-
+    inputTextHeader: {
+        color: "#568C9E",
+        fontSize: 15,
+        marginLeft:18.5,
+        fontWeight:"bold",
+        margin:5,
+    },
 
         containertwo: {
-            flex: 1,
-      
-            flexDirection: 'column'
-       
+        flex: 1,
+     
+        flexDirection: 'column'
           },
           
           scrollView: {
             marginHorizontal: 15,
-     
+            flex:1,
           },
 
           ImageStyles:{
-              flex:1,
+              height:350,
+                flex:1,
               borderBottomRightRadius: 50,
 
           },
@@ -53,10 +48,7 @@ const  RehabPageStyles = StyleSheet.create({
           searchIcon: {
             width:30,
             height:30,
-         
-         
         },
-
           
 
 })
