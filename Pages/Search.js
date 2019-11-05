@@ -7,11 +7,6 @@ import {KeyboardAvoidingView} from 'react-native';
 
 
 
-
-
-
-
-
 const Search = props => {
     const [search, setSearch] = useState(false);
 
