@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native';
-import Constants from 'expo-constants';
+
 
 
 const  RehabPageStyles = StyleSheet.create({
@@ -34,7 +34,7 @@ const  RehabPageStyles = StyleSheet.create({
 
         containertwo: {
             flex: 1,
-            marginTop: Constants.statusBarHeight,
+      
             flexDirection: 'column'
        
           },

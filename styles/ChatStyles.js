@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native';
-import Constants from 'expo-constants';
+
 
 
 const ChatStyles = StyleSheet.create({
@@ -108,7 +108,7 @@ const ChatStyles = StyleSheet.create({
 
         containertwo: {
             flex: 1,
-            marginTop: Constants.statusBarHeight,
+           
           },
           scrollView: {
             flex:1,

@@ -1,5 +1,4 @@
 import { StyleSheet } from 'react-native';
-import Constants from 'expo-constants';
 
 
 const SearchStyles = StyleSheet.create({
@@ -108,7 +107,7 @@ const SearchStyles = StyleSheet.create({
 
         containertwo: {
             flex: 1,
-            marginTop: Constants.statusBarHeight,
+     
           },
           scrollView: {
             marginHorizontal: 15,
