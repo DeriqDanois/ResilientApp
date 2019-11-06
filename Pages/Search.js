@@ -4,11 +4,13 @@ import { View, Text, TextInput, TouchableOpacity, Image, SafeAreaView, ScrollVie
 import SearchStyles from '../styles/SearchStyles';
 import NavBar from '../comps/NavBar';
 import {KeyboardAvoidingView} from 'react-native';
+import { DrawerActions } from 'react-navigation-drawer';
 
 
 
 const Search = props => {
     const [search, setSearch] = useState(false);
+    const [burger, setBurger] = useState(false);
 
 
     const name = "Name";
@@ -16,30 +18,50 @@ const Search = props => {
 
 
     return (
-
-
+        
  <KeyboardAvoidingView style={{flex:1}}  enabled>
- 
 
    <SafeAreaView style={SearchStyles.containertwo}>
+
     <ScrollView 
       horizontal={false}
       showsVerticalScrollIndicator={false}
       style={SearchStyles.scrollView}>
+        
    
-        <View style={SearchStyles.HeaderContainer}>
-            <TextInput style={SearchStyles.inputStyle}>
-                <Text style={SearchStyles.inputTextHeader}><Image 
-             style={SearchStyles.searchIcon}
-             source={{uri: "https://cdn.pixabay.com/photo/2017/01/13/01/22/magnifying-glass-1976105_960_720.png"}}>
-             </Image>Search</Text>
-            </TextInput>
-         </View>
+     <View style={SearchStyles.HeaderContainer}>
 
+         <TouchableOpacity>
+            <Image 
+                style={SearchStyles.searchIcon}
+                source={{uri: "https://cdn.pixabay.com/photo/2017/01/13/01/22/magnifying-glass-1976105_960_720.png"}}>
+            </Image>
+         </TouchableOpacity>
+        
+            <TextInput style={SearchStyles.SearchInputStyle}> </TextInput>
+
+        {/* Hamburger */}
+        
+            <TouchableOpacity
+            onPress={()=>{
+                props.navigation.dispatch(DrawerActions.openDrawer());
+            }}>
+
+                <Image 
+                    style={SearchStyles.HamburgerIcon}
+                    source={{uri: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hamburger_icon.svg/1024px-Hamburger_icon.svg.png"}}>
+                </Image>
+            </TouchableOpacity>
+
+        {/* hAMBURGER end */}
+
+        </View>
+
+      
         {/* The image text and short description from google places api will go into these below */}
             
         {/* Header #1 */}
-         <Text style={SearchStyles.HeaderText}>{title}</Text>  
+         <Text style={SearchStyles.HeaderText}>Safe Injection Sight</Text>  
          {/* Row One Results */}
          <View style={{flex:1, flexDirection:"row"}}>
             
@@ -72,7 +94,7 @@ const Search = props => {
          </View>
         
         {/* Header #2 */}
-        <Text style={SearchStyles.HeaderText}>{title}</Text>
+        <Text style={SearchStyles.HeaderText}>Detox Center</Text>
         {/* Row Two Results */}
         <View style={{flex:1, flexDirection:"row"}}>   
             <ScrollView
@@ -99,7 +121,7 @@ const Search = props => {
 
 
         {/* Header #3*/}
-        <Text style={SearchStyles.HeaderText}>{title}</Text>
+        <Text style={SearchStyles.HeaderText}> OutPatient Rehab</Text>
         {/* Row Three Results */}
         <View style={{flex:1, flexDirection:"row"}}>
 

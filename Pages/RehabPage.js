@@ -17,17 +17,23 @@ const RehabPage = props => {
     const name = "Rehab";
     const title = "Rehab1";
 
-
-
+    
     return (
   
      
         <SafeAreaView style={RehabPageStyles.containertwo}>
-
+        
               <View style={{flex: 1, width:'100%'}}>
+
+              <ScrollView 
+                horizontal={false}
+                showsVerticalScrollIndicator={false}
+                style={RehabPageStyles.scrollView}>
+              
               <Image style={RehabPageStyles.ImageStyles} source={{uri: 'https://lonelyplanetimages.imgix.net/a/g/hi/t/3cb45f6e59190e8213ce0a35394d0e11-nice.jpg?sharp=10&vib=20&w=1200'}}></Image>
 
               <DetailsCard />
+              </ScrollView>
               </View>
             
        < NavBar />

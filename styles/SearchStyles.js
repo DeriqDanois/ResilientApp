@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native';
-import Constants from 'expo-constants';
+
 
 
 const SearchStyles = StyleSheet.create({
@@ -20,28 +20,24 @@ const SearchStyles = StyleSheet.create({
         width: 310,
     },
 
-    inputStyle: {
+    SearchInputStyle: {
         alignSelf: "center",
         justifyContent: "center",
-        textAlign: "left",
-        width: 320,
-        height:50,
-        borderColor: "#568C9E",
-        borderWidth: 1,
-        borderRadius: 10,
+        flex:1,
+        height:"100%",    
     },
 
 
     Results: {
         alignSelf: "center",
         justifyContent: "center",
-        width: 130,
-        height:140,
+        width: 170,
+        height:150,
         borderColor: "#568C9E",
-        borderWidth: 1,
         flex:1,
-        margin: 10,
-        borderRadius: 5,
+        margin: 5,
+        borderTopLeftRadius: 10,
+        borderTopRightRadius: 10,
     },
 
     inputTextHeader: {
@@ -53,10 +49,6 @@ const SearchStyles = StyleSheet.create({
         
     },
 
-    buttonsText: {
-        fontSize: 15,
-        color: "white",
-    },
 
     buttons: {
         borderWidth: 2.5,
@@ -77,13 +69,6 @@ const SearchStyles = StyleSheet.create({
     },
     
 
-    InputContainer: {
-    alignItems:'center',
-    justifyContent:'center',
-    flex: 1,
-    width:'100%',
-    },
-
     container: {
         flex:1, 
         alignItems: 'center', 
@@ -93,9 +78,16 @@ const SearchStyles = StyleSheet.create({
     
     },
     HeaderContainer: {
-        flex:1, 
-        paddingTop: 25,
+        marginTop: 30,
         marginBottom: 25,
+        borderColor: "#568C9E",
+        height:60,
+        borderWidth: 1,
+        borderRadius: 20,
+        flex:1,
+        flexDirection:'row',
+ 
+                
     },
    
 
@@ -108,7 +100,7 @@ const SearchStyles = StyleSheet.create({
 
         containertwo: {
             flex: 1,
-            marginTop: Constants.statusBarHeight,
+           
           },
           scrollView: {
             marginHorizontal: 15,
@@ -118,12 +110,25 @@ const SearchStyles = StyleSheet.create({
           ImageStyles:{
               width: '100%',
               height: '80%',
+              borderTopLeftRadius: 10,
+              borderTopRightRadius: 10,
           },
 
           searchIcon: {
-            width:30,
-            height:30,
+              marginLeft:5,
+            width:55,
+            height:55,
+            flex:1,
+            alignSelf:'center',
+            justifyContent:'center'
          
+         
+        },
+          HamburgerIcon: {
+            marginRight:5,
+            width:55,
+            height:30,
+            flex:1,
          
         },
 

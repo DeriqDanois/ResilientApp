@@ -40,7 +40,7 @@ const NavBar = props => {
 
             <TouchableOpacity 
                 onPress={()=>{
-                props.navigation.navigate("Chat")}}>  
+                props.navigation.navigate("DiscussionPage")}}>  
                
                 <Image 
                 style={NavBarStyles.Image}
