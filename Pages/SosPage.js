@@ -2,7 +2,7 @@
 import React from 'react';
 import { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, Image, SafeAreaView, ScrollView} from 'react-native';
-import  SavedPlaces from '../styles/SavedPlacesStyle';
+import  SosPageStyles from '../styles/SosPageStyles';
 import NavBar from '../comps/NavBar';
 import {KeyboardAvoidingView} from 'react-native';
 import DetailsCard from '../comps/DetailsCard';
@@ -11,17 +11,17 @@ import DetailsCard from '../comps/DetailsCard';
 
 
 
-const SavedPage = props => {
+const SosPage = props => {
     const [login, checkLogin] = useState(false);
 
-    const contactName = "Sved Page";
+    const contactName = "Joe";
 
 
     
     return (
   
      
-        <SafeAreaView style={SavedPlaces.containertwo}>
+        <SafeAreaView style={SosPageStyles.containertwo}>
         
             <View style={{flex: 1, width:'100%'}}>
 
@@ -54,15 +54,15 @@ const SavedPage = props => {
                 <ScrollView 
                     horizontal={false}
                     showsVerticalScrollIndicator={false}
-                    style={SavedPlaces.scrollView}>
+                    style={SosPageStyles.scrollView}>
 
 
-                        <View style={{margin:50, alignSelf:'center', justifyContent:'center', width:300, height:300, borderRadius:200, backgroundColor:"red"}}>
-                            <Text style={SavedPlaces.CircleInnerText}>{contactName}</Text>
+                        <View style={{margin:50, alignSelf:'center', justifyContent:'center', width:300, height:300, borderRadius:200, backgroundColor:"blue"}}>
+                            <Text style={SosPageStyles.CircleInnerText}>{contactName}</Text>
                             </View>  
 
-                        <View style={{margin:50, alignSelf:'center', justifyContent:'center', width:300, height:300, borderRadius:200, backgroundColor:"red"}}>
-                            <Text style={SavedPlaces.CircleInnerText}>{contactName}</Text>
+                        <View style={{margin:50, alignSelf:'center', justifyContent:'center', width:300, height:300, borderRadius:200, backgroundColor:"blue"}}>
+                            <Text style={SosPageStyles.CircleInnerText}>{contactName}</Text>
                             </View>  
 
                 
@@ -80,7 +80,7 @@ const SavedPage = props => {
 }
 
 
-export default SavedPage;
+export default SosPage;
 
 
 

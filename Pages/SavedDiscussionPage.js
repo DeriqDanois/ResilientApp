@@ -1,8 +1,6 @@
-
-import React from 'react';
-import { useState } from 'react';
-import { View, Text, TextInput, TouchableOpacity, Image, SafeAreaView, ScrollView} from 'react-native';
-import  SavedPlaces from '../styles/SavedPlacesStyle';
+import React, { useState } from 'react';
+import { View, Text, TextInput, TouchableOpacity, Image, SafeAreaView, ScrollView } from 'react-native';
+import  SavedDiscussionStyles from '../styles/SavedDiscussionStyles';
 import NavBar from '../comps/NavBar';
 import {KeyboardAvoidingView} from 'react-native';
 import DetailsCard from '../comps/DetailsCard';
@@ -11,17 +9,17 @@ import DetailsCard from '../comps/DetailsCard';
 
 
 
-const SavedPage = props => {
+const SavedDiscussions = props => {
     const [login, checkLogin] = useState(false);
 
-    const contactName = "Sved Page";
+    const contactName = "Saved Discussion";
 
 
     
     return (
   
      
-        <SafeAreaView style={SavedPlaces.containertwo}>
+        <SafeAreaView style={SavedDiscussionStyles.containertwo}>
         
             <View style={{flex: 1, width:'100%'}}>
 
@@ -54,15 +52,15 @@ const SavedPage = props => {
                 <ScrollView 
                     horizontal={false}
                     showsVerticalScrollIndicator={false}
-                    style={SavedPlaces.scrollView}>
+                    style={SavedDiscussionStyles.scrollView}>
 
 
-                        <View style={{margin:50, alignSelf:'center', justifyContent:'center', width:300, height:300, borderRadius:200, backgroundColor:"red"}}>
-                            <Text style={SavedPlaces.CircleInnerText}>{contactName}</Text>
+                        <View style={{margin:50, alignSelf:'center', justifyContent:'center', width:300, height:300, borderRadius:200, backgroundColor:"green"}}>
+                            <Text style={SavedDiscussionStyles.CircleInnerText}>{contactName}</Text>
                             </View>  
 
-                        <View style={{margin:50, alignSelf:'center', justifyContent:'center', width:300, height:300, borderRadius:200, backgroundColor:"red"}}>
-                            <Text style={SavedPlaces.CircleInnerText}>{contactName}</Text>
+                        <View style={{margin:50, alignSelf:'center', justifyContent:'center', width:300, height:300, borderRadius:200, backgroundColor:"green"}}>
+                            <Text style={SavedDiscussionStyles.CircleInnerText}>{contactName}</Text>
                             </View>  
 
                 
@@ -80,7 +78,17 @@ const SavedPage = props => {
 }
 
 
-export default SavedPage;
+export default SavedDiscussions
+
+
+
+        
+      
+
+
+      
+
+   
 
 
 

@@ -1,6 +1,8 @@
 import { createAppContainer } from 'react-navigation';
-import { createStackNavigator } from 'react-navigation-stack';
-import { createDrawerNavigator } from 'react-navigation-stack';
+import { createStackNavigator} from 'react-navigation-stack';
+import { createDrawerNavigator } from 'react-navigation-drawer';
+import {DrawerComponent} from './comps/Hamburger'
+
 
 import React from 'react';
 
@@ -12,7 +14,11 @@ import SignUp from './Pages/SignUp';
 import Search from './Pages/Search';
 import AddEmergencyContact from './Pages/AddEmergencyContact';
 import RehabPage from './Pages/RehabPage'
-import Chat from './Pages/ChatPage'
+import DiscussionPage from './Pages/DiscussionPage'
+import SosPage from './Pages/SosPage';
+import SavedPage from './Pages/Saved-page';
+import SavedDiscussions from './Pages/SavedDiscussionPage';
+
 
 
 const AppNavigator = createStackNavigator(
@@ -22,7 +28,8 @@ const AppNavigator = createStackNavigator(
     AddEmergencyContact: { screen: AddEmergencyContact },
     Search: { screen:Search },
     RehabPage: { screen:RehabPage },
-    Chat: { screen:Chat },
+    DiscussionPage: { screen:DiscussionPage },
+    SosPage: { screen:SosPage },
     
   },
   {
@@ -32,11 +39,55 @@ const AppNavigator = createStackNavigator(
   },
 );
 
+//hamburger menu
+const AppDrawerNavigator = createDrawerNavigator(
+  {
+    "Emergency Contacts": {
+      screen: SosPage,
+      navigationOptions: {
+      }
+    },
+   
+    'Saved Places': {
+      screen: SavedPage,
+      navigationOptions: {
+      }
+    },
+    "Saved Discussion": {
+      screen: SavedDiscussions,
+      navigationOptions: {
+      }
+    },
+    "Settings": {
+      screen: SavedDiscussions,
+      navigationOptions: {
+      }
+    },
+    'Close': {
+      screen: AppNavigator,
+      navigationOptions: {
+      }
+    },
+    // hamburger menu
+  },
+  {
+    drawerPosition: 'right',
+    statusBarAnimation: 'slide',
+    contentComponent: DrawerComponent,
+   
+    contentOptions: {
+      activeBackgroundColor: null,
+      activeTintColor: '#506BFB',
+
+      labelStyle: {
+        fontSize: 19,
+       
+      },
+    }
+  })
 
 
-
-
-const AppContainer = createAppContainer(AppNavigator);
+const AppContainer = createAppContainer(AppDrawerNavigator);
 
 const App = () => {
   return (
