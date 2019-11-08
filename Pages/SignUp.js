@@ -17,8 +17,6 @@ const SignUp = props => {
 
     return (
 
-
-   
       <KeyboardAvoidingView style={{flex:1}} behavior='height'  enabled>
         
         <View style={stylesSignUp.container}>
