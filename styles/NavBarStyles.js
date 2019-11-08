@@ -51,7 +51,7 @@ const NavBarStyles = StyleSheet.create({
         fontSize: 20,
         color: 'white',
         fontWeight: 'bold',
-        fontFamily:'NunitoSans-ExtraBold',
+        // fontFamily:'NunitoSans-ExtraBold',
         textShadowColor: 'black',
        textShadowOffset: { width: 0.5, height: 1 },
        textShadowRadius: 5
