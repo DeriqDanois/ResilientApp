@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, Image} from 'react-native';
-import styles from '../styles/MainStyles';
+import styles from '../styles/PageStyles/MainStyles';
 import {KeyboardAvoidingView} from 'react-native';
 
 
@@ -19,7 +19,7 @@ const Login = props => {
 
 
 
-      <KeyboardAvoidingView style={{flex:1}} behavior='height'  enabled>
+      <KeyboardAvoidingView style={{flex:1}} behavior='padding'  enabled>
         
         <View style={styles.container}>
 

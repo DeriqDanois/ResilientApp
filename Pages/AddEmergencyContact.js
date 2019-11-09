@@ -2,7 +2,7 @@ import React from 'react';
 import { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, Image} from 'react-native';
 
-import EmergencyContactStyles from '../styles/AddEmergencyStyles';
+import EmergencyContactStyles from '../styles/PageStyles/AddEmergencyStyles';
 
 
 

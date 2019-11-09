@@ -1,7 +1,8 @@
 import React from 'react';
 import {TouchableOpacity, View, Text, Image, KeyboardAvoidingView} from 'react-native';
 import { withNavigation } from 'react-navigation';
-import NavBarStyles from '../styles/NavBarStyles';
+import NavBarStyles from '../styles/ComponentStyles/NavBarStyles';
+
 
 
 const NavBar = props => {
@@ -29,7 +30,7 @@ const NavBar = props => {
 
             <TouchableOpacity style={NavBarStyles.sosButton}
             onPress= {() => 
-                props.navigation.navigate('Login')}>
+                props.navigation.navigate('SosPage')}>
                      
                 <Text style={NavBarStyles.sosText}>SOS</Text>
             </TouchableOpacity>
