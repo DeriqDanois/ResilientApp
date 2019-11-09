@@ -1,7 +1,7 @@
 import React from 'react';
 import { SafeAreaView, View, Text, StyleSheet, TouchableOpacity, Image } from 'react-native';
 import { DrawerItems } from 'react-navigation-drawer';
-import HamburgerStyles from '../styles/HamburgerStyles';
+import HamburgerStyles from '../styles/ComponentStyles/HamburgerStyles';
 
 
 const Username = "Username"
@@ -9,7 +9,8 @@ const Username = "Username"
 
 
 export const DrawerComponent = props => (
-    
+   
+  
     <View style={HamburgerStyles.container}>
         <View style={{borderBottomColor:'grey', borderBottomWidth:1}}>
             <View>
@@ -41,5 +42,7 @@ export const DrawerComponent = props => (
         <View></View>
         <View></View>
     </View>
+    
 );
+
 

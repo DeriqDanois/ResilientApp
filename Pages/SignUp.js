@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, Image} from 'react-native';
-import stylesSignUp from '../styles/SignupStyles'
+import stylesSignUp from '../styles/PageStyles/SignupStyles'
 import {KeyboardAvoidingView} from 'react-native';
 
 
@@ -19,12 +19,10 @@ const SignUp = props => {
 
 
    
-      <KeyboardAvoidingView style={{flex:1}} behavior='height'  enabled>
+      <KeyboardAvoidingView style={{flex:1}} behavior='padding'  enabled>
         
         <View style={stylesSignUp.container}>
 
-     
-           
   
          <Image
           style={stylesSignUp.LoginImage}
@@ -37,30 +35,28 @@ const SignUp = props => {
         <View style={{flex:6}}>
            {/* This is an Invisable View pushing the opaque tab down with flex of 6 taking up most of upper screen */}
         </View>
-       
-        <View
-              style={stylesSignUp.OpaqueView}>
-                
-                
-                  <TouchableOpacity style={{flex:1}}
-                    onPress= {() => 
-                    props. navigation.navigate('Login')}><Text  style={stylesSignUp.SignUpText}> Login</Text>
-                  </TouchableOpacity>
+        
+          <View
+                style={stylesSignUp.OpaqueView}>
+                  
+                  
+                    <TouchableOpacity style={{flex:1}}
+                      onPress= {() => 
+                      props. navigation.navigate('Login')}><Text  style={stylesSignUp.SignUpText}> Login</Text>
+                    </TouchableOpacity>
 
 
-                  <TouchableOpacity style={{flex:1}}
-                    onPress= {() => 
-                    props. navigation.navigate('SignUp')}><Text  style={stylesSignUp.SignUpText}> SignUp</Text>
-                  </TouchableOpacity>
-          </View>
+                    <TouchableOpacity style={{flex:1}}
+                      onPress= {() => 
+                      props. navigation.navigate('SignUp')}><Text  style={stylesSignUp.SignUpText}> SignUp</Text>
+                    </TouchableOpacity>
+            </View>
           </View>
                     
 
           <View style={stylesSignUp.LoginBottamHalf}>
       
               
-           
-          
                   <TextInput style={stylesSignUp.inputStyle}
                   placeholder="Username"
                   placeholderTextColor="rgba(255, 255, 255, 0.9)">
