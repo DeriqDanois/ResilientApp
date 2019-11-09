@@ -51,8 +51,6 @@ storiesOf("Pages", module)
     .add("SignUp", ()=>{
         return <RehabPage/>
     })
-    .add("ProfilePage", ()=>{
-        return <ProfilePage/>
-    })
+   
 
 
