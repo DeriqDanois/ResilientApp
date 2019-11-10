@@ -24,26 +24,28 @@ const SosPage = props => {
         <SafeAreaView style={SosPageStyles.containertwo}>
         
             <View style={{flex: 1, width:'100%'}}>
-
-                <View>
-                    
-                </View>
-
-       
-                <View style={{width:'100%', height:100, backgroundColor:'green'}}>
+                <View style={{width:'100%', height:100, backgroundColor:'#E9FAFE',shadowOffset:{ width: 5,  height: 5,},
+                shadowColor: 'black',
+                shadowOpacity: 0.5}}>
             
                     <TouchableOpacity
-                        style={{width:100, height:100}}
+                        style={{width:'100%', height:100, flex:1, flexDirection:'row'}}
                         onPress={()=>{
                             props. navigation.navigate('Search')
                         
                     }}>
-                    <Image 
-                        source={{uri: "https://cdn.pixabay.com/photo/2016/09/05/10/50/app-1646213_960_720.png"}}
-                        style={{height:"50%", width:'50%', margin: 20}} />
+                        <View style={{padding: 25, flex:1,flexBasis:30,flexGrow: 0, flexShrink:0 ,justifyContent:'center',alignItems:'center'}}>
+                            <Image 
+                                source={{uri: "https://cdn.pixabay.com/photo/2016/09/05/10/50/app-1646213_960_720.png"}}
+                                style={{height:30, width:30}} />
+                        </View>
+                        
+                        <View style={{flex:1, justifyContent:'center',alignItems:'center'}}>
+                            <Text style={{ }}>Your emergency contacts</Text>
+                        </View>
                     </TouchableOpacity>
 
-                    <Text style={{flex:1}}>Your emergency contacts</Text>
+                    {/* <Text style={{flex:1}}>Your emergency contacts</Text> */}
 
                     
 
