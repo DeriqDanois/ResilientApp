@@ -1,7 +1,7 @@
 import React from 'react'
 import { View, Text, TextInput, TouchableOpacity, Image, SafeAreaView, ScrollView} from 'react-native';
 import {useState} from 'react'
-import DetailsCardStyles from '../styles/DetailsCardStyles';
+import DetailsCardStyles from '../styles/ComponentStyles/DetailsCardStyles';
 import { Rating, AirbnbRating } from 'react-native-ratings';
 import {KeyboardAvoidingView} from 'react-native';
 

@@ -1,14 +1,8 @@
 import React from 'react';
 import { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, Image, SafeAreaView, ScrollView} from 'react-native';
-import ChatStyles from '../styles/ChatStyles';
+import DiscussionStyles from '../styles/PageStyles/DiscussionStyles';
 import NavBar from '../comps/NavBar';
-
-
-
-
-
-
 
 
 
@@ -23,13 +17,11 @@ const Chat = props => {
     return (
 
 
- 
-
-        <SafeAreaView style={ChatStyles.containertwo}>
+    <SafeAreaView style={DiscussionStyles.containertwo}>
         <ScrollView 
           horizontal={false}
           showsVerticalScrollIndicator={false}
-          style={ChatStyles.scrollView}>
+          style={DiscussionStyles.scrollView}>
 
     
          <View style={{flex:1, marginTop:10, marginBottom:10, alignContent:'center', justifyContent:'center', borderWidth:2, borderColor:'black', borderRadius: 10}}>
@@ -40,23 +32,11 @@ const Chat = props => {
              <Text style={{flex:4, fontSize:13, marginTop:10}}>Q: How Long does it take for someone to OD</Text>
              </View>
          </View>
-
-    
-       
-   
-         
-        
-     
-     
-          
-          
-    
-
-        
+      
             
         </ScrollView>
         < NavBar />
-        </SafeAreaView>
+    </SafeAreaView>
 
     )
 }

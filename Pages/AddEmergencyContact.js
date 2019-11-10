@@ -1,13 +1,8 @@
 import React from 'react';
 import { useState } from 'react';
-import { View, Text, TextInput, TouchableOpacity, Image} from 'react-native';
-
-import EmergencyContactStyles from '../styles/AddEmergencyStyles';
-
-
-
-
-
+import { View, Text, TextInput, TouchableOpacity, ScrollView, Image} from 'react-native';
+import {KeyboardAvoidingView} from 'react-native';
+import EmergencyContactStyles from '../styles/PageStyles/AddEmergencyStyles';
 
 
 
@@ -17,70 +12,68 @@ const AddEmergencyContact = props => {
 
     return (
 
+<View style={EmergencyContactStyles.container}>
+    <KeyboardAvoidingView behavior='padding' enabled>
+        <ScrollView contentContainerStyle={{flex: 1}}>
+       
+            <View style={EmergencyContactStyles.HeaderContainer}>
 
-
-
-
+                <Text style={EmergencyContactStyles.HeaderText}>Add a Emergency Contact</Text>
         
-     <View style={EmergencyContactStyles.container}> 
-           
-        <View style={EmergencyContactStyles.HeaderContainer}>
+                <Text style={EmergencyContactStyles.HeaderTextSmall}>
+                    Resilient Helps send alerts to your friends
+                    or loved ones in case of an emergency
+                </Text>
 
-            <Text style={EmergencyContactStyles.HeaderText}>Add a Emergency Contact</Text>
-      
-            <Text style={EmergencyContactStyles.HeaderTextSmall}>Resilient Helps send alerts to your friends
-            or loved ones in case of an emergency
-            All information is confidential
-            You can always add or edit the contact information later
-            </Text>
-
-        </View>
-
-
-  
-
-            <View style={{flex:1}}>   
-                <Text style={EmergencyContactStyles.inputTextHeader}>Name</Text>
-                    <TextInput style={EmergencyContactStyles.inputStyle}></TextInput>
-            </View>  
+                <Text style={EmergencyContactStyles.HeaderTextSmall}>All confedential</Text>
                 
-                
-            <View style={{flex:1}}>   
-                <Text style={EmergencyContactStyles.inputTextHeader}>Phone Number</Text>
-                    <TextInput style={EmergencyContactStyles.inputStyle}></TextInput>
-            </View>  
-                
-            <View style={{flex:1}}>   
-                <Text style={EmergencyContactStyles.inputTextHeader}>Email (Optional)</Text>
-                    <TextInput style={EmergencyContactStyles.inputStyle}></TextInput>
-            </View>  
+                <Text style={EmergencyContactStyles.HeaderTextSmall}>
+                    Resilient Helps send alerts to your friends
+                     or loved ones in case of an emergency
+                </Text>
 
-            <Text> And / or </Text>
-                
-            <View style={{flex:1}}>   
-            
-                    <TextInput style={EmergencyContactStyles.RecommendedInput}>
-                        <Text style={EmergencyContactStyles.RecommendedInputText}>
-                               Add 911 as Contact
-                             (Recommended)</Text>
-                    </TextInput>
-            </View>  
+            </View>
 
-
-       <View style={{flex:1}}>   
-                  
-                  <TouchableOpacity
-                    style={EmergencyContactStyles.buttons}
-                    onPress= {() => 
-                    props. navigation.navigate('Search')}>
-                    <Text style={EmergencyContactStyles.buttonsText}>Add Emergency Contact</Text>  
-                  </TouchableOpacity>
-                
-              </View>
-        </View>
+        {/* Inputs Below */}
      
+             <View style={{flex: 1}}>
+            
+                    <Text style={EmergencyContactStyles.inputTextHeader}>Name</Text>
+                        <TextInput style={EmergencyContactStyles.inputStyle}></TextInput>
+                
+                    <Text style={EmergencyContactStyles.inputTextHeader}>Phone Number</Text>
+                        <TextInput style={EmergencyContactStyles.inputStyle}></TextInput>
+                
+                    <Text style={EmergencyContactStyles.inputTextHeader}>Email (Optional)</Text>
+                            <TextInput style={EmergencyContactStyles.inputStyle}></TextInput>
+                        
+                    <View style={{flex:1, alignItems:'center'}}>   
+                        <Text style={{marginBottom:10}}> And / or </Text>
+                            <TextInput 
+                                style={EmergencyContactStyles.RecommendedInput}
+                                placeholder="add 911 as Contact">
+                            </TextInput>
+                    </View>  
 
-   
+                    <View style={{flex:1, marginTop:"5%"}}>
+                        <TouchableOpacity
+                            style={EmergencyContactStyles.buttons}
+                            onPress= {() => 
+                            props. navigation.navigate('Search')}>
+                            <Text style={EmergencyContactStyles.buttonsText}>Add Emergency Contact</Text>  
+                        </TouchableOpacity>
+                    </View>
+        
+             </View>
+
+         </ScrollView>
+    </KeyboardAvoidingView>  
+             
+</View>
+
+
+
+
    
    
     )

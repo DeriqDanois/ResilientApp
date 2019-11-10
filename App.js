@@ -2,11 +2,10 @@ import { createAppContainer } from 'react-navigation';
 import { createStackNavigator} from 'react-navigation-stack';
 import { createDrawerNavigator } from 'react-navigation-drawer';
 import {DrawerComponent} from './comps/Hamburger'
+import {View} from 'react-native'
 
 
 import React from 'react';
-
-
 
 // Importing the screens
 import Login from './Pages/Login';
@@ -16,8 +15,9 @@ import AddEmergencyContact from './Pages/AddEmergencyContact';
 import RehabPage from './Pages/RehabPage'
 import DiscussionPage from './Pages/DiscussionPage'
 import SosPage from './Pages/SosPage';
-import SavedPage from './Pages/Saved-page';
+import SavedPage from './Pages/SavedPlaces';
 import SavedDiscussions from './Pages/SavedDiscussionPage';
+
 
 
 
@@ -30,6 +30,7 @@ const AppNavigator = createStackNavigator(
     RehabPage: { screen:RehabPage },
     DiscussionPage: { screen:DiscussionPage },
     SosPage: { screen:SosPage },
+   
     
   },
   {
@@ -42,6 +43,11 @@ const AppNavigator = createStackNavigator(
 //hamburger menu
 const AppDrawerNavigator = createDrawerNavigator(
   {
+    'Search Page': {
+      screen: AppNavigator,
+      navigationOptions: {
+      }
+    },
     "Emergency Contacts": {
       screen: SosPage,
       navigationOptions: {
@@ -58,16 +64,8 @@ const AppDrawerNavigator = createDrawerNavigator(
       navigationOptions: {
       }
     },
-    "Settings": {
-      screen: SavedDiscussions,
-      navigationOptions: {
-      }
-    },
-    'Close': {
-      screen: AppNavigator,
-      navigationOptions: {
-      }
-    },
+
+ 
     // hamburger menu
   },
   {
@@ -91,10 +89,13 @@ const AppContainer = createAppContainer(AppDrawerNavigator);
 
 const App = () => {
   return (
-    <AppContainer />
+    <View style={{flex:1}}>
+     <AppContainer/> 
+    </View>
   )
   }
 
 
 
 export default App;
+// export default from './storybook';

@@ -2,7 +2,7 @@
 import React from 'react';
 import { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, Image, SafeAreaView, ScrollView} from 'react-native';
-import  RehabPageStyles from '../styles/RehabPageStyles';
+import  RehabPageStyles from '../styles/PageStyles/RehabPageStyles';
 import NavBar from '../comps/NavBar';
 import {KeyboardAvoidingView} from 'react-native';
 import DetailsCard from '../comps/DetailsCard';

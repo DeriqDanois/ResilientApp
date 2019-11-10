@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, Image, SafeAreaView, ScrollView } from 'react-native';
-import  SavedDiscussionStyles from '../styles/SavedDiscussionStyles';
+import  SavedDiscussionStyles from '../styles/PageStyles/SavedDiscussionStyles';
 import NavBar from '../comps/NavBar';
 import {KeyboardAvoidingView} from 'react-native';
 import DetailsCard from '../comps/DetailsCard';
