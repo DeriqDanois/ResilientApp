@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { View, Text, TextInput, TouchableOpacity, Image, SafeAreaView, ScrollView} from 'react-native';
 import  SavedPlaces from '../styles/PageStyles/SavedPlacesStyle';
 import NavBar from '../comps/NavBar';
@@ -8,37 +8,33 @@ import {KeyboardAvoidingView} from 'react-native';
 import SavedRehabs from '../comps/SavedRehabs';
 import SavedPlacesStyle from '../styles/PageStyles/SavedPlacesStyle'
 import { DrawerActions } from 'react-navigation-drawer';
-
-
+import SearchBar from '../comps/SearchBar'
+import SearchBarStyles from '../styles/ComponentStyles/SearchBarStyles';
 
 
 
 const SavedPage = props => {
-    const [login, checkLogin] = useState(false);
 
-    const contactName = "Sved Page";
 
+    const [imageUrl, setImgUrl] = useState([]);
+
+    const getRehab = async()=>{
+        var resp = await fetch("https://api.thecatapi.com/v1/images/search?limit=5");
+        var json =  await resp.json();
+        // console.log(json);
+        setImgUrl(json);
+    }
+
+    // Handle 
+    useEffect(()=>{
+        getRehab();
+    },[]);
 
     
     return (
+ <SafeAreaView style={{flex:1}}>
 
-        <SafeAreaView style={{flex:1}}>
-
-<View style={SavedPlacesStyle.HeaderContainer}>
-        
-        <TextInput style={SavedPlacesStyle.SearchInputStyle}> </TextInput>
-
-    {/* Hamburger */}
-        <TouchableOpacity
-        onPress={()=>{
-            props.navigation.dispatch(DrawerActions.openDrawer());
-        }}>
-            <Image 
-                style={SavedPlacesStyle.HamburgerIcon}
-                source={{uri: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hamburger_icon.svg/1024px-Hamburger_icon.svg.png"}}>
-            </Image>
-        </TouchableOpacity>
-     </View>
+    <SearchBar />
         
             <View style={{flex: 1, flexDirection:'row'}}>
 
@@ -47,15 +43,23 @@ const SavedPage = props => {
                     showsVerticalScrollIndicator={false}
                     style={SavedPlaces.scrollView}>
 
-                     <SavedRehabs />
-               
+                {    
+                imageUrl.map((obj, i) => (
+                    <SavedRehabs
+                        key={i}
+                        description={obj.id}
+                        rehabName={"hello"}
+                        imageUrl={obj.url}
+                    />
+                ))
+            }
                 </ScrollView>
 
             </View>
             
         <NavBar />
        
-      </SafeAreaView>
+ </SafeAreaView>
 
     )
 }

@@ -10,6 +10,10 @@ import Login from '../Pages/Login';
 import AddEmergencyContact from '../Pages/AddEmergencyContact';
 import Search from '../Pages/Search';
 import RehabPage from '../Pages/RehabPage'
+import ProfilePage from '../Pages/ProfilePage';
+import SearchBar from './SearchBar';
+import SearchBarResults from '../Pages/SearchBarResults';
+
 
 
 
@@ -23,6 +27,10 @@ storiesOf("Navigation Components", module)
     .add("NavBar", ()=>{
         return <NavBar/>
     })
+    .add("SearchBar", ()=>{
+        return <SearchBar/>
+    })
+
 
 
 storiesOf("Rehab results boxes", module)
@@ -42,17 +50,21 @@ storiesOf("Pages", module)
     .add("SignUp", ()=>{
         return <SignUp/>
     })
-    .add("SignUp", ()=>{
+    .add("AddEmergencyContact", ()=>{
         return <AddEmergencyContact/>
     })
-    .add("SignUp", ()=>{
+    .add("Search", ()=>{
         return <Search/>
     })
-    .add("SignUp", ()=>{
+    .add("RehabPage", ()=>{
         return <RehabPage/>
     })
     .add("ProfilePage", ()=>{
         return <ProfilePage/>
     })
-
+    
+    .add("SearchBarResults", ()=>{
+        return <SearchBarResults/>
+    })
+  
 

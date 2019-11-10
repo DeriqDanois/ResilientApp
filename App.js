@@ -7,8 +7,6 @@ import {View} from 'react-native'
 
 import React from 'react';
 
-
-
 // Importing the screens
 import Login from './Pages/Login';
 import SignUp from './Pages/SignUp';
@@ -45,7 +43,7 @@ const AppNavigator = createStackNavigator(
 //hamburger menu
 const AppDrawerNavigator = createDrawerNavigator(
   {
-    ' ': {
+    'Search Page': {
       screen: AppNavigator,
       navigationOptions: {
       }

@@ -1,8 +1,7 @@
 import { StyleSheet } from 'react-native';
 
 
-
-const SearchStyles = StyleSheet.create({
+const SearchBarResultsStyles = StyleSheet.create({
 
     HeaderText: {
         color: "#568C9E",
@@ -11,8 +10,8 @@ const SearchStyles = StyleSheet.create({
         width: '70%',
         marginTop: 18,
     },
-
-
+ 
+   
     containertwo: {
         flex: 1,
         },
@@ -20,12 +19,25 @@ const SearchStyles = StyleSheet.create({
 
     scrollView: {
          marginHorizontal: 15,
-    
     },
 
+
+  item: {
+    backgroundColor: '#f9c2ff',
+    padding: 20,
+    marginVertical: 1,
+    marginHorizontal: 10,
+  },
+
+    title: {
+        fontSize: 23,
+    },
+    description: {
+        fontSize: 14,
+    },
 
 
 })
 
-export default SearchStyles;
+export default SearchBarResultsStyles;
 

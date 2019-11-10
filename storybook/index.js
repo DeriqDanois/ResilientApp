@@ -20,7 +20,7 @@ const StorybookUIRoot = getStorybookUI({});
 // If you use Expo you can safely remove this line.
 //AppRegistry.registerComponent('%APP_NAME%', () => StorybookUIRoot);
 const AppNavigator = createStackNavigator({ 
-    Dog: { screen: StorybookUIRoot },
+    Login: { screen: StorybookUIRoot },
 
     }
 );

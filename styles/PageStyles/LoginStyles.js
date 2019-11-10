@@ -1,7 +1,8 @@
 import { StyleSheet } from 'react-native';
 
 
-const styles = StyleSheet.create({
+
+const stylesSignUp = StyleSheet.create({
 
     inputStyle: {
         alignSelf: "center",
@@ -11,10 +12,7 @@ const styles = StyleSheet.create({
         borderBottomColor: 'white',
         borderBottomWidth: 1,
         marginBottom: 15,
-        
-      
     },  
-
 
     buttonsText: {
         fontSize: 15,
@@ -36,40 +34,52 @@ const styles = StyleSheet.create({
     },
 
     LoginImage: {
-        position:"absolute",
-        width:500,
-        height:520,
+        flex:1,
+        width:undefined,
+        height:undefined,
+        resizeMode: 'cover'
     },
     
     LoginBottamHalf: {
-    alignItems:'center',
-    justifyContent:'center',
-    flex: 0.75,
-    backgroundColor:'#002F43',      
+        alignItems:'center',
+        justifyContent:'center',
+        flex: 0.65,
+        backgroundColor:'#002F43',      
+    },
+    Logo: {
+        position:'absolute',
+        alignSelf:'center',
+        top:'25%',
     },
 
 
     container: {
-        flex:1, 
-    
+        flex: 1,
+        alignSelf: "stretch",
     },
 
-    SignUpText:
-    { color:'white', 
-    textAlign:'center',
-     fontSize:20, 
-     flex:0.5,
-    fontWeight:'bold'} ,
+    // Signup bar below
 
-    OpaqueView: {
-        flex: 1,
-        opacity:0.70,
-        margin:'auto',
+    SignUpText:{
+        color:'white', 
+        textAlign:'center',
+        fontSize:20, 
+        justifyContent:"center",
+        fontWeight:'bold',
+    } ,
+
+    OpaqueView: { 
+        opacity:0.7,
+        position: 'absolute',
+        top: "55%",
+        width:'100%',
+        height:"6%",
         alignItems:'center',
         justifyContent:'center',
         flexDirection:'row',
         backgroundColor:'#002F43',  
         }
+
 })
 
-export default styles;
+export default stylesSignUp;

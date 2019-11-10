@@ -18,26 +18,30 @@ const SavedPlaces = StyleSheet.create({
             borderRadius: 20,
         },
     
-    
         HeaderContainer: {
-            marginTop: 30,
-            marginBottom: 25,
-            marginLeft:"10%",
-            marginRight:"10%",
-            borderColor: "#568C9E",
-            height:60,
-            borderWidth: 1,
-            borderRadius: 20,
-            flexDirection:'row', 
+          marginLeft:30,
+          marginRight:30,
+          marginTop: 30,
+          marginBottom: 25,
+          height:"7.5%",
+          borderWidth:4,
+          borderColor: "rgba(0, 0, 0, 0.1)",
+          borderRadius: 8,
+         
+          flexDirection:'row', 
         },
 
-        HamburgerIcon: {
-          margin:9,
-          width:55,
-          height:30,
-          flex:1,
-          },
-  
+      
+    HamburgerIcon: {
+      margin:10,
+      marginRight:30,
+      width:35,
+      height:25,
+      flex:1,
+      },
+
+        
+
 
     
 
