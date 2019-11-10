@@ -45,7 +45,7 @@ storiesOf("Rehab results boxes", module)
 
 storiesOf("Pages", module)
     .add("Login", ()=>{
-        return <Login/>
+        return <Login/>  
     })
     .add("SignUp", ()=>{
         return <SignUp/>
