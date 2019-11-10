@@ -19,7 +19,7 @@ const SavedRehabs = props => {
        
          <TouchableOpacity  style={{padding:8, flex:1, marginBottom:20, marginTop:10}}
             onPress= {() => 
-                props. navigation.navigate(Link)}>
+                props. navigation.navigate("RehabPage")}>
             <View style={SavedRehabStyles.Results}>
                 <Image style={SavedRehabStyles.ImageStyles} source={{uri:props.imageUrl}} />
                 <Text style={SavedRehabStyles.RehabName}>{props.rehabName}</Text>
