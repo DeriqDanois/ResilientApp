@@ -6,6 +6,7 @@ import  SosPageStyles from '../styles/PageStyles/SosPageStyles';
 import NavBar from '../comps/NavBar';
 import {KeyboardAvoidingView} from 'react-native';
 import DetailsCard from '../comps/DetailsCard';
+import { FlatList } from 'react-native-gesture-handler';
 
 
 
@@ -44,11 +45,6 @@ const SosPage = props => {
                             <Text style={{ }}>Your emergency contacts</Text>
                         </View>
                     </TouchableOpacity>
-
-                    {/* <Text style={{flex:1}}>Your emergency contacts</Text> */}
-
-                    
-
                 </View>  
 
                    
@@ -58,7 +54,11 @@ const SosPage = props => {
                     showsVerticalScrollIndicator={false}
                     style={SosPageStyles.scrollView}>
 
-
+                    <View>
+                        <Text style={SosPageStyles.descriptionText}>This will automatically:</Text>
+                        <Text style={SosPageStyles.bulletedText}>Text your current location</Text>
+                        <Text style={SosPageStyles.bulletedText2}>Call with emergency voice message</Text>
+                    </View>
                         <View style={{margin:50, alignSelf:'center', justifyContent:'center', width:300, height:300, borderRadius:200, backgroundColor:"blue"}}>
                             <Text style={SosPageStyles.CircleInnerText}>{contactName}</Text>
                             </View>  
