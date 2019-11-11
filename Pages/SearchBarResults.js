@@ -5,8 +5,7 @@ import { View, Text, TextInput, TouchableOpacity, Image, SafeAreaView, ScrollVie
 import SearchBarResultsStyles from '../styles/PageStyles/SearchBarResultsStyles';
 import {KeyboardAvoidingView} from 'react-native';
 import SearchBar from '../comps/SearchBar'
-import AsyncStorage from '@react-native-community/async-storage';
-import { GooglePlacesAutocomplete } from 'react-native-google-places-autocomplete';
+import BackButtonHeader from '../comps/BackButtonHeader'
 
 const homePlace = { description: 'Home', geometry: { location: { lat: 48.8152937, lng: 2.4597668 } }};
 const workPlace = { description: 'Work', geometry: { location: { lat: 48.8496818, lng: 2.2940881 } }};
@@ -38,16 +37,18 @@ const DATA = [
     <KeyboardAvoidingView style={{flex:1}}  enabled>
         <SafeAreaView style={SearchBarResultsStyles.containertwo}>
 
-        <SearchBar />
+          <BackButtonHeader 
+            border={0}
+            height={100}
+            Header={""}/>
 
-          
+          <SearchBar />
             {/* Results */}
 
                 <FlatList
                 data={DATA}
                 renderItem={({ item }) => <Item title={item.title} />}
                 keyExtractor={item => item.id}/>
-            
             
             </SafeAreaView>
         </KeyboardAvoidingView>

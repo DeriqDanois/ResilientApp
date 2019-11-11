@@ -3,10 +3,11 @@ import { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, Image, SafeAreaView, ScrollView} from 'react-native';
 import DiscussionStyles from '../styles/PageStyles/DiscussionStyles';
 import NavBar from '../comps/NavBar';
+import BackButtonHeader from '../comps/BackButtonHeader'
 
 
 
-const Chat = props => {
+const DiscussonPage = props => {
     const [discussion, setDiscussion] = useState(false);
 
 
@@ -18,6 +19,14 @@ const Chat = props => {
 
 
     <SafeAreaView style={DiscussionStyles.containertwo}>
+
+            <BackButtonHeader 
+            border={1}
+            height={100}
+            Header={"Discussions"}
+            />
+
+        
         <ScrollView 
           horizontal={false}
           showsVerticalScrollIndicator={false}
@@ -41,7 +50,7 @@ const Chat = props => {
     )
 }
 
-export default Chat;
+export default DiscussonPage;
 
 
 

@@ -26,40 +26,14 @@ const NavBarStyles = StyleSheet.create({
         elevation: 6
     },
 
-    icons: {
-        height: 20,
-        margin: 30,
-        alignItems:'center',
-        justifyContent: 'center',
-        flex: 1,
-        width:20,
-        
-    },
-    
-    sosButton: {
-        height: 95,
-        backgroundColor: '#568C9E',
-        borderRadius: 50,
-        alignItems:'center',
-        justifyContent: 'center',
-        margin: 0,
-        top: -25,
-        flex: 1,   
-    },
-    
-    sosText: {
-        fontSize: 20,
-        color: 'white',
-        fontWeight: 'bold',
-        // fontFamily:'NunitoSans-ExtraBold',
-        textShadowColor: 'black',
-       textShadowOffset: { width: 0.5, height: 1 },
-       textShadowRadius: 5
-    },
-    Image: {
-        width:45,
-        height:40,
+    container: {
+        alignItems:'center', 
+        alignSelf:'center', 
+        height:"8.30%", 
+        width:'100%',
+        backgroundColor: 'rgba(52, 52, 52, 0.1)',
     }
+
     
 })
 

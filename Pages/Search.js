@@ -6,7 +6,7 @@ import NavBar from '../comps/NavBar';
 import {KeyboardAvoidingView} from 'react-native';
 import RehabResultsComponent from '../comps/RehabResultsComponent';
 import SearchBar from '../comps/SearchBar'
-import AsyncStorage from '@react-native-community/async-storage';
+
 
 
 
@@ -62,15 +62,17 @@ const Search = props => {
                 imageUrl.map((obj, i) => (
                     <RehabResultsComponent
                         key={i}
+                        width={160}
+                        height={115}
+                        BorderRadiusLeft={14}
+                        BorderRadiusRight={14}
                         description={obj.id}
                         rehabName={"hello"}
-                        imageUrl={obj.url}
-                    />
-                ))
-            }
+                        imageUrl={obj.url} />
+                     ))
+                 }
 
-            </ScrollView>
-             
+            </ScrollView>      
         </View>
         
         {/* Header #2 */}
@@ -81,15 +83,19 @@ const Search = props => {
                 horizontal={true}
                 showsHorizontalScrollIndicator={false}>
 
-                 {    
+{    
                 imageUrl.map((obj, i) => (
                     <RehabResultsComponent
                         key={i}
+                        width={160}
+                        height={115}
+                        BorderRadiusLeft={14}
+                        BorderRadiusRight={14}
                         description={obj.id}
                         rehabName={"hello"}
                         imageUrl={obj.url} />
                      ))
-                   }
+                 }
                 
             </ScrollView>
         </View>
@@ -103,21 +109,19 @@ const Search = props => {
                 horizontal={true}
                 showsHorizontalScrollIndicator={false}>
 
-
                 {    
                 imageUrl.map((obj, i) => (
                     <RehabResultsComponent
                         key={i}
+                        width={160}
+                        height={115}
+                        BorderRadiusLeft={14}
+                        BorderRadiusRight={14}
                         description={obj.id}
                         rehabName={"hello"}
                         imageUrl={obj.url} />
                      ))
                  }
-                
-
-                    
-
-
           
             </ScrollView>
         </View>

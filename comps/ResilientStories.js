@@ -2,7 +2,6 @@ import React from 'react';
 import { storiesOf } from '@storybook/react-native';
 
 import RehabResultsComponent from './RehabResultsComponent'
-import SavedRehabs from './SavedRehabs'
 import NavBar from './NavBar'
 import DetailsCard from './DetailsCard'
 import SignUp from '../Pages/SignUp';
@@ -13,6 +12,10 @@ import RehabPage from '../Pages/RehabPage'
 import ProfilePage from '../Pages/ProfilePage';
 import SearchBar from './SearchBar';
 import SearchBarResults from '../Pages/SearchBarResults';
+import SavedRehabsPage from '../Pages/SavedRehabsPage';
+import SavedDiscussionPage from '../Pages/SavedDiscussionPage';
+import DiscussinPage from '../Pages/DiscussionPage';
+import BackButtonHeader from '../comps/BackButtonHeader';
 
 
 
@@ -32,14 +35,15 @@ storiesOf("Navigation Components", module)
     })
 
 
+// Results boxes show as empty becuase they are empty waiting to be populated by data
 
-storiesOf("Rehab results boxes", module)
-    .add("Saved Rehabs", ()=>{
-        return <SavedRehabs/>
-    })
     .add("RehabResults", ()=>{
         return <RehabResultsComponent />
-    }),
+    })
+
+    .add("Back Button header component", ()=>{
+        return <BackButtonHeader/>
+    })
 
 
 
@@ -66,5 +70,18 @@ storiesOf("Pages", module)
     .add("SearchBarResults", ()=>{
         return <SearchBarResults/>
     })
+    
+    .add("Saved Rehabs Page", ()=>{
+        return <SavedRehabsPage/>
+    })
   
+    .add("Disucussion Page", ()=>{
+        return <DiscussinPage/>
+    })
+  
+    .add("Saved Discussion Page", ()=>{
+        return <SavedDiscussionPage/>
+    })
+  
+ 
 

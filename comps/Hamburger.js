@@ -19,9 +19,18 @@ export const DrawerComponent = props => (
                         source={{uri: 'http://www.themes-lab.com/traqs/assets/global/images/avatars/avatar1_big.png'}}
                         style={{ width:80, height:80}}>
                     </Image>
+
                     <View style={{flexDirection:'column', margin:19}}>
-                        <Text style={HamburgerStyles.UsernameText}>{Username}</Text>
-                        <Text style={HamburgerStyles.EditProfileText}>Edit profile</Text>
+                         <Text style={HamburgerStyles.UsernameText}>{Username}</Text>
+
+                        <TouchableOpacity
+                         onPress={()=>{
+                            props. navigation.navigate("ProfilePage")
+                            
+                         }}>
+                            <Text style={HamburgerStyles.EditProfileText}>Edit profile</Text>
+                        </TouchableOpacity>
+                        
                     </View>
                 </View>
             </View>

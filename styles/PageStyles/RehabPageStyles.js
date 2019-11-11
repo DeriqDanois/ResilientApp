@@ -28,20 +28,20 @@ const  RehabPageStyles = StyleSheet.create({
     },
 
         containertwo: {
-        flex: 1,
+          flex: 1,
      
         flexDirection: 'column'
           },
-          
-          scrollView: {
-            marginHorizontal: 15,
-            flex:1,
+   
+        scrollView: {
+          marginHorizontal: 15,
+          flex:1,
           },
 
           ImageStyles:{
-              height:350,
-                flex:1,
-              borderBottomRightRadius: 50,
+            height:350,
+            flex:1,
+            borderBottomRightRadius: 50,
 
           },
 
