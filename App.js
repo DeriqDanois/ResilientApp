@@ -15,8 +15,10 @@ import AddEmergencyContact from './Pages/AddEmergencyContact';
 import RehabPage from './Pages/RehabPage'
 import DiscussionPage from './Pages/DiscussionPage'
 import SosPage from './Pages/SosPage';
-import SavedPage from './Pages/SavedPlaces';
+import SavedRehabsPage from './Pages/SavedRehabsPage';
 import SavedDiscussions from './Pages/SavedDiscussionPage';
+import ProfilePage from './Pages/ProfilePage'
+
 
 
 
@@ -30,6 +32,7 @@ const AppNavigator = createStackNavigator(
     RehabPage: { screen:RehabPage },
     DiscussionPage: { screen:DiscussionPage },
     SosPage: { screen:SosPage },
+    ProfilePage: { screen:ProfilePage },
    
     
   },
@@ -54,8 +57,8 @@ const AppDrawerNavigator = createDrawerNavigator(
       }
     },
    
-    'Saved Places': {
-      screen: SavedPage,
+    'Saved Rehabs': {
+      screen: SavedRehabsPage,
       navigationOptions: {
       }
     },

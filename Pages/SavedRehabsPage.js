@@ -2,18 +2,17 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 import { View, Text, TextInput, TouchableOpacity, Image, SafeAreaView, ScrollView} from 'react-native';
-import  SavedPlaces from '../styles/PageStyles/SavedPlacesStyle';
+import  SavedRehabsPageStyle from '../styles/PageStyles/SavedRehabPageStyle';
 import NavBar from '../comps/NavBar';
 import {KeyboardAvoidingView} from 'react-native';
-import SavedRehabs from '../comps/SavedRehabs';
-import SavedPlacesStyle from '../styles/PageStyles/SavedPlacesStyle'
-import { DrawerActions } from 'react-navigation-drawer';
-import SearchBar from '../comps/SearchBar'
-import SearchBarStyles from '../styles/ComponentStyles/SearchBarStyles';
+import RehabResultsComponent from '../comps/RehabResultsComponent';
+import BackButtonHeader from '../comps/BackButtonHeader'
 
 
 
-const SavedPage = props => {
+
+
+const SavedRehabsPage = props => {
 
 
     const [imageUrl, setImgUrl] = useState([]);
@@ -32,27 +31,37 @@ const SavedPage = props => {
 
     
     return (
+
+
  <SafeAreaView style={{flex:1}}>
 
-    <SearchBar />
+            <BackButtonHeader 
+            border={1}
+            height={100}
+            Header={"Saved Rehabs"}
+            />
+
         
             <View style={{flex: 1, flexDirection:'row'}}>
 
                 <ScrollView 
                     horizontal={false}
                     showsVerticalScrollIndicator={false}
-                    style={SavedPlaces.scrollView}>
+                    style={SavedRehabsPageStyle.scrollView}>
 
-                {    
+{    
                 imageUrl.map((obj, i) => (
-                    <SavedRehabs
+                    <RehabResultsComponent
                         key={i}
+                        width={"100%"}
+                        height={115}
+                        BorderRadiusLeft={14}
+                        BorderRadiusRight={14}
                         description={obj.id}
                         rehabName={"hello"}
-                        imageUrl={obj.url}
-                    />
-                ))
-            }
+                        imageUrl={obj.url} />
+                     ))
+                 }
                 </ScrollView>
 
             </View>
@@ -65,7 +74,7 @@ const SavedPage = props => {
 }
 
 
-export default SavedPage;
+export default SavedRehabsPage;
 
 
 

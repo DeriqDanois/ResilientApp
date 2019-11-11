@@ -17,7 +17,13 @@ function RehabResultsComponent(props){
             onPress= {() => 
                 props. navigation.navigate("RehabPage")}
              >
-                <Image style={RehabResultsComponenetStyle.ImageStyles} source={{uri:props.imageUrl}} />
+                <Image style={{
+                        width:props.width, 
+                        borderTopLeftRadius:props.BorderRadiusLeft,
+                        borderTopRightRadius:props.BorderRadiusRight,
+                        height:props.height
+                        }} 
+                         source={{uri:props.imageUrl}} />
                 <Text style={RehabResultsComponenetStyle.RehabName}>{props.rehabName}</Text>
                 <Text style={RehabResultsComponenetStyle.RehabDescription}>{props.description}</Text>
          </TouchableOpacity>
