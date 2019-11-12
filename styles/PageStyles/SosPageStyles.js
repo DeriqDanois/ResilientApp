@@ -21,18 +21,32 @@ const SosPageStyles = StyleSheet.create({
             color: 'grey'
           },
           bulletedText: {
-            textAlign: 'left',
+            textAlign: 'center',
             fontSize: 15,
             paddingTop: 30,
             color: 'black',
-            paddingLeft: '28%'
           },
           bulletedText2: {
             textAlign: 'center',
             fontSize: 15,
             color: 'black',
-            paddingLeft: '2%'
+          },
+          johnDoeStyle: {
+            paddingTop:20,
+            fontSize: 18,
+            fontWeight:'bold',
+            paddingLeft: 15  
+          },
+          phStyle: {
+            paddingTop:13,
+            paddingLeft: '3%'
+          },
+          contactJohn: {
+            position:'absolute',
+            marginTop: '20%',
+            marginLeft:'35%'
           }
+
 
     
 
