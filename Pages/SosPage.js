@@ -17,7 +17,7 @@ const SosPage = props => {
 
     // RNImmediatePhoneCall.immediatePhoneCall('0123456789');}
 
-    iconDim = 2100;
+    iconDim = 400;
     
     return (
         <SafeAreaView style={SosPageStyles.containertwo}>
@@ -42,6 +42,9 @@ const SosPage = props => {
                     </View>
                     <View style={{paddingLeft:'4%', paddingTop:20}}>
                         <Text style={{textAlign:'center', color:'#587a8b', paddingTop:20, fontSize:17}}>Edit your emergency contacts</Text>
+                           
+                            {/* //contact component starts from here */}
+                           
                             <View style={{flex:1, flexDirection:'row'}}>
                                 <View style={{paddingLeft:'10%', paddingTop:'5%'}}>
                                     <Image
