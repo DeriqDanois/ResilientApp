@@ -7,8 +7,6 @@ import {View} from 'react-native'
 
 import React from 'react';
 
-
-
 // Importing the screens
 import Login from './Pages/Login';
 import SignUp from './Pages/SignUp';
@@ -17,8 +15,10 @@ import AddEmergencyContact from './Pages/AddEmergencyContact';
 import RehabPage from './Pages/RehabPage'
 import DiscussionPage from './Pages/DiscussionPage'
 import SosPage from './Pages/SosPage';
-import SavedPage from './Pages/SavedPlaces';
+import SavedRehabsPage from './Pages/SavedRehabsPage';
 import SavedDiscussions from './Pages/SavedDiscussionPage';
+import ProfilePage from './Pages/ProfilePage'
+
 
 
 
@@ -32,6 +32,7 @@ const AppNavigator = createStackNavigator(
     RehabPage: { screen:RehabPage },
     DiscussionPage: { screen:DiscussionPage },
     SosPage: { screen:SosPage },
+    ProfilePage: { screen:ProfilePage },
    
     
   },
@@ -45,7 +46,7 @@ const AppNavigator = createStackNavigator(
 //hamburger menu
 const AppDrawerNavigator = createDrawerNavigator(
   {
-    ' ': {
+    'Search Page': {
       screen: AppNavigator,
       navigationOptions: {
       }
@@ -56,8 +57,8 @@ const AppDrawerNavigator = createDrawerNavigator(
       }
     },
    
-    'Saved Places': {
-      screen: SavedPage,
+    'Saved Rehabs': {
+      screen: SavedRehabsPage,
       navigationOptions: {
       }
     },

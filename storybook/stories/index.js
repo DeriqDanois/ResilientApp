@@ -6,5 +6,5 @@ import { storiesOf } from '@storybook/react-native';
 
 //I can bypass using this page and just run modules through Resilient Stories page to storybook index.js
 
-storiesOf('Components', module)
+
 // .add('RehabResultsComponent', () => <RehabResultsComponent />)

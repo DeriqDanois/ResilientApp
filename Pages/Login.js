@@ -1,93 +1,73 @@
 import React from 'react';
 import { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, Image} from 'react-native';
-import styles from '../styles/PageStyles/MainStyles';
+import LoginStyles from '../styles/PageStyles/LoginStyles';
 import {KeyboardAvoidingView} from 'react-native';
-
-
-
-
-
+import * as icon from '../comps/Svgs';
 
 
 
 const Login = props => {
-    const [login, checkLogin] = useState(false);
 
+
+    const iconDim = 174;
 
     return (
 
-
-
-      <KeyboardAvoidingView style={{flex:1}} behavior='padding'  enabled>
-        
-        <View style={styles.container}>
-
+    <KeyboardAvoidingView style={{flex:1}} behavior='padding'  enabled>  
      
-           
-  
-         <Image
-          style={styles.LoginImage}
-          source={{uri:'https://cdn.pixabay.com/photo/2015/03/26/09/41/mountain-690104_960_720.jpg'}}>
-        </Image>
+      <View style={LoginStyles.container}>
 
-     
-      <View style={{flex:1}}>
-      
-        <View style={{flex:6}}>
-           {/* This is an Invisable View pushing the opaque tab down with flex of 6 taking up most of upper screen */}
-        </View>
-       
-        <View
-              style={styles.OpaqueView}>
-                
-                
-                  <TouchableOpacity style={{flex:1}}
-                    onPress= {() => 
-                    props. navigation.navigate('Login')}><Text  style={styles.SignUpText}> Login</Text>
-                  </TouchableOpacity>
+          <Image
+            style={LoginStyles.LoginImage}
+            source={{uri:'https://cdn.pixabay.com/photo/2015/03/26/09/41/mountain-690104_960_720.jpg'}}>
+          </Image>
 
-
-                  <TouchableOpacity style={{flex:1}}
-                    onPress= {() => 
-                    props. navigation.navigate('SignUp')}><Text  style={styles.SignUpText}> SignUp</Text>
-                  </TouchableOpacity>
-          </View>
-          </View>
-                    
-
-          <View style={styles.LoginBottamHalf}>
-      
+          <View style={LoginStyles.Logo}>
+              <icon.LogoAndHexagon fill={'white'} height={iconDim} width={iconDim} />
               
-           
-          
-                  <TextInput style={styles.inputStyle}
+          </View>
+      
+      </View> 
+
+       <View style={LoginStyles.OpaqueView}>  
+
+            <TouchableOpacity style={{flex:1}}
+              onPress= {() => 
+              props. navigation.navigate('Login')}><Text  style={LoginStyles.SignUpText}>Login</Text>
+            </TouchableOpacity>
+
+            <TouchableOpacity style={{flex:1,}}
+              onPress= {() => 
+              props. navigation.navigate('SignUp')}><Text  style={LoginStyles.SignUpText}> SignUp</Text>
+            </TouchableOpacity>
+          </View>
+   
+          {/* Inputs and button Below */}
+             
+          <View style={LoginStyles.LoginBottamHalf}>
+      
+                <TextInput style={LoginStyles.inputStyle}
                   placeholder="Username or Email"
                   placeholderTextColor="rgba(255, 255, 255, 0.9)">
-                  </TextInput>
-          
-               
-                  <TextInput style={styles.inputStyle}
+                </TextInput>
+
+                <TextInput style={LoginStyles.inputStyle}
                   placeholder="Password"
                   placeholderTextColor="rgba(255, 255, 255, 0.9)">
-                  </TextInput>
-                  
-                  <TouchableOpacity
-                    style={styles.buttons}
-                    onPress= {() => 
-                    props. navigation.navigate('Search')}>
-                    <Text style={styles.buttonsText}>Touch here</Text>  
-                  </TouchableOpacity>
+                </TextInput>
                 
-              </View>
-         
-              </View>
-          </KeyboardAvoidingView>
-          
+                <TouchableOpacity
+                  style={LoginStyles.buttons}
+                  onPress= {() => 
+                  props. navigation.navigate('Search')}>
+                  <Text style={LoginStyles.buttonsText}>Touch here</Text>  
+                </TouchableOpacity>
 
-   
-   
-   
+          </View>
+         
+      </KeyboardAvoidingView>
+          
     )
 }
 

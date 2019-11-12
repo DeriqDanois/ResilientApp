@@ -3,7 +3,7 @@ import { View, Text, TextInput, TouchableOpacity, Image, SafeAreaView, ScrollVie
 import  SavedDiscussionStyles from '../styles/PageStyles/SavedDiscussionStyles';
 import NavBar from '../comps/NavBar';
 import {KeyboardAvoidingView} from 'react-native';
-import DetailsCard from '../comps/DetailsCard';
+import BackButtonHeader from '../comps/BackButtonHeader'
 
 
 
@@ -20,33 +20,17 @@ const SavedDiscussions = props => {
   
      
         <SafeAreaView style={SavedDiscussionStyles.containertwo}>
+
+            <BackButtonHeader 
+            border={1}
+            height={100}
+            Header={"Saved Discussions"}
+            />
+
         
             <View style={{flex: 1, width:'100%'}}>
 
-                <View>
-                    
-                </View>
-
        
-                <View style={{width:'100%', height:100, backgroundColor:'green'}}>
-            
-                    <TouchableOpacity
-                        style={{width:100, height:100}}
-                        onPress={()=>{
-                            props. navigation.navigate('Search')
-                        
-                    }}>
-                    <Image 
-                        source={{uri: "https://cdn.pixabay.com/photo/2016/09/05/10/50/app-1646213_960_720.png"}}
-                        style={{height:"50%", width:'50%', margin: 20}} />
-                    </TouchableOpacity>
-
-                    <Text style={{flex:1}}>Your emergency contacts</Text>
-
-                    
-
-                </View>  
-
                    
                     
                 <ScrollView 
