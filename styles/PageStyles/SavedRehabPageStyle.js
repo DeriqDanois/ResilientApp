@@ -2,7 +2,7 @@ import { StyleSheet } from 'react-native';
 
 
 
-const SavedPlaces = StyleSheet.create({
+const SavedRehabPageStyles = StyleSheet.create({
        containertwo: {
             flex: 1,
           },
@@ -32,13 +32,13 @@ const SavedPlaces = StyleSheet.create({
         },
 
       
-    HamburgerIcon: {
-      margin:10,
-      marginRight:30,
-      width:35,
-      height:25,
-      flex:1,
-      },
+      HamburgerIcon: {
+        margin:10,
+        marginRight:30,
+        width:35,
+        height:25,
+        flex:1,
+        },
 
         
 
@@ -51,5 +51,5 @@ const SavedPlaces = StyleSheet.create({
 
 })
 
-export default SavedPlaces;
+export default SavedRehabPageStyles;
 

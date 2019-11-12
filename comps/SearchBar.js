@@ -6,10 +6,14 @@ import { DrawerActions } from 'react-navigation-drawer';
 import SearchBarStyles from '../styles/ComponentStyles/SearchBarStyles';
 import { withNavigation } from 'react-navigation';
 import { useScreens } from 'react-native-screens';
+import * as icon from '../comps/Svgs'
 
 
 
 function SearchBar(props)  {
+
+    const iconDim= 60
+
 
   
 
@@ -30,10 +34,13 @@ function SearchBar(props)  {
                 props.navigation.dispatch(DrawerActions.openDrawer());
                 
             }}>
-                <Image 
-                    style={SearchBarStyles.HamburgerIcon}
-                    source={{uri: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hamburger_icon.svg/1024px-Hamburger_icon.svg.png"}}>
-                </Image>
+            
+             
+             <icon.HamBurgerIcon  style={SearchBarStyles.HamburgerIcon} />
+
+
+                 
+            
             </TouchableOpacity>
         </View>
      

@@ -8,10 +8,10 @@ const SearchBarStyles = StyleSheet.create({
     SearchInputStyle: {
         alignSelf: "center",
         justifyContent: "center",
-        flex:1,
-        height:"100%",    
-        height:50,
+        flex:1,  
         borderRadius: 20,
+        textAlign:'center',
+        fontSize:16,
     },
 
     HeaderContainer: {
@@ -23,7 +23,6 @@ const SearchBarStyles = StyleSheet.create({
         borderWidth:4,
         borderColor: "rgba(0, 0, 0, 0.1)",
         borderRadius: 8,
-     
         flexDirection:'row', 
       
     },
@@ -37,11 +36,9 @@ const SearchBarStyles = StyleSheet.create({
 
 
     HamburgerIcon: {
-        margin:10,
-        marginRight:30,
-        width:35,
-        height:25,
+        margin:3,
         flex:1,
+        borderRadius:30,
         },
 
           
