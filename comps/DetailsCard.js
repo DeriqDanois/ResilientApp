@@ -1,6 +1,5 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { View, Text, TextInput, TouchableOpacity, Image, SafeAreaView, ScrollView} from 'react-native';
-import {useState} from 'react'
 import DetailsCardStyles from '../styles/ComponentStyles/DetailsCardStyles';
 import { Rating, AirbnbRating } from 'react-native-ratings';
 
@@ -41,7 +40,7 @@ function DetailsCard(){
                 
                         <View style={{  marginTop:10, flex:1, flexDirection:"row",  alignItems:'center', justifyContent:'center'}}>
                        
-                        <View style={{ flex:1, borderBottomColor:'#568C9E', borderBottomWidth:underline1}}>
+                        <View style={{ flex:1}}>
                             <Text style={{textAlign:'center'}}
                             onPress={()=>{
                                 alert("OverView")
@@ -52,7 +51,7 @@ function DetailsCard(){
                             }}>OverView</Text>
                         </View>
                         
-                        <View style={{ flex:1, borderBottomColor:'#568C9E', borderBottomWidth:underline2}}>
+                        <View style={{ flex:1}}>
                             <Text style={{textAlign:'center'}}
                             onPress={()=>{
                                 alert("OverView")
@@ -63,7 +62,7 @@ function DetailsCard(){
                             }}>Facility</Text>
                         </View>
                         
-                        <View style={{ flex:1, borderBottomColor:'#568C9E', borderBottomWidth:underline3 ? 2 : 0}}>
+                        <View style={{ flex:1}}>
                             <Text style={{textAlign:'center'}}
                             onPress={()=>{
                                 alert("OverView")
@@ -100,7 +99,7 @@ function DetailsCard(){
 
                          </View>
                         {/* Seperation Line */}
-                    <View style={{marginTop:'5%',  borderBottomColor:'grey', borderBottomWidth:0.7}}></View>
+                    <View style={{marginTop:5}}></View>
                     {/* Long Description Below */}
                     <Text style={{marginTop:20, letterSpacing:1, }}>{LongDescription}</Text>
               </View>              

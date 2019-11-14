@@ -14,7 +14,7 @@ function RehabResultsComponent(props){
       
          <TouchableOpacity style={{padding:8, flex:1, marginBottom:20, marginTop:10}}
             onPress= {() => 
-                props. navigation.navigate("RehabPage")}
+                props.navigation.navigate("RehabPage")}
              >
                 <Image style={{
                         width:props.width, 
