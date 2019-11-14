@@ -1,5 +1,5 @@
 import React from 'react'
-import Svg, { Path, G, Defs, ClipPath, Circle } from 'react-native-svg'
+import Svg, { Path, G, Rect, Defs, ClipPath, Circle } from 'react-native-svg'
 
 
 export const LogoAndHexagon = props => (
@@ -27,16 +27,22 @@ export const LogoAndHexagon = props => (
 )
 
 
-export const EmergencyButton = props => {
-
-  <Svg width={258} height={258} fill="none" {...props}>
-    <G filter="url(#prefix__filter0_d)">
-      <Circle cx={129} cy={129} r={99} fill="#fff" />
-      <Circle cx={129.5} cy={128.5} r={90.5} fill="#568C9E" />
-    </G>
-    <Defs></Defs>
-  </Svg>
-}
+export const EmergencyButton = props => (
+  <Svg width={368} height={170} fill="none" {...props}>
+  <G filter="url(#prefix__filter0_d)">
+    <Rect width={307.753} height={110} x={30} y={26} fill="#fff" rx={55} />
+  </G>
+  <Rect
+    width={290.449}
+    height={95.168}
+    x={38.652}
+    y={33.416}
+    fill="#A61B1D"
+    rx={47.584}
+  />
+  <Defs></Defs>
+</Svg>
+)
 
 
 export const ThreeDots = props => (
