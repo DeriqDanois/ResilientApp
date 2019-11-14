@@ -1,3 +1,15 @@
+# To Install
+
+Added android and ios folder here with the proper git ignore to avoid anymore mishaps.
+
+All you need to do is first `$ npm install`
+
+Then do `$ cd ios & pod install` if you're using ios simulator
+
+Then do `$ npx react-native link` if you're using the android simulator
+
+After all of the above, you should be ready to run the application.
+
 # ResilientApp
 
 Using Story book 
