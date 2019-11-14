@@ -19,10 +19,6 @@ import SavedRehabsPage from './Pages/SavedRehabsPage';
 import SavedDiscussions from './Pages/SavedDiscussionPage';
 import ProfilePage from './Pages/ProfilePage'
 
-
-
-
-
 const AppNavigator = createStackNavigator(
   {
     Login: { screen: Login },

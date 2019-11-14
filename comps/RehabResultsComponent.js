@@ -1,5 +1,4 @@
-import React from 'react';
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { View, Text, TouchableOpacity, Image, SafeAreaView, ScrollView} from 'react-native';
 import RehabResultsComponenetStyle from '../styles/ComponentStyles/ResultsComponentStyle';
 import { withNavigation } from 'react-navigation';

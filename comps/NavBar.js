@@ -1,8 +1,7 @@
 import React from 'react';
-import {TouchableOpacity, View, Text, Image, KeyboardAvoidingView} from 'react-native';
+import { TouchableOpacity, View, Text, Image, KeyboardAvoidingView } from 'react-native';
 import { withNavigation } from 'react-navigation';
 import NavBarStyles from '../styles/ComponentStyles/NavBarStyles';
-import * as icon from '../comps/Svgs'
 
 
 
@@ -23,44 +22,45 @@ const NavBar = props => {
     const DiscussionTop = -246;
 
 
-    return(
+    return (
 
-     
+
         <View style={NavBarStyles.container}>
 
 
 
-            {/* Sos Button */}
+            {/* Sos Button 
 
              <icon.TabBarSosButton bottom={SosBottom} fill={'red'} height={SosButtonDim} width={SosButtonDim} 
                  onPress= {() => 
                     props.navigation.navigate('SosPage')}/>
-        
-            {/* Tab Bar */}
-            <icon.TabBar left={left} top={tabBarTop} fill={'white'} height={tabBarHieght} width={tabBarWidth} />
+            */}
 
-                    {/* Explore Icon */}
+            {/* Tab Bar
+            <icon.TabBar left={left} top={tabBarTop} fill={'white'} height={tabBarHieght} width={tabBarWidth} />
+             */}
+            {/* Explore Icon 
                    
             <icon.ExploreIconInActive left={exploreLeft} top={exploreTop} fill={'white'} height={tabBarHieght} width={tabBarWidth} 
                 onPress={()=>{
                      props.navigation.navigate('Search')}}/>
   
+            */}
 
-           
-                    {/* Discussions Icon */}
+            {/* Discussions Icon 
             <icon.DiscussionIconInActive left={DiscussionLeft} top={DiscussionTop} fill={'white'} height={tabBarHieght} width={tabBarWidth} 
                  onPress={()=>{
                     props.navigation.navigate('DiscussionPage')}} />
-          
+            */}
 
 
-           
-                
+
+
         </View>
-       
 
-      
-       
+
+
+
     )
 
 }

@@ -3,7 +3,6 @@ import { View, Text, TextInput, TouchableOpacity, Image, SafeAreaView, ScrollVie
 import {useState} from 'react'
 import DetailsCardStyles from '../styles/ComponentStyles/DetailsCardStyles';
 import { Rating, AirbnbRating } from 'react-native-ratings';
-import {KeyboardAvoidingView} from 'react-native';
 
 
 
