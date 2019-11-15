@@ -6,7 +6,7 @@ import BackButtonHeader from '../comps/BackButtonHeader'
 
 
 
-const DiscussonPage = props => {
+const DiscussionPage = props => {
     const [discussion, setDiscussion] = useState(false);
 
 
@@ -49,7 +49,7 @@ const DiscussonPage = props => {
     )
 }
 
-export default DiscussonPage;
+export default DiscussionPage;
 
 
 
