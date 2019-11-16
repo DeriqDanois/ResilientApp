@@ -51,7 +51,10 @@ const stylesSignUp = StyleSheet.create({
     Logo: {
         position:'absolute',
         alignSelf:'center',
-        top:'25%',
+        alignItems: 'center',
+        justifyContent:'center',
+        top:'40%',
+        left:'50%'
     },
 
 

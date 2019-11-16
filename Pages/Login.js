@@ -24,7 +24,7 @@ const Login = props => {
           {/*}
           <icon.LogoAndHexagon fill={'white'} height={iconDim} width={iconDim} />
           */}
-          <Image style={{width:180, height:180, position:"absolute"}}
+          <Image style={{width:180, height:180, position:"absolute", justifyContent:'center', alignItems:'center'}}
           source={require('../Assets/PNGs/loginLogo.png')}/>
         </View>
 
