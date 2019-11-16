@@ -7,7 +7,7 @@ import { withNavigation } from 'react-navigation';
 
 const BackButtonHeader = props => {
     const [signup, setSignUp] = useState(false);
-    const height = 100;
+    const height = 50;
 
     return ( 
        
@@ -22,7 +22,7 @@ const BackButtonHeader = props => {
           <TouchableOpacity
               style={{justifyContent:'center', width:'18%'}}
                 onPress={()=>{
-                props. navigation.navigate('Search')}}>
+                props.navigation.navigate('Search')}}>
                 {
                   //image for back button
                 }

@@ -22,7 +22,7 @@ const SignUp = props => {
 
         <Image
           style={stylesSignUp.LoginImage}
-          source={{ uri: 'https://cdn.pixabay.com/photo/2015/03/26/09/41/mountain-690104_960_720.jpg' }}>
+          source={{ uri: 'https://bit.ly/2NMonRR' }}>
         </Image>
 
 

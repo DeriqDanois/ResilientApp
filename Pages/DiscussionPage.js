@@ -17,11 +17,11 @@ const DiscussionPage = props => {
     return (
 
 
-        <SafeAreaView style={DiscussionStyles.containertwo}>
+        <SafeAreaView>
 
             <BackButtonHeader
                 border={1}
-                height={100}
+                height={50}
                 Header={"Discussions"}
             />
 
@@ -32,12 +32,12 @@ const DiscussionPage = props => {
                 style={DiscussionStyles.scrollView}>
 
 
-                <View style={{ flex: 1, marginTop: 10, marginBottom: 10, alignContent: 'center', justifyContent: 'center', borderWidth: 2, borderColor: 'black', borderRadius: 10 }}>
+                <View style={{ flex: 1, marginTop: 50, marginBottom: 50, alignContent: 'center', justifyContent: 'center', borderWidth: 2, borderColor: 'black', borderRadius: 10 }}>
                     <View style={{ flex: 1, flexDirection: 'row' }}>
                         <Image
                             source={{ uri: 'http://www.themes-lab.com/traqs/assets/global/images/avatars/avatar1_big.png' }}
                             style={{ flex: 1, width: 70, height: 70, margin: 10 }}></Image>
-                        <Text style={{ flex: 4, fontSize: 13, marginTop: 10 }}>Q: How Long does it take for someone to OD</Text>
+                        <Text style={{ flex: 4, fontSize: 20, marginTop: 10 }}>Q: How Long does it take for someone to OD</Text>
                     </View>
                 </View>
 
