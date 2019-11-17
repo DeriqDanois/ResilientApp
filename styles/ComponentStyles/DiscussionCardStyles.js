@@ -1,4 +1,4 @@
-import { StyleSheet } from 'react-native';
+import { Platform, StyleSheet } from 'react-native';
 
 
 const DiscussionCardStyles = StyleSheet.create({
@@ -10,31 +10,19 @@ const DiscussionCardStyles = StyleSheet.create({
     marginBottom: 50,
     alignContent: 'center',
     justifyContent: 'center',
-    borderWidth: 2,
-    borderColor: 'black',
     borderRadius: 10,
-    flexDirection: 'row',
-    shadowColor: "rgba(0,0,0)",
+    shadowOffset:{  width: 2,  height:2,},
+    shadowColor: 'black',
     shadowOpacity: 0.5,
-    shadowRadius: 5
+    shadowRadius: 20,
+    width:"70%",
+    margin:"auto"
     }
+
+
 })
 
-    //   button: {
 
-//     // cross-platform css
-
-//     ...Platform.select({
-//       ios: {
-//         shadowColor: rgba(0,0,0),
-//         shadowOpacity: 0.5,
-//         shadowRadius: 5
-//       },
-//       android: {
-//         elevation: 5
-//       },
-//     }),
-//   }
 
 
 export default DiscussionCardStyles;

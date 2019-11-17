@@ -34,7 +34,7 @@ const DiscussionPage = props => {
 
 
                 <View>
-                    {DiscussionCard}
+                    <DiscussionCard />
                 </View>
 
 
