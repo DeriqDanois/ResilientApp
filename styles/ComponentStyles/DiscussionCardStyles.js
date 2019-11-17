@@ -1,7 +1,7 @@
-import { Platform, StyleSheet } from 'react-native';
+import { StyleSheet } from 'react-native';
 
 
-const DiscussionCardStyles = Stylesheet.create({
+const DiscussionCardStyles = StyleSheet.create({
 
     WhiteCard: {
 
@@ -14,10 +14,11 @@ const DiscussionCardStyles = Stylesheet.create({
     borderColor: 'black',
     borderRadius: 10,
     flexDirection: 'row',
-    shadowColor: rgba(0,0,0),
+    shadowColor: "rgba(0,0,0)",
     shadowOpacity: 0.5,
     shadowRadius: 5
-    },
+    }
+})
 
     //   button: {
 
@@ -34,6 +35,6 @@ const DiscussionCardStyles = Stylesheet.create({
 //       },
 //     }),
 //   }
-})
+
 
 export default DiscussionCardStyles;
