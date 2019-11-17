@@ -21,7 +21,6 @@ const DiscussionPage = props => {
         <SafeAreaView>
 
             <BackButtonHeader
-                border={1}
                 height={50}
                 Header={"Discussions"}
             />
@@ -34,6 +33,10 @@ const DiscussionPage = props => {
 
 
                 <View>
+                    <DiscussionCard />
+                    <DiscussionCard />
+                    <DiscussionCard />
+                    <DiscussionCard />
                     <DiscussionCard />
                 </View>
 

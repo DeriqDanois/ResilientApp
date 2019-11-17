@@ -34,7 +34,6 @@ const stylesSignUp = StyleSheet.create({
         width:250,
         backgroundColor:'#002F43',     
     },
-
     LoginImage: {
         flex:1,
         width:undefined,
@@ -53,6 +52,7 @@ const stylesSignUp = StyleSheet.create({
         alignSelf:'center',
         top:'25%',
     },
+
 
 
 

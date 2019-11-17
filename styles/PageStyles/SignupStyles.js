@@ -71,12 +71,13 @@ const stylesSignUp = StyleSheet.create({
         fontWeight:'bold',
     } ,
 
+  
     OpaqueView: { 
         opacity:0.6,
         position: 'absolute',
-        top: "48.2%",
+        top: "47%",
         width:'100%',
-        height:"6%",
+        height:"7%",
         alignItems:'center',
         justifyContent:'center',
         flexDirection:'row',
