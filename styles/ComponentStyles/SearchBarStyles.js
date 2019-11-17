@@ -12,7 +12,6 @@ const SearchBarStyles = StyleSheet.create({
         borderRadius: 20,
         textAlign:'center',
         fontSize:16,
-        shadowOffset:{  width: 3,  height:3,  },
         shadowColor: 'black',
         shadowOpacity: 0.2,
      
@@ -26,8 +25,10 @@ const SearchBarStyles = StyleSheet.create({
         borderRadius: 8,
         flexDirection:'row', 
         shadowOffset:{  width: 2,  height:2,  },
+        shadowRadius:15,
         shadowColor: 'black',
         shadowOpacity: 0.2,
+
       
     },
 

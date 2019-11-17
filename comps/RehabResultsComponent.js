@@ -2,14 +2,14 @@ import React, { useState, useEffect } from 'react';
 import { View, Text, TouchableOpacity, Image, SafeAreaView, ScrollView} from 'react-native';
 import RehabResultsComponenetStyle from '../styles/ComponentStyles/ResultsComponentStyle';
 import { withNavigation } from 'react-navigation';
-import RehabPageStyles from '../styles/ComponentStyles/ResultsComponentStyle';
+
 import * as icon from './Svgs';
 
 
 
 function RehabResultsComponent({ renderBookmark = true, ...props }){
 
-    const iconDim = 30
+    const iconDim = 25
   
     return (
         
@@ -37,7 +37,7 @@ function RehabResultsComponent({ renderBookmark = true, ...props }){
         
         {
             renderBookmark && (
-                <TouchableOpacity style={RehabPageStyles.bookMarkIcon}
+                <TouchableOpacity style={RehabResultsComponenetStyle.bookMarkIcon}
                           onPress={()=>{
                               alert("Added To Saved Rehabs")
                               }}>

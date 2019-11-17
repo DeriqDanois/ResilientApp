@@ -1,40 +1,34 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet, Dimensions } from 'react-native';
 
 
 const SearchBarResultsStyles = StyleSheet.create({
 
-    HeaderText: {
-        color: "#568C9E",
-        fontSize: 24,
-        textAlign: 'left',
-        width: '70%',
-        marginTop: 18,
-    },
- 
-   
-    containertwo: {
-        flex: 1,
-        },
-
-
-    scrollView: {
-         marginHorizontal: 15,
-    },
-
-
-  item: {
-    backgroundColor: '#f9c2ff',
-    padding: 20,
-    marginVertical: 1,
-    marginHorizontal: 10,
+  ResultsDescriptionText:{
+        fontSize:20, 
+        textAlign:'center'
   },
 
-    title: {
-        fontSize: 23,
+    ResultsBox: { 
+        marginTop:10,
+       
+        width:"80%", 
+        height:100, 
+        backgroundColor:'white', 
+        borderWidth:0.5, 
+        width:Dimensions.get("window").width, 
+        alignSelf:'center', 
+        justifyContent:'center' 
     },
-    description: {
-        fontSize: 14,
+
+    InputStyle:{
+        width:"80%", 
+        height:30, borderWidth:1, 
+         borderColor:'teal', 
+         textAlign:'center', 
+         alignSelf:'center'
     },
+
+
 
 
 })

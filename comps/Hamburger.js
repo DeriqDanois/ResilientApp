@@ -4,6 +4,7 @@ import { DrawerItems } from 'react-navigation-drawer';
 import HamburgerStyles from '../styles/ComponentStyles/HamburgerStyles';
 
 
+
 const Username = "Username"
 
 
@@ -12,7 +13,7 @@ export const DrawerComponent = props => (
    
   
     <View style={HamburgerStyles.container}>
-        <View style={{borderBottomColor:'grey', borderBottomWidth:1}}>
+        <View style={{borderBottomColor:'grey', borderBottomWidth:1, width:"100%"}}>
             <View>
                 <View style={{ flexDirection:'row'}}>
                     <Image 

@@ -30,10 +30,8 @@ function Reviews(props){
                     
                     /> 
 
-
             </View>   
-        
-                             
+                                
                    {/* Seperation Line */}
                <View style={{marginTop:'5%',  borderBottomColor:'grey', borderBottomWidth:0.7}}></View>
                {/* Long Description Below */}

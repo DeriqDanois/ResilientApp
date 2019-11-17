@@ -1,78 +1,104 @@
-import React from 'react';
-import { View, Text, TextInput, TouchableOpacity, Image, SafeAreaView, ScrollView, FlatList, Button } from 'react-native';
-import SearchBarResultsStyles from '../styles/PageStyles/SearchBarResultsStyles';
-import { KeyboardAvoidingView } from 'react-native';
-import SearchBar from '../comps/SearchBar'
-import BackButtonHeader from '../comps/BackButtonHeader'
-
-const homePlace = { description: 'Home', geometry: { location: { lat: 48.8152937, lng: 2.4597668 } } };
-const workPlace = { description: 'Work', geometry: { location: { lat: 48.8496818, lng: 2.2940881 } } };
+import React, { useEffect, useState } from 'react';
+import {View, Image, Text, SafeAreaView } from 'react-native';
+import BackButtonHeader from '../comps/BackButtonHeader';
+import axios from 'axios'
+import { TextInput } from 'react-native-gesture-handler';
+import RehabResultsComponent from '../comps/RehabResultsComponent';
+import SearchBarResultsStyle from "../styles/PageStyles/SearchBarResultsStyles"
 
 
 
-const SearchBarResults = ({ }) => {
 
 
-  const DATA = [
-    {
-      id: 'bd7acbea-c1b1-46c2-aed5-3ad53abb28ba',
-      title: 'First Item',
-    },
-    {
-      id: '3ac68afc-c605-48d3-a4f8-fbd91aa97f63',
-      title: 'Second Item',
-    },
-    {
-      id: '58694a0f-3da1-471f-bd96-145571e29d72',
-      title: 'Third Item',
-    },
-  ];
+const GooglePlacesInput = () => {
+//AIzaSyAqvr-0U5nQvhSS4PkWIT5Yz_KfnIbJo6o
+
+  
+  const [input, setInput] = useState('');
+  const [placesdata, setPlacesData] = useState([]);
+// Google Places below
+  const GetPlaces =async()=>{
+    var r = await axios.get(`https://maps.googleapis.com/maps/api/place/autocomplete/json?key=AIzaSyAqvr-0U5nQvhSS4PkWIT5Yz_KfnIbJo6o&input=${input}`);
+    //console.log(r);
+    var data = r.data.predictions.map((o)=>{
+      return o.description;
+    });
+    setPlacesData(data)
+    console.log(data);
+  }
 
 
   return (
 
+    <SafeAreaView>
 
-    <KeyboardAvoidingView style={{ flex: 1 }} enabled>
-      <SafeAreaView style={SearchBarResultsStyles.containertwo}>
+         <BackButtonHeader
+         Header={"Search for places"} />
 
-        <BackButtonHeader
-          border={0}
-          height={100}
-          Header={""} />
+      <View style={{flex:1}}>
 
-        <SearchBar />
-        {/* Results */}
+        <TextInput 
+          style={SearchBarResultsStyle.InputStyle}
+          placeholder="search for rehabs"
+          onChangeText={(text)=>{
+        if ( text.length >= 3){
+            GetPlaces();
+            setInput(text)
+            console.log(input)
+        }
+        }} />
 
-        <FlatList
-          data={DATA}
-          renderItem={({ item }) => <Item title={item.title} />}
-          keyExtractor={item => item.id} />
 
-      </SafeAreaView>
-    </KeyboardAvoidingView>
 
-  )
-}
+            {/* Loading Results into  */}
+    {
+        placesdata.map((obj, i) => (
+           
+            <View
+              key={i} 
+              style={SearchBarResultsStyle.ResultsBox}>
+                <Text style={SearchBarResultsStyle.ResultsDescriptionText}>{obj}</Text>
+            </View>
+        ))
+    }
 
-function Item({ title }) {
 
-  return (
-    <TouchableOpacity>
-      <View style={SearchBarResultsStyles.item}>
-        <Text style={SearchBarResultsStyles.title}>{title}</Text>
-        <Text style={SearchBarResultsStyles.description}>{title}</Text>
-      </View>
-    </TouchableOpacity>
+      {/* {
+          placesdata.map((obj, i) => (
+              <RehabResultsComponent
+                  key={i}
+                  width={160}
+                  height={115}
+                  renderBookmark={false}
+                  BorderRadiusLeft={14}
+                  BorderRadiusRight={14}
+                  description={obj.id}
+                  rehabName={"hello"}
+                   />
+          ))
+      } */}
+
+   
+
+        
+
+
+     
+
+
+
+
+    </View>
+    </SafeAreaView>
   );
 }
+export default GooglePlacesInput;
 
 
-export default SearchBarResults;
+        
+      
 
 
+      
 
-
-
-
-
-
+   

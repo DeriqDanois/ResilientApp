@@ -30,6 +30,7 @@ const NavBarStyles = StyleSheet.create({
         top:"90%",
         left:"75%",
         shadowOffset:{  width: 3,  height:3,  },
+        shadowRadius:20,
         shadowColor: 'black',
         shadowOpacity: 0.2,
         

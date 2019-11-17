@@ -18,6 +18,7 @@ function DetailsCard(props) {
     const [overview, SetOverView] = useState(0)
     const [facilities, SetFacilities] = useState(0)
     const [reviews, SetReviews] = useState(0)
+ 
 
     const [underline1, SetUnderline1] = useState(0)
     const [underline2, SetUnderline2] = useState(0)

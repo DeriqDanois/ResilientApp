@@ -54,7 +54,7 @@ const ImageSlider = props => {
                 <View style={{position:"absolute", alignSelf:"center", top:'85%'}}>
                     
                     <Pagination
-                        dotsLength={6}
+                        dotsLength={4}
                         activeDotIndex={currentslide}
                         dotStyle={{
                             width: 6,

@@ -11,6 +11,7 @@ const NavBarStyles = StyleSheet.create({
         flexDirection: 'row',
         borderTopLeftRadius: 40,
         borderTopRightRadius: 40,
+        
   
         
     },
@@ -21,8 +22,11 @@ const NavBarStyles = StyleSheet.create({
         height:"8.30%", 
         width:'100%',
         shadowOffset:{  width: -2,  height:-2,},
+        shadowRadius:15,
         shadowColor: 'black',
+        color:"blue",
         shadowOpacity: 0.2,
+        backfaceVisibility:"hidden"
     }
 
     

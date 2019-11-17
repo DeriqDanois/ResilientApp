@@ -12,7 +12,7 @@ const HamburgerStyles = StyleSheet.create({
     EditProfileText: {
       fontSize: 14,
       color: 'blue',
-      paddingVertical: 6
+      paddingVertical: 6,
     },
     UsernameText: {
       fontSize: 30,

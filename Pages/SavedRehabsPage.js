@@ -51,8 +51,8 @@ const SavedRehabsPage = props => {
                         imageUrl.map((obj, i) => (
                             <RehabResultsComponent
                                 key={i}
-                                width={"100%"}
-                                height={115}
+                                width={"101%"}
+                                height={110}
                                 BorderRadiusLeft={14}
                                 BorderRadiusRight={14}
                                 description={obj.id}

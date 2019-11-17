@@ -21,6 +21,10 @@ function SearchBar(props) {
 
         <View style={SearchBarStyles.HeaderContainer}>
 
+
+
+
+      
             <TextInput 
                 onChangeText={(val) => { 
                     userInput = val,
@@ -28,6 +32,9 @@ function SearchBar(props) {
                 }}
                 style={SearchBarStyles.SearchInputStyle}>
             </TextInput>
+
+          
+
 
 
             <TouchableOpacity

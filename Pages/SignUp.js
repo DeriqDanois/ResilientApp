@@ -19,65 +19,64 @@ const SignUp = props => {
 
     <KeyboardAvoidingView style={{ flex: 1 }} behavior='padding' enabled>
 
-      <View style={stylesSignUp.container}>
+    <View style={stylesSignUp.container}>
 
-        <Image
-          style={stylesSignUp.LoginImage}
-          source={{ uri: 'https://cdn.pixabay.com/photo/2015/03/26/09/41/mountain-690104_960_720.jpg' }}>
-        </Image>
+      <Image
+        style={stylesSignUp.LoginImage}
+        source={{ uri: 'https://bit.ly/2NMonRR' }}>
+      </Image>
 
-
-        <View style={stylesSignUp.Logo}>
-         
-          <icon.LogoAndHexagon fill={'white'} height={iconDim} width={iconDim} />
-          
-        </View>
-
+      <View style={stylesSignUp.Logo}>
+    
+        <icon.LogoAndHexagon fill={'white'} height={iconDim} width={iconDim} />
+        
       </View>
 
-      <View style={stylesSignUp.OpaqueView}>
+    </View>
 
+    <View style={stylesSignUp.OpaqueView}>
 
-        <TouchableOpacity style={{ flex: 1, }}
-          onPress={() =>
-            props.navigation.navigate('Login')}><Text style={stylesSignUp.SignUpText}> Login</Text>
-        </TouchableOpacity>
+      <TouchableOpacity style={{ flex: 1 }}
+        onPress={() =>
+          props.navigation.navigate('Login')}><Text style={stylesSignUp.SignUpText}>LOGIN</Text>
+      </TouchableOpacity>
 
-        <TouchableOpacity style={{ flex: 1, }}
-          onPress={() =>
-            props.navigation.navigate('SignUp')}><Text style={stylesSignUp.SignUpText}> SignUp</Text>
-        </TouchableOpacity>
-      </View>
+      <TouchableOpacity style={{ flex: 1, }}
+        onPress={() =>
+          props.navigation.navigate('SignUp')}><Text style={stylesSignUp.SignUpText}>SIGN UP</Text>
+      </TouchableOpacity>
+    </View>
 
-      {/* Inputs and button Below */}
+    {/* Inputs and button Below */}
 
-      <View style={stylesSignUp.LoginBottamHalf}>
+    <View style={stylesSignUp.LoginBottamHalf}>
 
-        <TextInput style={stylesSignUp.inputStyle}
-          placeholder="Username"
-          placeholderTextColor="rgba(255, 255, 255, 0.9)">
-        </TextInput>
+      <TextInput style={stylesSignUp.inputStyle}
+        placeholder="USERNAME OR EMAIL"
+        placeholderTextColor="rgba(255, 255, 255, 0.9)">
+      </TextInput>
 
-        <TextInput style={stylesSignUp.inputStyle}
-          placeholder="Email"
-          placeholderTextColor="rgba(255, 255, 255, 0.9)">
-        </TextInput>
+      <TextInput style={stylesSignUp.inputStyle}
+        placeholder="EMAIL"
+        placeholderTextColor="rgba(255, 255, 255, 0.9)">
+      </TextInput>
 
-        <TextInput style={stylesSignUp.inputStyle}
-          placeholder="Password"
-          placeholderTextColor="rgba(255, 255, 255, 0.9)">
-        </TextInput>
+      <TextInput style={stylesSignUp.inputStyle}
+        placeholder="PASSWORD"
+        placeholderTextColor="rgba(255, 255, 255, 0.9)">
+      </TextInput>
+       
 
-        <TouchableOpacity
-          style={stylesSignUp.buttons}
-          onPress={() =>
-            props.navigation.navigate('AddEmergencyContact')}>
-          <Text style={stylesSignUp.buttonsText}>Touch here</Text>
-        </TouchableOpacity>
+      <TouchableOpacity
+        style={stylesSignUp.buttons}
+        onPress={() =>
+          props.navigation.navigate('AddEmergencyContact')}>
+        <Text style={stylesSignUp.buttonsText}>LOGIN</Text>
+      </TouchableOpacity>
 
-      </View>
+    </View>
 
-    </KeyboardAvoidingView>
+  </KeyboardAvoidingView>
 
   )
 }

@@ -9,14 +9,17 @@ const stylesSignUp = StyleSheet.create({
         justifyContent: "center",
         textAlign: "left",
         width: 250,
+        height: 20,
         borderBottomColor: 'white',
-        borderBottomWidth: 1,
-        marginBottom: 15,
+        borderBottomWidth: 2,
+        marginBottom: 50,
+        color:'white'
     },  
 
     buttonsText: {
         fontSize: 15,
         color: "white",
+        fontWeight:"bold"
     },
 
     buttons: {
@@ -26,9 +29,8 @@ const stylesSignUp = StyleSheet.create({
         fontSize: 10,
         alignItems:"center",
         justifyContent: "center",
-        marginTop:30,
         marginBottom:20,
-        height: 40,
+        height:45,
         width:250,
         backgroundColor:'#002F43',     
     },
@@ -43,7 +45,7 @@ const stylesSignUp = StyleSheet.create({
     LoginBottamHalf: {
         alignItems:'center',
         justifyContent:'center',
-        flex: 0.65,
+        flex: 0.85,
         backgroundColor:'#002F43',      
     },
     Logo: {
@@ -53,12 +55,13 @@ const stylesSignUp = StyleSheet.create({
     },
 
 
+
     container: {
         flex: 1,
         alignSelf: "stretch",
     },
 
-    // Signup bar below
+    // Login Signup bar
 
     SignUpText:{
         color:'white', 
@@ -69,11 +72,11 @@ const stylesSignUp = StyleSheet.create({
     } ,
 
     OpaqueView: { 
-        opacity:0.7,
+        opacity:0.6,
         position: 'absolute',
-        top: "55%",
+        top: "47%",
         width:'100%',
-        height:"6%",
+        height:"7%",
         alignItems:'center',
         justifyContent:'center',
         flexDirection:'row',
