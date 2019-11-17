@@ -8,6 +8,7 @@ import SearchBar from '../comps/SearchBar'
 
 
 
+
 //Get User input
 
 
@@ -62,6 +63,7 @@ const Search = props => {
                                         key={i}
                                         width={160}
                                         height={115}
+                                        renderBookmark={false}
                                         BorderRadiusLeft={14}
                                         BorderRadiusRight={14}
                                         description={obj.id}
@@ -87,6 +89,7 @@ const Search = props => {
                                         key={i}
                                         width={160}
                                         height={115}
+                                        renderBookmark={false}
                                         BorderRadiusLeft={14}
                                         BorderRadiusRight={14}
                                         description={obj.id}
@@ -113,6 +116,7 @@ const Search = props => {
                                         key={i}
                                         width={160}
                                         height={115}
+                                        renderBookmark={false}
                                         BorderRadiusLeft={14}
                                         BorderRadiusRight={14}
                                         description={obj.id}

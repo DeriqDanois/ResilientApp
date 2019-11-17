@@ -54,7 +54,7 @@ export const ThreeDots = props => (
 export const BookMarkIcon = props => (
   <Svg viewBox="0 0 312.746 312.746" {...props}>
     <Path
-      fill="#010002"
+      fill="#568c9e"
       d="M40.347 0v312.452l117.734-120.247 114.318 120.541V0H40.347z"
     />
   </Svg>

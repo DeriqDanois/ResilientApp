@@ -4,6 +4,7 @@ import SearchComponentStyles from '../styles/ComponentStyles/SearchBarStyles';
 import { DrawerActions } from 'react-navigation-drawer';
 import SearchBarStyles from '../styles/ComponentStyles/SearchBarStyles';
 import { withNavigation } from 'react-navigation';
+import * as icon from '../comps/Svgs'
 
 
 
@@ -20,8 +21,11 @@ function SearchBar(props) {
 
         <View style={SearchBarStyles.HeaderContainer}>
 
-            <TextInput
-                onChangeText={(val) => { userInput = val, console.log(userInput) }}
+            <TextInput 
+                onChangeText={(val) => { 
+                    userInput = val,
+                 console.log(userInput) 
+                }}
                 style={SearchBarStyles.SearchInputStyle}>
             </TextInput>
 
@@ -32,9 +36,9 @@ function SearchBar(props) {
 
                 }}>
 
-                {/* Hamburger 
+               {/* Hamburger  */}
              <icon.HamBurgerIcon  style={SearchBarStyles.HamburgerIcon} />
-            */}
+            
 
 
 

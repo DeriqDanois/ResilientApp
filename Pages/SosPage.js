@@ -3,6 +3,7 @@ import React, { useState, useEffect, Linking } from 'react';
 import { View, Text, TextInput, TouchableOpacity, Image, SafeAreaView, ScrollView } from 'react-native';
 import SosPageStyles from '../styles/PageStyles/SosPageStyles';
 import BackButtonHeader from '../comps/BackButtonHeader';
+import * as icon from '../comps/Svgs'
 
 
 const SosPage = props => {
@@ -58,9 +59,9 @@ const SosPage = props => {
                                     alert("hello")
                                 }}>
                                 <View style={{ position: 'relative' }}>
-                                    {/*
+                               
                                     <icon.EmergencyButton width={iconDim} height={iconDim} />
-                                    */}
+                                 
                                 </View>
                                 <View style={SosPageStyles.contactJohn}>
                                     <Text style={{ color: 'white', fontWeight: 'bold' }}>CONTACT JOHN</Text>

@@ -6,21 +6,24 @@ const DetailsCardStyles = StyleSheet.create({
         flex:1, 
     },
 
-    BodyText:{
+
+    DirectionText:{
         marginTop:10,
+        marginLeft:'5%',
      
     }, 
     rowText:{
-        marginTop:10,
+        alignSelf:'center',
         flex:1,
     }, 
     ButtonText:{
        textAlign:'center',
        fontSize:12,
+       color:'white',
+       fontWeight:'bold'
 
     }, 
     HeaderText:{
-        marginTop:5,
         alignSelf:"center",
         fontSize:16,
         fontWeight:'bold',
@@ -28,40 +31,52 @@ const DetailsCardStyles = StyleSheet.create({
     }, 
 
     TypeofCenter:{
-        marginTop:5,
         left: "10%",
         fontSize:12,
        color:'grey',
-     
+    },
+
    
-
-    },
-    Types:{
-        marginTop:20,
-        fontSize:12,
-       color:'grey',
-        flex:1,
-    },
-
-    BodyTextContainer: {
-         marginTop:0, 
-         marginLeft:40,
-         position:'absolute',
-    },
-
-    StarBox:{
-        flex:1,
-        marginBottom:12,
-        alignSelf:'auto',
-    }, 
     containertwo: {
         flex: 1,
   
       },
+      
       scrollView: {
         marginHorizontal: 15,
-     
       },
+
+
+    //   Facilities styles below
+
+    facilityTextHeader:{
+        marginTop:'10%', 
+        marginLeft:"4%", 
+        fontWeight:"bold", 
+        fontSize:15
+    },
+
+    rowViews:{
+        flex:1, 
+        flexDirection:"row",  
+        alignItems:"center", 
+        borderBottomWidth:0.5, 
+        width:'100%',
+        borderBottomColor:'grey',
+    
+    },
+
+    facilitiesText:{
+        margin:'5%'
+    },
+
+    //Views inside the row to hold the text
+    rowColumnViews:{
+        flex:1, 
+        margin:'5%'
+        
+
+    }
 
 })
 

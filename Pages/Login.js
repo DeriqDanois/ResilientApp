@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, Image, KeyboardAvoidingView } from 'react-native';
 import LoginStyles from '../styles/PageStyles/LoginStyles';
+import * as icon from '../comps/Svgs'
 
 
 
@@ -21,9 +22,9 @@ const Login = props => {
         </Image>
 
         <View style={LoginStyles.Logo}>
-          {/*}
+      
           <icon.LogoAndHexagon fill={'white'} height={iconDim} width={iconDim} />
-          */}
+          
         </View>
 
       </View>

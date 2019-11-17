@@ -3,6 +3,8 @@ import { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, Image, SafeAreaView, Button} from 'react-native';
 import BackButtonHeaderStyles from '../styles/ComponentStyles/BackButtonHeaderStyles.js'
 import { withNavigation } from 'react-navigation';
+import * as icon from '../comps/Svgs'
+
 
 
 const BackButtonHeader = props => {
@@ -17,7 +19,13 @@ const BackButtonHeader = props => {
         justifyContent:'center',
     }}>
 
+      
+
        <Text style={BackButtonHeaderStyles.HeaderTextStyle}>{props.Header}</Text>
+
+     
+
+       
 
           <TouchableOpacity
               style={{justifyContent:'center', width:'18%'}}
@@ -26,6 +34,9 @@ const BackButtonHeader = props => {
                 {
                   //image for back button
                 }
+
+            <icon.BackArrow style={{width:40,height:20, margin: 10}}/>  
+            
           </TouchableOpacity>
 
    </View>  

@@ -2,10 +2,14 @@ import React, { useState, useEffect } from 'react';
 import { View, Text, TouchableOpacity, Image, SafeAreaView, ScrollView} from 'react-native';
 import RehabResultsComponenetStyle from '../styles/ComponentStyles/ResultsComponentStyle';
 import { withNavigation } from 'react-navigation';
+import RehabPageStyles from '../styles/ComponentStyles/ResultsComponentStyle';
+import * as icon from './Svgs';
 
 
 
-function RehabResultsComponent(props){
+function RehabResultsComponent({ renderBookmark = true, ...props }){
+
+    const iconDim = 30
   
     return (
         
@@ -16,6 +20,9 @@ function RehabResultsComponent(props){
             onPress= {() => 
                 props.navigation.navigate("RehabPage")}
              >
+
+      
+
                 <Image style={{
                         width:props.width, 
                         borderTopLeftRadius:props.BorderRadiusLeft,
@@ -23,9 +30,22 @@ function RehabResultsComponent(props){
                         height:props.height
                         }} 
                          source={{uri:props.imageUrl}} />
+                         
                 <Text style={RehabResultsComponenetStyle.RehabName}>{props.rehabName}</Text>
                 <Text style={RehabResultsComponenetStyle.RehabDescription}>{props.description}</Text>
          </TouchableOpacity>
+        
+        {
+            renderBookmark && (
+                <TouchableOpacity style={RehabPageStyles.bookMarkIcon}
+                          onPress={()=>{
+                              alert("Added To Saved Rehabs")
+                              }}>
+                <icon.BookMarkIcon width={iconDim} height={iconDim} />
+        </TouchableOpacity>
+            )
+        }
+
    </View>
 
     )

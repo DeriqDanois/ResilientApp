@@ -35,7 +35,7 @@ const AppNavigator = createStackNavigator(
   {
     //Initial Screen
     headerMode: 'none',
-    initialRouteName: 'Login'
+    initialRouteName: 'RehabPage'
   },
 );
 
@@ -96,5 +96,5 @@ const App = () => {
 
 
 
-//export default App;
-export default from './storybook';
+export default App;
+// export default from './storybook';

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { View, KeyboardAvoidingView, Text, TextInput, TouchableOpacity, Image } from 'react-native';
 import stylesSignUp from '../styles/PageStyles/SignupStyles';
+import * as icon from '../comps/Svgs'
 
 
 
@@ -27,9 +28,9 @@ const SignUp = props => {
 
 
         <View style={stylesSignUp.Logo}>
-          {/*
+         
           <icon.LogoAndHexagon fill={'white'} height={iconDim} width={iconDim} />
-          */}
+          
         </View>
 
       </View>

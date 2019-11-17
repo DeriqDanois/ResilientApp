@@ -11,19 +11,8 @@ const NavBarStyles = StyleSheet.create({
         flexDirection: 'row',
         borderTopLeftRadius: 40,
         borderTopRightRadius: 40,
-        // shadowColor: 'black',
-        // shadowOpacity: 1,
-        // elevation: 20,
-        // shadowRadius: 50 ,
-        // shadowOffset : { width: 56, height: 23},
-        shadowColor: "black",
-        shadowOffset: {
-            width: 2,
-            height: 5,
-        },
-        shadowOpacity: 1,
-        shadowRadius: 3,
-        elevation: 6
+  
+        
     },
 
     container: {
@@ -31,7 +20,9 @@ const NavBarStyles = StyleSheet.create({
         alignSelf:'center', 
         height:"8.30%", 
         width:'100%',
-        backgroundColor: 'rgba(52, 52, 52, 0.1)',
+        shadowOffset:{  width: -2,  height:-2,},
+        shadowColor: 'black',
+        shadowOpacity: 0.2,
     }
 
     

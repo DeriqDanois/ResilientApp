@@ -16,6 +16,7 @@ import SavedRehabsPage from '../Pages/SavedRehabsPage';
 import SavedDiscussionPage from '../Pages/SavedDiscussionPage';
 import DiscussinPage from '../Pages/DiscussionPage';
 import BackButtonHeader from '../comps/BackButtonHeader';
+import ImageSlider from '../comps/imageSlider';
 
 
 
@@ -23,7 +24,12 @@ import BackButtonHeader from '../comps/BackButtonHeader';
 storiesOf("Cards", module)
     .add("DetailsCard", ()=>{
         return <DetailsCard/>
-    }),
+    })
+
+    .add("ImageSlider", ()=>{
+        return <ImageSlider/>
+    })
+  
 
 
 storiesOf("Navigation Components", module)
@@ -83,5 +89,6 @@ storiesOf("Pages", module)
         return <SavedDiscussionPage/>
     })
   
+    
  
 
