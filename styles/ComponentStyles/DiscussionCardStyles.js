@@ -1,8 +1,25 @@
 import { Platform, StyleSheet } from 'react-native';
 
 
-// const styles = Stylesheet.create({
-//   button: {
+const DiscussionCardStyles = Stylesheet.create({
+
+    WhiteCard: {
+
+    flex: 1,
+    marginTop: 50,
+    marginBottom: 50,
+    alignContent: 'center',
+    justifyContent: 'center',
+    borderWidth: 2,
+    borderColor: 'black',
+    borderRadius: 10,
+    flexDirection: 'row',
+    shadowColor: rgba(0,0,0),
+    shadowOpacity: 0.5,
+    shadowRadius: 5
+    },
+
+    //   button: {
 
 //     // cross-platform css
 
@@ -17,4 +34,6 @@ import { Platform, StyleSheet } from 'react-native';
 //       },
 //     }),
 //   }
-// })
+})
+
+export default DiscussionCardStyles;

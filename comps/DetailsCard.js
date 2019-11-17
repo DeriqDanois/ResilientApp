@@ -17,7 +17,7 @@ function DetailsCard(){
     const [underline3, SetUnderline3] = useState(!true)
  
 
-    var impatient = "impatient";
+    var inpatient = "INPATIENT";
 
     var ReviewNum = 40;
     var Direction = "1472 KingGeorge, Vancouver BC";
@@ -33,7 +33,7 @@ function DetailsCard(){
         <View style={{flex:1}}>
             <View style={{flex: 0.75}}>
                             
-                <Text style={DetailsCardStyles.TypeofCenter}>{impatient}</Text>
+                <Text style={DetailsCardStyles.TypeofCenter}>{inpatient}</Text>
                 <Text style={DetailsCardStyles.HeaderText}>{Title}</Text>
 
             </View>
@@ -43,18 +43,18 @@ function DetailsCard(){
                         <View style={{ flex:1}}>
                             <Text style={{textAlign:'center'}}
                             onPress={()=>{
-                                alert("OverView")
+                                alert("Overview")
                                 SetUnderline1(2)
                                 SetUnderline2(!true)
                                 SetUnderline3(!true)
                             
-                            }}>OverView</Text>
+                            }}>Overview</Text>
                         </View>
                         
                         <View style={{ flex:1}}>
                             <Text style={{textAlign:'center'}}
                             onPress={()=>{
-                                alert("OverView")
+                                alert("Overview")
                                 SetUnderline1(!true)
                                 SetUnderline2(2)
                                 SetUnderline3(!true)
@@ -65,7 +65,7 @@ function DetailsCard(){
                         <View style={{ flex:1}}>
                             <Text style={{textAlign:'center'}}
                             onPress={()=>{
-                                alert("OverView")
+                                alert("Overview")
                                 SetUnderline3(2)
                                 SetUnderline2(!true)
                                 SetUnderline1(!true)
