@@ -15,13 +15,48 @@ function DiscussionCard(props){
         
     <View style={DiscussionCardStyles.WhiteCard}>
         
+        <View style={{flex:4, flexDirection:"row"}}>
+            <Image style={{
+        flex:1,
+        height: 45,
+        width: 45,
+        margin: 5,
+        resizeMode:"contain"
+    }}
+        source={require('../Assets/avatars/PNGs/Girl3-3.png')}/>
+            
+        <Text style={DiscussionCardStyles.Text}>
+            Taken off pain meds after 10 years because people are...
+        </Text>
+        </View> 
 
-        <Image
-            source={{ uri: 'http://www.themes-lab.com/traqs/assets/global/images/avatars/avatar1_big.png' }}
-            style={{ flex: 1, width: 70, height: 70, margin: 10 }}></Image>
-        <Text style={{ flex: 4, fontSize: 20, marginTop: 10 }}>Q: How Long does it take for someone to OD</Text>
-
+        <View style={{flex:1, flexDirection:"row", padding:10}}>
+            <Image style={{
+            height:20,
+            width:20,
+        }}
+        source={require('../Assets/PNGs/upvoteIcon.png')}/>
+       
+       <View style={{flex:1}}>
+           <Text style={DiscussionCardStyles.Upvote}>
+           12
+           </Text>
         </View>
+
+    <View style={{flex:2, flexDirection:"row"}}>
+        <Text style={DiscussionCardStyles.PostStatus}>
+       10 mins ago
+       </Text>
+
+       <Text style={DiscussionCardStyles.PostStatus}>
+       2 answers
+       </Text>
+
+    </View>
+
+</View>
+
+</View>
 
 
     )
