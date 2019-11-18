@@ -35,7 +35,7 @@ const AppNavigator = createStackNavigator(
   {
     //Initial Screen
     headerMode: 'none',
-    initialRouteName: 'RehabPage'
+    initialRouteName: 'Login'
   },
 );
 
