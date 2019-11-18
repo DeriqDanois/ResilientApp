@@ -9,14 +9,14 @@ const EditEmergency = props => {
 
     return (
         <SafeAreaView>
-            <View>
-                        <BackButtonHeader
-                            border={1}
-                            height={100}
-                            Header={"Edit Emergency Contact"}
-                        />
-
-            </View>
+            <BackButtonHeader
+                border={1}
+                height={100}
+                Header={"Edit Emergency Contact"}
+            />
+         <View style={{ flex: 1, width: '100%' }}>
+             
+        </View>
 
         </SafeAreaView>
        

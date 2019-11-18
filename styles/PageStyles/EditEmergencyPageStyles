@@ -1,0 +1,7 @@
+import { StyleSheet } from 'react-native';
+
+const EditEmergencyPageStyles = StyleSheet.create({
+    box1 : {
+        flex:1   
+    }
+})
