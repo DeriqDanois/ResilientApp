@@ -1,9 +1,10 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react-native';
 
-import RehabResultsComponent from './RehabResultsComponent'
-import NavBar from './NavBar'
-import DetailsCard from './DetailsCard'
+import RehabResultsComponent from './RehabResultsComponent';
+import NavBar from './NavBar';
+import DetailsCard from './DetailsCard';
+import DiscussionCard from './DiscussionCard';
 import SignUp from '../Pages/SignUp';
 import Login from '../Pages/Login';
 import AddEmergencyContact from '../Pages/AddEmergencyContact';
@@ -20,11 +21,14 @@ import BackButtonHeader from '../comps/BackButtonHeader';
 
 
 
+
 storiesOf("Cards", module)
     .add("DetailsCard", ()=>{
         return <DetailsCard/>
-    }),
-
+    })
+    .add("DiscussionCard", ()=>{
+        return <DiscussionCard/>
+    })
 
 storiesOf("Navigation Components", module)
     .add("NavBar", ()=>{

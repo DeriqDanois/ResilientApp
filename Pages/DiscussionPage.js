@@ -33,11 +33,11 @@ const DiscussionPage = props => {
 
 
                 <View>
-                    <DiscussionCard />
-                    <DiscussionCard />
-                    <DiscussionCard />
-                    <DiscussionCard />
-                    <DiscussionCard />
+                    <DiscussionCard renderBookmark={false}/>
+                    <DiscussionCard renderBookmark={false}/>
+                    <DiscussionCard renderBookmark={false}/>
+                    <DiscussionCard renderBookmark={false}/>
+                    <DiscussionCard renderBookmark={false}/>
                 </View>
 
 

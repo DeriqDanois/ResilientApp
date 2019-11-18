@@ -3,6 +3,15 @@ import { Platform, StyleSheet } from 'react-native';
 
 const DiscussionCardStyles = StyleSheet.create({
 
+    Bookmark: {
+    height:70,
+    width:70,
+    position:"absolute",
+    left:"78%",
+    top:"10%",
+    zIndex:1
+    },
+
     WhiteCard: {
 
     flex: 1,
@@ -11,7 +20,7 @@ const DiscussionCardStyles = StyleSheet.create({
     marginTop: 40,
     marginBottom: -20,
     justifyContent: 'center',
-    borderRadius: 5,
+    borderRadius: 10,
     shadowOffset:{  width: 2,  height:2,},
     shadowColor: 'black',
     shadowOpacity: 0.2,
@@ -20,6 +29,15 @@ const DiscussionCardStyles = StyleSheet.create({
     margin:"auto",
     alignSelf:'center',
     padding:15
+    },
+
+    Avatar: {
+
+    flex:1,
+    height: 45,
+    width: 45,
+    margin: 5,
+    resizeMode:"contain"
     },
 
     Text: {

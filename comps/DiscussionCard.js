@@ -9,21 +9,33 @@ import { View,
     Button } from 'react-native';
 import DiscussionCardStyles from '../styles/ComponentStyles/DiscussionCardStyles';
 
-function DiscussionCard(props){
+function DiscussionCard({renderBookmark = true, ...props}){
   
     return (
+        
+<View>
+
+{
+    renderBookmark && (
+        <Image 
+            style={DiscussionCardStyles.Bookmark}
+            source={require('../Assets/PNGs/savedIcon.png')}/>
+        //     <TouchableOpacity
+        //     style={RehabPageStyles.bookMarkIcon}
+        //         onPress={()=>{
+        //             alert("Added To Saved Rehabs")
+        //         }}>
+        //         <icon.BookMarkIcon width={iconDim} height={iconDim} />
+        // </TouchableOpacity>
+            )
+        }
         
     <View style={DiscussionCardStyles.WhiteCard}>
         
         <View style={{flex:4, flexDirection:"row"}}>
-            <Image style={{
-        flex:1,
-        height: 45,
-        width: 45,
-        margin: 5,
-        resizeMode:"contain"
-    }}
-        source={require('../Assets/avatars/PNGs/Girl3-3.png')}/>
+            <Image
+            style={DiscussionCardStyles.Avatar}
+            source={require('../Assets/avatars/PNGs/Girl3-3.png')}/>
             
         <Text style={DiscussionCardStyles.Text}>
             Taken off pain meds after 10 years because people are...
@@ -57,6 +69,8 @@ function DiscussionCard(props){
 </View>
 
 </View>
+
+        </View>
 
 
     )

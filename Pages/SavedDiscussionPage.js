@@ -37,11 +37,6 @@ const SavedDiscussions = props => {
                     style={SavedDiscussionStyles.scrollView}>
 
                 <View>
-                    <Image 
-                    style={{
-                        height:70,
-                        width:70,}}
-                    source={require('../Assets/PNGs/savedIcon.png')}/>
                     <DiscussionCard />
                     <DiscussionCard />
                     <DiscussionCard />
