@@ -1,9 +1,10 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react-native';
 
-import RehabResultsComponent from './RehabResultsComponent'
-import NavBar from './NavBar'
-import DetailsCard from './DetailsCard'
+import RehabResultsComponent from './RehabResultsComponent';
+import NavBar from './NavBar';
+import DetailsCard from './DetailsCard';
+import DiscussionCard from './DiscussionCard';
 import SignUp from '../Pages/SignUp';
 import Login from '../Pages/Login';
 import AddEmergencyContact from '../Pages/AddEmergencyContact';
@@ -15,6 +16,7 @@ import SearchBarResults from '../Pages/SearchBarResults';
 import SavedRehabsPage from '../Pages/SavedRehabsPage';
 import SavedDiscussionPage from '../Pages/SavedDiscussionPage';
 import DiscussionPage from '../Pages/DiscussionPage';
+import DiscussionTopic from '../Pages/DiscussionTopic';
 import BackButtonHeader from '../comps/BackButtonHeader';
 import ImageSlider from '../comps/imageSlider';
 import SosPage from '../Pages/SosPage';
@@ -32,6 +34,9 @@ storiesOf("Cards", module)
     })
   
 
+    .add("DiscussionCard", ()=>{
+        return <DiscussionCard/>
+    })
 
 storiesOf("Navigation Components", module)
     .add("NavBar", ()=>{
@@ -51,8 +56,6 @@ storiesOf("Navigation Components", module)
     .add("Back Button header component", ()=>{
         return <BackButtonHeader/>
     })
-
-
 
 storiesOf("Pages", module)
     .add("Login", ()=>{
@@ -84,6 +87,10 @@ storiesOf("Pages", module)
   
     .add("Discussion Page", ()=>{
         return <DiscussionPage/>
+    })
+
+    .add("Discussion Topic", ()=>{
+        return <DiscussionTopic/>
     })
   
     .add("Saved Discussion Page", ()=>{
