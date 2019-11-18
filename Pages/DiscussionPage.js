@@ -21,7 +21,7 @@ const DiscussionPage = props => {
         <SafeAreaView>
 
             <BackButtonHeader
-                height={100}
+                height={50}
                 Header={"Discussions"}
             />
             <ScrollView
