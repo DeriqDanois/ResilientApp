@@ -37,7 +37,13 @@ const SosPage = props => {
                         <Text style={SosPageStyles.bulletedText2}>Call your contacts with emergency voice message</Text>
                     </View>
                     <View style={{ paddingLeft: '4%', paddingTop: 20 }}>
-                        <Text style={{ textAlign: 'center', color: '#587a8b', paddingTop: 20, fontSize: 17 }}>Edit your emergency contacts</Text>
+                        <Text 
+                        onPress={()=>{
+                            props.navigation.navigate("EditEmergency")
+                        }}
+                        style={{ textAlign: 'center', color: '#587a8b', paddingTop: 20, fontSize: 17 }}>
+                            Edit your emergency contacts
+                        </Text>
 
                         {/* //contact component starts from here */}
 

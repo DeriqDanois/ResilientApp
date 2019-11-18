@@ -17,7 +17,8 @@ import SavedDiscussionPage from '../Pages/SavedDiscussionPage';
 import DiscussionPage from '../Pages/DiscussionPage';
 import BackButtonHeader from '../comps/BackButtonHeader';
 import ImageSlider from '../comps/imageSlider';
-
+import SosPage from '../Pages/SosPage';
+import EditEmergency from '../Pages/EditEmergency';
 
 
 
@@ -87,8 +88,13 @@ storiesOf("Pages", module)
   
     .add("Saved Discussion Page", ()=>{
         return <SavedDiscussionPage/>
-    })
-  
-    
+    }) 
  
+    .add("Sos Page", ()=>{
+        return<SosPage/>
+    })
+    .add("Edit Emergency contact", ()=>{
+        return<EditEmergency/>
+    })
+
 

@@ -18,6 +18,7 @@ import SosPage from './Pages/SosPage';
 import SavedRehabsPage from './Pages/SavedRehabsPage';
 import SavedDiscussions from './Pages/SavedDiscussionPage';
 import ProfilePage from './Pages/ProfilePage'
+import EditEmergency from './Pages/EditEmergency'
 
 const AppNavigator = createStackNavigator(
   {
@@ -29,6 +30,7 @@ const AppNavigator = createStackNavigator(
     DiscussionPage: { screen:DiscussionPage },
     SosPage: { screen:SosPage },
     ProfilePage: { screen:ProfilePage },
+    EditEmergency: { screen:EditEmergency },
    
     
   },

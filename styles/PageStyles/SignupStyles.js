@@ -16,6 +16,7 @@ const stylesSignUp = StyleSheet.create({
         borderBottomWidth: 2,
         marginBottom: 30,
         fontSize:14,
+        color:'white',
     },  
 
     buttonsText: {
