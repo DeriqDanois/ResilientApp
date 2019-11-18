@@ -16,7 +16,9 @@ import SearchBarResults from '../Pages/SearchBarResults';
 import SavedRehabsPage from '../Pages/SavedRehabsPage';
 import SavedDiscussionPage from '../Pages/SavedDiscussionPage';
 import DiscussionPage from '../Pages/DiscussionPage';
+import DiscussionTopic from '../Pages/DiscussionTopic';
 import BackButtonHeader from '../comps/BackButtonHeader';
+
 
 
 
@@ -81,6 +83,10 @@ storiesOf("Pages", module)
   
     .add("Discussion Page", ()=>{
         return <DiscussionPage/>
+    })
+
+    .add("Discussion Topic", ()=>{
+        return <DiscussionTopic/>
     })
   
     .add("Saved Discussion Page", ()=>{
