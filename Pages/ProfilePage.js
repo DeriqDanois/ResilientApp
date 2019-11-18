@@ -21,8 +21,9 @@ const ProfilePage = props => {
 
 
       <BackButtonHeader
-        border={1}
-        height={100}
+         borderBottomColor={'rgba(52, 52, 52, 0.1)'}
+         height={100}
+         border={1}
         Header={"Edit Profile"}
       />
 
@@ -33,7 +34,7 @@ const ProfilePage = props => {
 
 
           <Image
-            source={{ uri: 'http://www.themes-lab.com/traqs/assets/global/images/avatars/avatar1_big.png' }}
+            source={require('../Assets/avatars/PNGs/Girl1-1.png')}
             style={ProfilePageStyles.UserIcon}></Image>
           <Text style={ProfilePageStyles.UserName}>Username</Text>
 

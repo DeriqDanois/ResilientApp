@@ -18,10 +18,14 @@ const DiscussionPage = props => {
     return (
 
 
-        <SafeAreaView>
+        <SafeAreaView style={{flex:1}}>
+
+            
 
             <BackButtonHeader
-                height={50}
+                borderBottomColor={'rgba(52, 52, 52, 0.1)'}
+                height={100}
+                border={1}
                 Header={"Discussions"}
             />
             <ScrollView

@@ -34,11 +34,11 @@ const SavedRehabsPage = props => {
         <SafeAreaView style={{ flex: 1 }}>
 
             <BackButtonHeader
-                border={1}
+                borderBottomColor={'rgba(52, 52, 52, 0.1)'}
                 height={100}
+                border={1}
                 Header={"Saved Rehabs"}
             />
-
 
             <View style={{ flex: 1, flexDirection: 'row' }}>
 
@@ -74,7 +74,6 @@ const SavedRehabsPage = props => {
             <NavBar />
 
         </SafeAreaView>
-
     )
 }
 

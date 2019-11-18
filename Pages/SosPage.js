@@ -19,8 +19,9 @@ const SosPage = props => {
         <SafeAreaView style={SosPageStyles.containertwo}>
 
             <BackButtonHeader
-                border={1}
+                borderBottomColor={'rgba(52, 52, 52, 0.1)'}
                 height={100}
+                border={1}
                 Header={"Emergency Contact"}
             />
 
@@ -76,10 +77,6 @@ const SosPage = props => {
                         </View>
                     </View>
 
-
-
-
-
                     <View style={{ height: 200, width: 200 }}>
 
                     </View>
@@ -88,10 +85,6 @@ const SosPage = props => {
                 </ScrollView>
 
             </View>
-
-
-
-
 
         </SafeAreaView>
 

@@ -14,6 +14,7 @@ import Search from './Pages/Search';
 import AddEmergencyContact from './Pages/AddEmergencyContact';
 import RehabPage from './Pages/RehabPage'
 import DiscussionPage from './Pages/DiscussionPage'
+import DiscussionTopic from './Pages/DiscussionTopic'
 import SosPage from './Pages/SosPage';
 import SavedRehabsPage from './Pages/SavedRehabsPage';
 import SavedDiscussions from './Pages/SavedDiscussionPage';
@@ -27,6 +28,7 @@ const AppNavigator = createStackNavigator(
     AddEmergencyContact: { screen: AddEmergencyContact },
     Search: { screen:Search },
     RehabPage: { screen:RehabPage },
+    DiscussionTopic: { screen:DiscussionTopic },
     DiscussionPage: { screen:DiscussionPage },
     SosPage: { screen:SosPage },
     ProfilePage: { screen:ProfilePage },

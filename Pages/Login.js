@@ -9,6 +9,9 @@ const Login = props => {
 
 
   const iconDim = 174;
+  const [error, setError ] = useState("");
+  const [Username, setUsername ] = useState("");
+  const [password, setPassword ] = useState("");
 
   return (
 
@@ -47,11 +50,17 @@ const Login = props => {
       <View style={LoginStyles.LoginBottamHalf}>
 
         <TextInput style={LoginStyles.inputStyle}
+        onChangeText={(t)=> {
+          setUsername(t)
+        }}
           placeholder="USERNAME OR EMAIL"
           placeholderTextColor="rgba(255, 255, 255, 0.9)">
         </TextInput>
 
         <TextInput style={LoginStyles.inputStyle}
+           onChangeText={(t)=> {
+             setPassword(t)
+          }}
           placeholder="PASSWORD"
           placeholderTextColor="rgba(255, 255, 255, 0.9)">
         </TextInput>
@@ -59,10 +68,19 @@ const Login = props => {
 
         <TouchableOpacity
           style={LoginStyles.buttons}
-          onPress={() =>
-            props.navigation.navigate('Search')}>
+          onPress={() => {
+            if ( 1 === 10 ) {
+              props.navigation.navigate('Search')
+            } else {
+              setError("Username or Password Is Invalid")
+            }
+          }}>
           <Text style={LoginStyles.buttonsText}>LOGIN</Text>
+      
         </TouchableOpacity>
+        
+        <Text style={{color:"red"}}>{error}</Text>
+        
 
       </View>
 

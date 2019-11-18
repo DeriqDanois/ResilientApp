@@ -11,22 +11,21 @@ const NavBar = props => {
 
     const left = 0;
     const right = 0;
-    const SosBottom = 35;
+    const SosBottom = 55;
     const SosButtonDim = 97;
-    const tabBarWidth = 396;
+    const tabBarWidth = "100%";
     const tabBarHieght = 79;
-    const tabBarTop = -100;
+    const tabBarTop = -130;
     const exploreLeft = 50;
-    const exploreTop = -167;
+    const exploreTop = -200;
     const DiscussionLeft = 278;
-    const DiscussionTop = -246;
+    const DiscussionTop = -280;
 
 
     return (
 
 
         <View style={NavBarStyles.container}>
-
 
 
             {/* Sos Button  */}

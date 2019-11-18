@@ -14,12 +14,12 @@ const BackButtonHeader = props => {
     return ( 
        
   <View style={{ height:props.height, 
-        borderBottomColor:'rgba(0, 0, 0, 0.3)', 
+        borderBottomColor:props.borderBottomColor, 
         borderBottomWidth:props.border,
         justifyContent:'center',
+  
     }}>
-
-      
+    
 
        <Text style={BackButtonHeaderStyles.HeaderTextStyle}>{props.Header}</Text>
 
@@ -28,7 +28,7 @@ const BackButtonHeader = props => {
        
 
           <TouchableOpacity
-              style={{justifyContent:'center', width:'18%'}}
+              style={{justifyContent:'center', width:'18%', }}
                 onPress={()=>{
                 props.navigation.navigate('Search')}}>
                 {
@@ -38,6 +38,7 @@ const BackButtonHeader = props => {
             <icon.BackArrow style={{width:40,height:20, margin: 10}}/>  
             
           </TouchableOpacity>
+
 
    </View>  
 

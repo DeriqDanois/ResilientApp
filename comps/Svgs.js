@@ -1,5 +1,5 @@
 import React from 'react'
-import Svg, { Path, G, Rect, Defs, ClipPath, Circle } from 'react-native-svg'
+import Svg, { Path, G, Rect, Defs, ClipPath, Circle, Image } from 'react-native-svg'
 
 
 export const LogoAndHexagon = props => (
@@ -115,14 +115,14 @@ export const BackArrow = props => (
 
 
 export const TabBar = props => (
-  <Svg viewBox="0 0 450 85.8" {...props}>
-    <Path
-      d="M224.4 63.6c27.2 0 49.2-22 49.2-49.2 0-7.3 5.2-14.4 12.5-14.4h128.5C434.2 0 450 15.8 450 35.4c0 1 0 2-.1 3h.1v32.4H0V38.4h.1c-.1-1-.1-2-.1-3C0 15.8 15.8 0 35.4 0h127.3c7.3 0 12.5 7.1 12.5 14.4 0 27.2 22 49.2 49.2 49.2z"
-      fillRule="evenodd"
-      clipRule="evenodd"
-      fill="#fff"
-    />
-  </Svg>
+  <Svg viewBox="0 0 1058.4 196.08" {...props}>
+  <Path
+    d="M527.79 176.11c63.97 0 115.72-60.92 115.72-136.25 0-20.2 12.23-39.86 29.4-39.86h302.23c46.1 0 83.26 43.75 83.26 98.04 0 2.77 0 5.54-.24 8.31h.24v89.73H0v-89.73h.24C0 103.58 0 100.81 0 98.04 0 43.75 37.16 0 83.26 0h299.41c17.17 0 29.4 19.66 29.4 39.89 0 75.3 51.74 136.22 115.72 136.22z"
+    fillRule="evenodd"
+    clipRule="evenodd"
+    fill="#fff"
+  />
+</Svg>
 )
 
 export const DiscussionIconInActive = props => (
@@ -157,7 +157,6 @@ export const DiscussionIconActive = props => (
     />
   </Svg>
 )
-
 
 export const ExploreIconInActive = props => (
   <Svg width={60} height={59} fill="none" {...props}>

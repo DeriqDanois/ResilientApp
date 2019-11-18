@@ -13,23 +13,19 @@ const SavedDiscussions = props => {
 
     const contactName = "Saved Discussion";
 
-
-
     return (
-
 
         <SafeAreaView style={SavedDiscussionStyles.containertwo}>
 
             <BackButtonHeader
-                height={50}
+                borderBottomColor={'rgba(52, 52, 52, 0.1)'}
+                height={100}
+                border={1}
                 Header={"Saved Discussions"}
             />
 
 
             <View style={{ flex: 1, width: '100%' }}>
-
-
-
 
                 <ScrollView
                     horizontal={false}
@@ -48,8 +44,6 @@ const SavedDiscussions = props => {
                 </ScrollView>
 
             </View>
-
-
 
         </SafeAreaView>
 

@@ -8,6 +8,7 @@ import { View,
     ScrollView,
     Button } from 'react-native';
 import DiscussionCardStyles from '../styles/ComponentStyles/DiscussionCardStyles';
+import { withNavigation } from 'react-navigation';
 
 function DiscussionCard({renderBookmark = true, ...props}){
   
@@ -29,6 +30,13 @@ function DiscussionCard({renderBookmark = true, ...props}){
         // </TouchableOpacity>
             )
         }
+
+        <TouchableOpacity
+            style={{flex:1,}}
+            onPress={()=>{
+                props.navigation.navigate("DiscussionTopic")
+            }}>
+
         
     <View style={DiscussionCardStyles.WhiteCard}>
         
@@ -70,13 +78,15 @@ function DiscussionCard({renderBookmark = true, ...props}){
 
 </View>
 
+</TouchableOpacity>
+
         </View>
 
 
     )
 }
 
-export default DiscussionCard;
+export default withNavigation(DiscussionCard);
 
 
 //make discussion card with text, img, icon

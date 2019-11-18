@@ -12,11 +12,11 @@ export const DrawerComponent = props => (
    
   
     <View style={HamburgerStyles.container}>
-        <View style={{borderBottomColor:'grey', borderBottomWidth:1}}>
+        <View style={{ borderBottomWidth:1, borderBottomColor: 'rgba(52, 52, 52, 0.1)'}}>
             <View>
                 <View style={{ flexDirection:'row'}}>
                     <Image 
-                        source={{uri: 'http://www.themes-lab.com/traqs/assets/global/images/avatars/avatar1_big.png'}}
+                          source={require('../Assets/avatars/PNGs/Girl1-1.png')}
                         style={{ width:80, height:80}}>
                     </Image>
 
