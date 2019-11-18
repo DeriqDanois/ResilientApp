@@ -41,8 +41,9 @@ const ImageSlider = props => {
               //Render to map out my image array into src of image component
               renderItem={() => (
                 <Image 
-                style={{ flex: props.flex, borderBottomRightRadius:props.borderRadiusBottomRight}}
-                source={{ uri: props.Url }}>
+                style={{ resizeMode: 'cover', width:'100%', height:'100%', flex: props.flex, borderBottomRightRadius:props.borderRadiusBottomRight}}
+                source={require('../Assets/Imgs/home1.jpg')}>
+                {/* source={{ uri: props.Url }}> */}
               </Image>
               )}
               sliderWidth={Dimensions.get("window").width}

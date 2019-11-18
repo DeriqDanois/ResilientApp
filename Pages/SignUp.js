@@ -87,7 +87,8 @@ const SignUp = props => {
           setError("Password is too short")
           } 
         else {
-          props.navigation.navigate('AddEmergencyContact')} 
+          props.navigation.navigate('AddEmergencyContact')
+        } 
         }}>
         <Text style={stylesSignUp.buttonsText}>Sign Up</Text>
       </TouchableOpacity>

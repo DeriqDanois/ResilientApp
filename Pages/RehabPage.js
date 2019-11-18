@@ -31,7 +31,7 @@ const RehabPage = props => {
           showsVerticalScrollIndicator={false}
           style={RehabPageStyles.scrollView}>
         <ImageSlider
-        Url={"https://lonelyplanetimages.imgix.net/a/g/hi/t/3cb45f6e59190e8213ce0a35394d0e11-nice.jpg?sharp=10&vib=20&w=1200'"}
+        Url={['../Assets/avatars/PNGs/Girl1-1.png',]}
         flex={1}
         borderRadiusBottomRight={50} />
         <Text style={RehabPageStyles.type}>{"Safe injection Site"}</Text>
