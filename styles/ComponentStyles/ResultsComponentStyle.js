@@ -1,44 +1,69 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet, Dimensions } from 'react-native';
 
 const RehabResultsStyle = StyleSheet.create({
-    RehabDescription: {
+    rehabAddress: {
         fontSize: 11,
+        flex:2
     },
+
+    RehabDistance:{
+        fontSize:10,
+        flex:0.3,
+    },
+
     RehabName: {
         fontSize: 19,
+        margin: "2%",
     },
-    containertwo: {
-        flex:1,
-        flexDirection:'row',
-        backgroundColor: 'white',
-        shadowOffset:{ width: 2, height: 2 },
-        shadowColor: 'black',
-        shadowOpacity: 0.2,
-        borderTopLeftRadius: 14,
-        borderTopRightRadius: 14,
-        borderBottomRightRadius: 14,
-        borderBottomLeftRadius: 14,
-        margin: 8,
+
+    AddressBox:{
+        height:20,
+        width:60,
+        flex:1
     },
-    ImageStyles:{
-        height:115,
-        width: 160,
-        borderTopLeftRadius: 14,
-        borderTopRightRadius: 14,
-    },
+    
     bookMarkIcon: {
-        width:50, 
-        height:50, 
+        width:25, 
+        height:25, 
         borderRadius:60, 
         position:'absolute', 
         backgroundColor:'white',
         justifyContent:'center', 
         alignItems:'center', 
+        margin:"2%",
         left:"83%",
         shadowOffset:{  width: 5,  height:5,  },
         shadowColor: 'black',
         shadowOpacity: 0.2, 
     },
+    RehabDescription:{
+        fontSize:14,
+        flex:1,
+        
+    },
+ 
+    RatingContainer:{
+        flexDirection:'row', 
+        width:300, 
+        marginTop:6
+    },
+
+    RatingNum: {
+        flex:0.15, 
+        fontSize:12, 
+        justifyContent:'center'
+    },
+
+    AddressAndKm: {
+        flexDirection:"row", 
+        width:"100%",
+
+        
+    }
+
+
+
+
 })
 export default RehabResultsStyle;
 

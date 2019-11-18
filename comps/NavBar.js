@@ -11,7 +11,7 @@ const NavBar = props => {
 
     const left = 0;
     const right = 0;
-    const SosBottom = 30;
+    const SosBottom = 35;
     const SosButtonDim = 97;
     const tabBarWidth = 396;
     const tabBarHieght = 79;

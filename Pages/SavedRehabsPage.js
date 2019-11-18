@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
-import { View, Text, TextInput, TouchableOpacity, Image, SafeAreaView, ScrollView } from 'react-native';
+import { View, Text, TextInput, TouchableOpacity, Image, SafeAreaView, ScrollView, Dimensions } from 'react-native';
 import SavedRehabsPageStyle from '../styles/PageStyles/SavedRehabPageStyle';
 import NavBar from '../comps/NavBar';
 import RehabResultsComponent from '../comps/RehabResultsComponent';
@@ -51,13 +51,20 @@ const SavedRehabsPage = props => {
                         imageUrl.map((obj, i) => (
                             <RehabResultsComponent
                                 key={i}
-                                width={"100%"}
-                                height={115}
+                                width={Dimensions.get("window").width/1.11}
+                                height={Dimensions.get("window").height/4.5}
+                                imageHeight={"120%"}
                                 BorderRadiusLeft={14}
                                 BorderRadiusRight={14}
                                 description={obj.id}
                                 rehabName={"hello"}
-                                imageUrl={obj.url} />
+                                imageUrl={obj.url}
+                                renderRatings={true}
+                                Distance={"2.1km"}
+                                RehabDistanceNumFlex={1}
+                                addressAdnDistanceFlexDirectio={"row"}
+                              
+                                 />
                         ))
                     }
                 </ScrollView>

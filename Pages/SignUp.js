@@ -4,10 +4,6 @@ import stylesSignUp from '../styles/PageStyles/SignupStyles';
 import * as icon from '../comps/Svgs'
 
 
-
-
-
-
 const SignUp = props => {
   const [signup, setSignUp] = useState(false);
 

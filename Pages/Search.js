@@ -61,14 +61,18 @@ const Search = props => {
                                 imageUrl.map((obj, i) => (
                                     <RehabResultsComponent
                                         key={i}
-                                        width={160}
-                                        height={115}
+                                        width={Dimensions.get("window").width/2.58}
+                                        height={Dimensions.get("window").height/4.6}
+                                        imageHeight={"120%"}
                                         renderBookmark={false}
+                                        renderRatings={false}
                                         BorderRadiusLeft={14}
                                         BorderRadiusRight={14}
                                         description={obj.id}
                                         rehabName={"hello"}
-                                        imageUrl={obj.url} />
+                                        imageUrl={obj.url}
+                                        // Distance={"4.0km"}
+                                        RehabDistanceNumFlex={0.6} />
                                 ))
                             }
 
@@ -87,14 +91,19 @@ const Search = props => {
                                 imageUrl.map((obj, i) => (
                                     <RehabResultsComponent
                                         key={i}
-                                        width={160}
-                                        height={115}
+                                        width={Dimensions.get("window").width/2.58}
+                                        height={Dimensions.get("window").height/4.6}
+                                        imageHeight={"120%"}
                                         renderBookmark={false}
+                                        renderRatings={false}
                                         BorderRadiusLeft={14}
                                         BorderRadiusRight={14}
                                         description={obj.id}
                                         rehabName={"hello"}
-                                        imageUrl={obj.url} />
+                                        imageUrl={obj.url}
+                                        // Distance={"4.0km"} 
+                                        RehabDistanceNumFlex={0.6}
+                                        />
                                 ))
                             }
 
@@ -114,14 +123,19 @@ const Search = props => {
                                 imageUrl.map((obj, i) => (
                                     <RehabResultsComponent
                                         key={i}
-                                        width={160}
-                                        height={115}
+                                        width={Dimensions.get("window").width/2.58}
+                                        height={Dimensions.get("window").height/4.6}
+                                        imageHeight={"120%"}
                                         renderBookmark={false}
+                                        renderRatings={false}
                                         BorderRadiusLeft={14}
                                         BorderRadiusRight={14}
                                         description={obj.id}
                                         rehabName={"hello"}
-                                        imageUrl={obj.url} />
+                                        imageUrl={obj.url}
+                                        // Distance={"4.0km"}
+                                        RehabDistanceNumFlex={0.6}
+                                         />
                                 ))
                             }
 
