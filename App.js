@@ -21,6 +21,7 @@ import SavedDiscussions from './Pages/SavedDiscussionPage';
 import ProfilePage from './Pages/ProfilePage'
 import EditEmergency from './Pages/EditEmergency'
 import LeaveReview from './Pages/LeaveReviewPage'
+import OverView from './comps/OverView'
 
 
 const AppNavigator = createStackNavigator(
@@ -37,14 +38,15 @@ const AppNavigator = createStackNavigator(
     SosPage: { screen:SosPage },
     ProfilePage: { screen:ProfilePage },
     EditEmergency: { screen:EditEmergency },
-    LeaveReview: {screen:LeaveReview}
+    LeaveReview: {screen:LeaveReview},
+    OverView: {screen:OverView}
    
     
   },
   {
     //Initial Screen
     headerMode: 'none',
-    initialRouteName: 'Login'
+    initialRouteName: 'RehabPage'
   },
 );
 

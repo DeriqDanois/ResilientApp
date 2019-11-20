@@ -21,6 +21,7 @@ import BackButtonHeader from '../comps/BackButtonHeader';
 import ImageSlider from '../comps/imageSlider';
 import SosPage from '../Pages/SosPage';
 import EditEmergency from '../Pages/EditEmergency';
+import OverView from '../comps/OverView'
 
 
 
@@ -44,6 +45,9 @@ storiesOf("Navigation Components", module)
     })
     .add("SearchBar", ()=>{
         return <SearchBar/>
+    })
+    .add("OverView", ()=>{
+        return <OverView/>
     })
 
 
