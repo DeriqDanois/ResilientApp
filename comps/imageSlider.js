@@ -30,7 +30,7 @@ const ImageSlider = props => {
       <TouchableOpacity 
           style={{width:100, height:100, position:'absolute', zIndex:1, margin:'5%'}}
           onPress={()=>{
-            props. navigation.navigate('Search')}}>
+            props.navigation.goBack()}}>
         
           <icon.BackArrow width={iconDim} height={iconDim} />
           </TouchableOpacity>

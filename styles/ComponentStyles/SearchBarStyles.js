@@ -25,8 +25,9 @@ const SearchBarStyles = StyleSheet.create({
         backgroundColor:'white',
         borderRadius: 8,
         flexDirection:'row', 
-        shadowOffset:{  width: 2,  height:2,  },
+        shadowOffset:{  width: 0,  height:0},
         shadowColor: 'black',
+        shadowRadius:7,
         shadowOpacity: 0.2,
       
     },

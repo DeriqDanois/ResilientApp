@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { Dimensions, View, Text, TextInput, TouchableOpacity, Image, SafeAreaView, ScrollView } from 'react-native';
-import DiscussionStyles from '../styles/PageStyles/DiscussionStyles';
+import { View, Text, TextInput, TouchableOpacity, Image, SafeAreaView, ScrollView } from 'react-native';
 import NavBar from '../comps/NavBar';
 import BackButtonHeader from '../comps/BackButtonHeader';
 import DiscussionTopicStyles from '../styles/PageStyles/DiscussionTopicStyles';
@@ -10,7 +9,7 @@ const DiscussionTopic = props => {
 
     return (
     
-    <SafeAreaView>
+    <SafeAreaView style={{flex:1}}>
         
         <BackButtonHeader
                 borderBottomColor={'rgba(52, 52, 52, 0.1)'}
@@ -18,15 +17,10 @@ const DiscussionTopic = props => {
                 height={100}
                 Header={"Discussions"}
             />
-
-   
-
-        
-            
+  
             <ScrollView
                 horizontal={false}
-                showsVerticalScrollIndicator={false}
-                style={DiscussionStyles.scrollView}>
+                showsVerticalScrollIndicator={false}>
 
         <View style={DiscussionTopicStyles.Container}>
 
@@ -125,7 +119,7 @@ const DiscussionTopic = props => {
 
     <TextInput
     // how to do textinput border? border:1, borderColor:"#568C9E"
-    style={{flex:3, height:'60%', borderColor:"#568C9E", borderWidth:1, borderRadius:30, alignSelf:'center', marginRight:"13%"}}
+    style={{flex:3, height:'60%', borderColor:"#568C9E", paddingLeft:"2%", borderWidth:1, borderRadius:10, alignSelf:'center', marginRight:"13%"}}
     placeholder="Add a comment" />
 
     </View>
@@ -133,8 +127,7 @@ const DiscussionTopic = props => {
     </View>
 
         </ScrollView>
-        {/* <NavBar /> */}
-
+            <NavBar />
     </SafeAreaView>
 )
 }

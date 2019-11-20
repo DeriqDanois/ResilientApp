@@ -4,6 +4,7 @@ import { DrawerItems } from 'react-navigation-drawer';
 import HamburgerStyles from '../styles/ComponentStyles/HamburgerStyles';
 
 
+
 const Username = "Username"
 
 
@@ -40,7 +41,9 @@ export const DrawerComponent = props => (
     
 
         <View style={{alignItems:'center', justifyContent:'center'}}>
-            <DrawerItems {...props} />
+            
+           <DrawerItems {...props} />
+           
         </View>
 
     

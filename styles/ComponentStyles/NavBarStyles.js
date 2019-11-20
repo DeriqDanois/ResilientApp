@@ -3,15 +3,15 @@ import { StyleSheet, ImageBackground } from 'react-native';
 const NavBarStyles = StyleSheet.create({
  
     container: {
-        alignItems:'center', 
-        height:"6%",
+        flex:1,
+        alignItems:'center',
+        justifyContent:"flex-end", 
         width:'100%',
-        shadowOffset:{  width: -2,  height:-2,},
+        shadowOffset:{  width: 0,  height:0},
         shadowColor: 'black',
-        shadowOpacity: 0.2,
+        shadowRadius:12,
+        shadowOpacity: 0.25,
         backfaceVisibility:'hidden',
-        
-      
     }
 
     

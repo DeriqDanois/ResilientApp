@@ -70,8 +70,10 @@ const SavedRehabsPage = props => {
                 </ScrollView>
 
             </View>
-
-            <NavBar />
+            <View>
+                <NavBar />
+            </View>
+           
 
         </SafeAreaView>
     )

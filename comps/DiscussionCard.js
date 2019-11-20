@@ -21,18 +21,11 @@ function DiscussionCard({renderBookmark = true, ...props}){
         <Image 
             style={DiscussionCardStyles.Bookmark}
             source={require('../Assets/PNGs/savedIcon.png')}/>
-        //     <TouchableOpacity
-        //     style={RehabPageStyles.bookMarkIcon}
-        //         onPress={()=>{
-        //             alert("Added To Saved Rehabs")
-        //         }}>
-        //         <icon.BookMarkIcon width={iconDim} height={iconDim} />
-        // </TouchableOpacity>
             )
         }
 
         <TouchableOpacity
-            style={{flex:1,}}
+            style={{flex:1}}
             onPress={()=>{
                 props.navigation.navigate("DiscussionTopic")
             }}>
@@ -43,10 +36,10 @@ function DiscussionCard({renderBookmark = true, ...props}){
         <View style={{flex:4, flexDirection:"row"}}>
             <Image
             style={DiscussionCardStyles.Avatar}
-            source={require('../Assets/avatars/PNGs/Girl3-3.png')}/>
+            source={props.avatarImg}/>
             
         <Text style={DiscussionCardStyles.Text}>
-            Taken off pain meds after 10 years because people are...
+            {props.DiscussionTitle}
         </Text>
         </View> 
 
@@ -59,17 +52,17 @@ function DiscussionCard({renderBookmark = true, ...props}){
        
        <View style={{flex:1}}>
            <Text style={DiscussionCardStyles.Upvote}>
-           12
+           {props.upVoteNum}
            </Text>
         </View>
 
     <View style={{flex:2, flexDirection:"row"}}>
         <Text style={DiscussionCardStyles.PostStatus}>
-       10 mins ago
+       {props.timePosted}
        </Text>
 
        <Text style={DiscussionCardStyles.PostStatus}>
-       2 answers
+       {props.answerNum} answers
        </Text>
 
     </View>

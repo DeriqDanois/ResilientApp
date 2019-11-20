@@ -2,11 +2,16 @@ import React from 'react'
 import { View, Text, TextInput, TouchableOpacity, Image, SafeAreaView, ScrollView} from 'react-native';
 import {useState} from 'react'
 import DetailsCardStyles from '../styles/ComponentStyles/DetailsCardStyles';
+import { withNavigation } from 'react-navigation';
 import { Rating, AirbnbRating } from 'react-native-ratings';
 
 
+
 //  Overview tab below
+
+
 function Reviews(props){
+    
 
 
     return(
@@ -18,18 +23,26 @@ function Reviews(props){
 
             <View starContainerStyle={DetailsCardStyles.StarBox}>
 
-            <Text style={{textAlign:'center', marginTop:"5%", marginBottom:'5%'}}>Rate and Review</Text>
+            <Text style={{textAlign:'center', marginTop:"5%", marginBottom:'5%', fontWeight:'bold', color:'#568c9e'}}>Rate and Review</Text>
   
                     {/* Ratings */}
-                    <AirbnbRating
-                    count={5}
-                    showRating={false}
-                    defaultRating={props.Ratings}
-                    size={25}
-                    selectedColor={'#002F43'}
-                    
-                    /> 
+                 
+                        <AirbnbRating
+                        count={5}
+                        showRating={false}
+                        defaultRating={props.Ratings}
+                        size={25}
+                        selectedColor={'#568c9e'}
+                        onFinishRating={(t) =>{
+                                props. navigation.navigate("LeaveReview");
+                         
+                                
+                        }}/>
+                        
+              
+         
 
+                    
 
             </View>   
         
@@ -47,4 +60,4 @@ function Reviews(props){
 
 
 
-   export default Reviews;
+   export default withNavigation(Reviews);

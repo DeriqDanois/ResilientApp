@@ -29,15 +29,14 @@ const EditEmergencyPageStyles = StyleSheet.create({
         paddingTop:'10%', 
         paddingRight:'5%', 
         fontSize:16,
-        marginBottom:20
+        marginBottom:"3%",
      
     },
 
     HeaderTextContainer: {
-        borderBottomColor:'grey',
+        borderBottomColor:'#DADADA',
         borderBottomWidth:1,
         width: Dimensions.get("window").width/1.2,
-        marginBottom:"6%"
     },
     PhoneNumber: {
         fontSize:18, 
@@ -47,7 +46,7 @@ const EditEmergencyPageStyles = StyleSheet.create({
     ImageStyles: {
         width: 30, 
         height: 30, 
-        marginTop:'25%'
+        marginTop:'20%'
     },
     EditButtonRow: {
 

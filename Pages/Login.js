@@ -19,67 +19,62 @@ const Login = props => {
 
       <View style={LoginStyles.container}>
 
-        <Image
-          style={LoginStyles.LoginImage}
-          source={{ uri: 'https://bit.ly/2NMonRR' }}>
-        </Image>
+          <Image
+            style={LoginStyles.LoginImage}
+            source={{ uri: 'https://bit.ly/2NMonRR' }}>
+          </Image>
 
-        <View style={LoginStyles.Logo}>
-      
-          <icon.LogoAndHexagon fill={'white'} height={iconDim} width={iconDim} />
-          
-        </View>
+          <View style={LoginStyles.Logo}>
+              <icon.LogoAndHexagon fill={'white'} height={iconDim} width={iconDim} />
+          </View>
 
       </View>
 
       <View style={LoginStyles.OpaqueView}>
 
-        <TouchableOpacity style={{ flex: 1 }}
-          onPress={() =>
-            props.navigation.navigate('Login')}><Text style={LoginStyles.SignUpText}>LOGIN</Text>
-        </TouchableOpacity>
+          <TouchableOpacity style={{ flex: 1 }}
+            onPress={() =>
+              props.navigation.navigate('Login')}><Text style={LoginStyles.SignUpText}>LOGIN</Text>
+          </TouchableOpacity>
 
-        <TouchableOpacity style={{ flex: 1, }}
-          onPress={() =>
-            props.navigation.navigate('SignUp')}><Text style={LoginStyles.SignUpText}>SIGN UP</Text>
-        </TouchableOpacity>
+          <TouchableOpacity style={{ flex: 1, }}
+            onPress={() =>
+              props.navigation.navigate('SignUp')}><Text style={LoginStyles.SignUpText}>SIGN UP</Text>
+          </TouchableOpacity>
+
       </View>
 
       {/* Inputs and button Below */}
 
       <View style={LoginStyles.LoginBottamHalf}>
 
-        <TextInput style={LoginStyles.inputStyle}
-        onChangeText={(t)=> {
-          setUsername(t)
-        }}
-          placeholder="USERNAME OR EMAIL"
-          placeholderTextColor="rgba(255, 255, 255, 0.9)">
-        </TextInput>
-
-        <TextInput style={LoginStyles.inputStyle}
-           onChangeText={(t)=> {
-             setPassword(t)
+          <TextInput style={LoginStyles.inputStyle}
+          onChangeText={(t)=> {
+            setUsername(t)
           }}
-          placeholder="PASSWORD"
-          placeholderTextColor="rgba(255, 255, 255, 0.9)">
-        </TextInput>
-         
+            placeholder="USERNAME OR EMAIL"
+            placeholderTextColor="rgba(255, 255, 255, 0.9)">
+          </TextInput>
 
-        <TouchableOpacity
-          style={LoginStyles.buttons}
-          onPress={() => {
-            if ( 1 === 10 ) {
-              props.navigation.navigate('Search')
-            } else {
-              setError("Username or Password Is Invalid")
-            }
-          }}>
-          <Text style={LoginStyles.buttonsText}>LOGIN</Text>
-      
-        </TouchableOpacity>
+          <TextInput style={LoginStyles.inputStyle}
+            onChangeText={(t)=> {
+              setPassword(t)
+            }}
+            placeholder="PASSWORD"
+            placeholderTextColor="rgba(255, 255, 255, 0.9)">
+          </TextInput>
+          
+
+          <TouchableOpacity
+            style={LoginStyles.buttons}
+            onPress={() => {
+                props.navigation.navigate('Search')
+            }}>
+            <Text style={LoginStyles.buttonsText}>LOGIN</Text>
         
-        <Text style={{color:"red"}}>{error}</Text>
+          </TouchableOpacity>
+          
+          <Text style={{color:"red"}}>{error}</Text>
         
 
       </View>

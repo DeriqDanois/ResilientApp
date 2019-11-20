@@ -38,7 +38,8 @@ const SearchBarResults = ({ }) => {
         <BackButtonHeader
           border={0}
           height={100}
-          Header={""} />
+          Header={""} 
+         />
 
         <SearchBar />
         {/* Results */}

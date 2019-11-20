@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, Image, SafeAreaView, ScrollView } from 'react-native';
-import DiscussionStyles from '../styles/PageStyles/DiscussionStyles';
 import NavBar from '../comps/NavBar';
 import BackButtonHeader from '../comps/BackButtonHeader';
 import DiscussionCard from '../comps/DiscussionCard';
@@ -27,19 +26,56 @@ const DiscussionPage = props => {
                 height={100}
                 border={1}
                 Header={"Discussions"}
+                renderBookmark={false}
+   
             />
             <ScrollView
                 horizontal={false}
-                showsVerticalScrollIndicator={false}
-                style={DiscussionStyles.scrollView}>
+                showsVerticalScrollIndicator={false}>
 
 
                 <View>
-                    <DiscussionCard renderBookmark={false}/>
-                    <DiscussionCard renderBookmark={false}/>
-                    <DiscussionCard renderBookmark={false}/>
-                    <DiscussionCard renderBookmark={false}/>
-                    <DiscussionCard renderBookmark={false}/>
+                    <DiscussionCard 
+                    renderBookmark={false}
+                    DiscussionTitle={"Taken off pain meds after 10 years because people are..."}
+                    upVoteNum={"12"}
+                    answerNum={"2"}
+                    timePosted={"2 mins ago"}
+                    avatarImg={require('../Assets/avatars/PNGs/Girl3-3.png')}
+                    />
+                    <DiscussionCard 
+                    renderBookmark={false}
+                    DiscussionTitle={"Taken off pain meds after 10 years because people are..."}
+                    upVoteNum={"12"}
+                    answerNum={"2"}
+                    timePosted={"2 mins ago"}
+                    avatarImg={require('../Assets/avatars/PNGs/Girl3-3.png')}
+                    />
+                    <DiscussionCard 
+                    renderBookmark={false}
+                    DiscussionTitle={"Taken off pain meds after 10 years because people are..."}
+                    upVoteNum={"12"}
+                    answerNum={"2"}
+                    timePosted={"2 mins ago"}
+                    avatarImg={require('../Assets/avatars/PNGs/Girl3-3.png')}
+                    />
+                    <DiscussionCard 
+                    renderBookmark={false}
+                    DiscussionTitle={"Taken off pain meds after 10 years because people are..."}
+                    upVoteNum={"12"}
+                    answerNum={"2"}
+                    timePosted={"2 mins ago"}
+                    avatarImg={require('../Assets/avatars/PNGs/Girl3-3.png')}
+                    />
+                    <DiscussionCard 
+                    renderBookmark={false}
+                    DiscussionTitle={"Taken off pain meds after 10 years because people are..."}
+                    upVoteNum={"12"}
+                    answerNum={"2"}
+                    timePosted={"2 mins ago"}
+                    avatarImg={require('../Assets/avatars/PNGs/Girl3-3.png')}
+                    />
+                
                 </View>
 
 

@@ -6,9 +6,7 @@ const SosPageStyles = StyleSheet.create({
        containertwo: {
             flex: 1,
           },
-          scrollView: {
-            marginHorizontal: 15,
-          },
+     
           CircleInnerText: {
               textAlign:'center',
               fontSize:20,
@@ -16,35 +14,65 @@ const SosPageStyles = StyleSheet.create({
           },
           descriptionText: {
             textAlign: 'center',
-            fontSize: 15,
+            fontSize: 20,
             paddingTop: 20,
-            color: 'grey'
+            color: 'grey',
+            textAlign:'left',
+            marginBottom:"5%"
           },
-          bulletedText: {
+          bulletedText: {        
             textAlign: 'center',
-            fontSize: 15,
-            paddingTop: 30,
+            lineHeight:35,
+            fontSize: 17,
             color: 'black',
+            fontWeight:'500',
+            textAlign:'left'
           },
-          bulletedText2: {
-            textAlign: 'center',
-            fontSize: 15,
-            color: 'black',
+      
+     
+
+      
+
+          // start  Emergency Contact Component Style
+
+          contactJohn: {
+            alignSelf:'center',
+            width:'90%',
+            height:"75%",
+            justifyContent:'center',
+            backgroundColor:'#A61B1D',
+            borderRadius:60,
+            borderWidth:9,
+            borderColor:'white',
+            shadowOffset:{  width: 2,  height:2,},
+            shadowColor: 'black',
+            shadowOpacity: 0.4,
+            shadowRadius: 13,
           },
-          johnDoeStyle: {
-            paddingTop:20,
-            fontSize: 18,
-            fontWeight:'bold',
-            paddingLeft: 15  
-          },
+
           phStyle: {
             paddingTop:13,
-            paddingLeft: '3%'
+            fontSize:23,
+            marginLeft:"9%"
           },
-          contactJohn: {
-            position:'absolute',
-            marginTop: '20%',
-            marginLeft:'35%'
+
+          johnDoeStyle: {
+            paddingTop:20,
+            fontSize: 20,
+            fontWeight:'bold',
+            paddingLeft: "10%",  
+          },
+
+          // end
+
+          editLinkText: { 
+            textDecorationLine:'underline', 
+            fontWeight:"500", 
+            textAlign: 'left', 
+            color: '#568c9e', 
+            marginTop:'6%',
+            marginLeft:'5%',
+            fontSize: 17 
           }
 
 

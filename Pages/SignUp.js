@@ -4,6 +4,7 @@ import stylesSignUp from '../styles/PageStyles/SignupStyles';
 import * as icon from '../comps/Svgs'
 
 
+
 const SignUp = props => {
   const [signup, setSignUp] = useState(false);
   const [ username, setUsername ] = useState("");
@@ -80,15 +81,15 @@ const SignUp = props => {
       <TouchableOpacity
         style={stylesSignUp.buttons}
         onPress={() => {
-          if( username.length >= 0 ){
-            setError("Please Enter a Username")
-            }
-          if( password.length <= 4 ) {
-          setError("Password is too short")
-          } 
-        else {
+        //   if( username.length >= 0 ){
+        //     setError("Please Enter a Username")
+        //     }
+        //   if( password.length <= 4 ) {
+        //   setError("Password is too short")
+        //   } 
+        // else {
           props.navigation.navigate('AddEmergencyContact')
-        } 
+    
         }}>
         <Text style={stylesSignUp.buttonsText}>Sign Up</Text>
       </TouchableOpacity>

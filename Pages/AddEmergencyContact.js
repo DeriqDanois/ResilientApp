@@ -47,10 +47,13 @@ const AddEmergencyContact = props => {
 
                         <View style={{ flex: 1, alignItems: 'center' }}>
                             <Text style={{ marginBottom: 10 }}> And / or </Text>
-                            <TextInput
-                                style={EmergencyContactStyles.RecommendedInput}
-                                placeholder="add 911 as Contact">
-                            </TextInput>
+                            <TouchableOpacity
+                                    onPress={()=>{
+                                        alert("911 added as emergency contact")
+                                    }}
+                                style={EmergencyContactStyles.RecommendedButton}>
+                                <Text style={{textAlign:'center', color:'#568C9E', fontWeight:'bold'}}>add 911 as Contact</Text>
+                            </TouchableOpacity>
                         </View>
 
                         <View style={{ flex: 1, marginTop: "5%" }}>

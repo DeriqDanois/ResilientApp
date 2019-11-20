@@ -88,12 +88,13 @@ const EmergencyContactStyles = StyleSheet.create({
        width:"70%",    
     },
 
-    RecommendedInput: {
+    RecommendedButton: {
+        
         alignSelf: "center",
         justifyContent: "center",
         textAlign: "center",
         width: '80%',
-        height:"45%",
+        height:"40%",
         borderColor: "#568C9E",
         borderWidth: 1,
         borderRadius: 12,

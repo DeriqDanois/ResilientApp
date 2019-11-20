@@ -19,13 +19,14 @@ const RehabPage = props => {
 
   return (
 
+    <SafeAreaView style={{flex:1}}>
+
 
     <View style={RehabPageStyles.containertwo}>
       
 
  
-   
-
+  
         <ScrollView
           horizontal={false}
           showsVerticalScrollIndicator={false}
@@ -39,9 +40,10 @@ const RehabPage = props => {
         </ScrollView>
     
 
-      < NavBar />
+  
     </View>
-
+      < NavBar />
+    </SafeAreaView>
   )
 }
 

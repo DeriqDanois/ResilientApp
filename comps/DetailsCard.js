@@ -19,13 +19,13 @@ function DetailsCard(props) {
     const [facilities, SetFacilities] = useState(0)
     const [reviews, SetReviews] = useState(0)
 
-    const [underline1, SetUnderline1] = useState(0)
-    const [underline2, SetUnderline2] = useState(0)
-    const [underline3, SetUnderline3] = useState(0)
+    const [Background1, SetBackground1] = useState("white")
+    const [Background2, SetBackground2] = useState("white")
+    const [Background3, SetBackground3] = useState("white")
 
     useEffect(() => {
         SetOverView(1)
-        SetUnderline1(1)
+        SetBackground1("#568C9E")
     }, []);
 
     return (
@@ -45,46 +45,46 @@ function DetailsCard(props) {
 
                     </View>
 
-                    <View style={{ marginTop: 10, flex: 1, flexDirection: "row", alignItems: 'center', justifyContent: 'center' }}>
+                    <View style={{ marginTop: 10, flex: 1, height:50, borderWidth:0.7, borderColor:'#DADADA', flexDirection: "row", alignItems: 'center', justifyContent: 'center' }}>
 
-                        <View style={{ flex: 1, borderBottomColor: '#568C9E', borderBottomWidth: underline1 }}>
+                        <View style={{ flex: 1, borderLeftWidth:0.5, borderColor:'#DADADA', height:'100%', justifyContent:'center', backgroundColor: Background1 }}>
                             <Text style={{ textAlign: 'center' }}
                                 onPress={() => {
                                     SetOverView(1)
                                     SetFacilities(0)
                                     SetReviews(0)
-                                    // Setting the underline to change
-                                    SetUnderline1(2)
-                                    SetUnderline2(0)
-                                    SetUnderline3(0)
+                                    // Setting the Background to change
+                                    SetBackground1("#568C9E")
+                                    SetBackground2("white")
+                                    SetBackground3("white")
 
-                                }}>OverView</Text>
+                                }}>Overview</Text>
                         </View>
 
-                        <View style={{ flex: 1, borderBottomColor: '#568C9E', borderBottomWidth: underline2 }}>
+                        <View style={{ flex: 1, borderLeftWidth:0.5, borderColor:'#DADADA', height:'100%', justifyContent:'center', backgroundColor: Background2 }}>
                             <Text style={{ textAlign: 'center' }}
                                 onPress={() => {
                                     SetFacilities(1)
                                     SetOverView(0)
                                     SetReviews(0)
-                                    // Setting the underline to change
-                                    SetUnderline1(0)
-                                    SetUnderline2(2)
-                                    SetUnderline3(0)
+                                    // Setting the Background to change
+                                    SetBackground1("white")
+                                    SetBackground2("#568C9E")
+                                    SetBackground3("white")
                                 }}>Facility</Text>
                         </View>
 
-                        <View style={{ flex: 1, borderBottomColor: '#568C9E', borderBottomWidth: underline3 }}>
+                        <View style={{ flex: 1, borderLeftWidth:0.5, borderColor:'#DADADA', height:'100%', justifyContent:'center', backgroundColor: Background3 }}>
                             <Text style={{ textAlign: 'center' }}
                                 onPress={() => {
                                     SetReviews(1)
                                     SetOverView(0)
                                     SetFacilities(0)
 
-                                    // Setting the underline to change
-                                    SetUnderline3(2)
-                                    SetUnderline2(0)
-                                    SetUnderline1(0)
+                                    // Setting the Background to change
+                                    SetBackground3("#568C9E")
+                                    SetBackground2("white")
+                                    SetBackground1("white")
                                 }}>Review</Text>
                         </View>
                     </View>

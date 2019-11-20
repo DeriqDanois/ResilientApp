@@ -17,9 +17,8 @@ const BackButtonHeaderStyles = StyleSheet.create({
           HeaderTextStyle:{
             fontSize:25,
             textAlign:'center',
-            position:'absolute',
-            left:'25%',
-            top:"34%"
+            flex:0.85,
+            marginTop:'7.8%'
           },
 
           

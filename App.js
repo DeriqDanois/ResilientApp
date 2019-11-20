@@ -2,7 +2,7 @@ import { createAppContainer } from 'react-navigation';
 import { createStackNavigator} from 'react-navigation-stack';
 import { createDrawerNavigator } from 'react-navigation-drawer';
 import {DrawerComponent} from './comps/Hamburger'
-import {View} from 'react-native'
+import {View, Image} from 'react-native'
 
 
 import React from 'react';
@@ -20,6 +20,8 @@ import SavedRehabsPage from './Pages/SavedRehabsPage';
 import SavedDiscussions from './Pages/SavedDiscussionPage';
 import ProfilePage from './Pages/ProfilePage'
 import EditEmergency from './Pages/EditEmergency'
+import LeaveReview from './Pages/LeaveReviewPage'
+
 
 const AppNavigator = createStackNavigator(
   {
@@ -28,11 +30,14 @@ const AppNavigator = createStackNavigator(
     AddEmergencyContact: { screen: AddEmergencyContact },
     Search: { screen:Search },
     RehabPage: { screen:RehabPage },
+    SavedRehabsPage: { screen:SavedRehabsPage },
     DiscussionTopic: { screen:DiscussionTopic },
     DiscussionPage: { screen:DiscussionPage },
+    SavedDiscussions: { screen:SavedDiscussions },
     SosPage: { screen:SosPage },
     ProfilePage: { screen:ProfilePage },
     EditEmergency: { screen:EditEmergency },
+    LeaveReview: {screen:LeaveReview}
    
     
   },
@@ -45,6 +50,7 @@ const AppNavigator = createStackNavigator(
 
 //hamburger menu
 const AppDrawerNavigator = createDrawerNavigator(
+
   {
     'Search Page': {
       screen: AppNavigator,

@@ -11,15 +11,15 @@ const NavBar = props => {
 
     const left = 0;
     const right = 0;
-    const SosBottom = 55;
-    const SosButtonDim = 97;
+    const SosBottom = -219;
+    const SosButtonDim = 86;
     const tabBarWidth = "100%";
-    const tabBarHieght = 79;
-    const tabBarTop = -130;
+    const tabBarHieght = 77;
+    const tabBarTop = 160;
     const exploreLeft = 50;
-    const exploreTop = -200;
-    const DiscussionLeft = 278;
-    const DiscussionTop = -280;
+    const exploreTop = 90;
+    const DiscussionLeft = 287;
+    const DiscussionTop = 13;
 
 
     return (

@@ -3,6 +3,7 @@ import React, { useState, useEffect, Linking } from 'react';
 import { View, Text, TextInput, TouchableOpacity, Image, SafeAreaView, ScrollView } from 'react-native';
 import SosPageStyles from '../styles/PageStyles/SosPageStyles';
 import BackButtonHeader from '../comps/BackButtonHeader';
+import EmergencyContact from '../comps/EmergencyContact'
 import * as icon from '../comps/Svgs'
 
 
@@ -23,69 +24,55 @@ const SosPage = props => {
                 height={100}
                 border={1}
                 Header={"Emergency Contact"}
+            
             />
 
-            <View style={{ flex: 1, width: '100%' }}>
+            <View style={{ flex: 1, width: '90%', alignSelf:'center' }}>
 
                 <ScrollView
                     horizontal={false}
-                    showsVerticalScrollIndicator={false}
-                    style={SosPageStyles.scrollView}>
+                    showsVerticalScrollIndicator={false}>
 
-                    <View>
-                        <Text style={SosPageStyles.descriptionText}>This will automatically:</Text>
-                        <Text style={SosPageStyles.bulletedText}>Text your current location to your contacts</Text>
-                        <Text style={SosPageStyles.bulletedText2}>Call your contacts with emergency voice message</Text>
-                    </View>
-                    <View style={{ paddingLeft: '4%', paddingTop: 20 }}>
-                        <Text 
-                        onPress={()=>{
-                            props.navigation.navigate("EditEmergency")
-                        }}
-                        style={{ textAlign: 'center', color: '#587a8b', paddingTop: 20, fontSize: 17 }}>
-                            Edit your emergency contacts
-                        </Text>
+                    <View style={{margin:'5%'}}>
+                        <Text style={SosPageStyles.descriptionText}> This will automatically:</Text>
+                        <Text style={SosPageStyles.bulletedText}>{" \u2022 Text your current location"}</Text>
+                        <Text style={SosPageStyles.bulletedText}>{" \u2022 Call with emergency voice message"}</Text>
 
-                        {/* //contact component starts from here */}
-
-                        <View style={{ flex: 1, flexDirection: 'row' }}>
-                            <View style={{ paddingLeft: '10%', paddingTop: '5%' }}>
-                                <Image
-                                    style={{ width: 20, height: 20 }}
-                                    source={{ uri: 'https://cdn.pixabay.com/photo/2012/04/26/19/43/profile-42914_1280.png' }}
-                                />
-                            </View>
-                            <View>
-                                <Text style={SosPageStyles.johnDoeStyle}>John Doe</Text>
-                                <Text style={SosPageStyles.phStyle}>+1(234)567-8900</Text>
-                            </View>
-                        </View>
-                        <View>
-                            <TouchableOpacity
-                                onPress={() => {
-                                    alert("hello")
-                                }}>
-                                <View style={{ position: 'relative' }}>
-                               
-                                    <icon.EmergencyButton width={iconDim} height={iconDim} />
-                                 
-                                </View>
-                                <View style={SosPageStyles.contactJohn}>
-                                    <Text style={{ color: 'white', fontWeight: 'bold' }}>CONTACT JOHN</Text>
-                                </View>
-                            </TouchableOpacity>
-                        </View>
+                            <Text 
+                            onPress={()=>{
+                                props.navigation.navigate("EditEmergency")
+                            }}
+                            style={SosPageStyles.editLinkText}>
+                                Edit your emergency contact 
+                            </Text>
                     </View>
 
-                    <View style={{ height: 200, width: 200 }}>
+                   
+                    {/* //contact component starts from here */}
 
-                    </View>
+                        <EmergencyContact
+                        phoneNum={"+1(250)719-2239"} 
+                        contactName={"John"}
+                        contactFullName={"John Doe"}
+                        topMargin={"2%"}
+                        />
+                        <EmergencyContact
+                        phoneNum={"+1(250)713-9999"} 
+                        contactName={"Jim"}
+                        contactFullName={"Jim Bean"}
+                        topMargin={"20%"}
+                        />
+                        <EmergencyContact
+                        phoneNum={"+1(250)713-9999"} 
+                        contactName={"Jim"}
+                        contactFullName={"Jim Bean"}
+                        topMargin={"2%"}
+                        />
 
+                    {/*  */}
 
                 </ScrollView>
-
             </View>
-
         </SafeAreaView>
 
     )
