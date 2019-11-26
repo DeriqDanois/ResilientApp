@@ -5,6 +5,7 @@ import SavedRehabsPageStyle from '../styles/PageStyles/SavedRehabPageStyle';
 import NavBar from '../comps/NavBar';
 import RehabResultsComponent from '../comps/RehabResultsComponent';
 import BackButtonHeader from '../comps/BackButtonHeader'
+import axios from '../axios'
 
 
 
@@ -15,17 +16,20 @@ const SavedRehabsPage = props => {
 
     const [imageUrl, setImgUrl] = useState([]);
 
+
     const getRehab = async () => {
-        var resp = await fetch("https://api.thecatapi.com/v1/images/search?limit=5");
-        var json = await resp.json();
+        var data = await axios('rehab_read', {});
+        console.log(data)
         // console.log(json);
-        setImgUrl(json);
+        // setImgUrl(json);
+        setImgUrl(data);
     }
 
     // Handle 
     useEffect(() => {
         getRehab();
     }, []);
+
 
 
     return (
@@ -56,15 +60,15 @@ const SavedRehabsPage = props => {
                                 imageHeight={"120%"}
                                 BorderRadiusLeft={14}
                                 BorderRadiusRight={14}
-                                description={obj.id}
-                                rehabName={"hello"}
-                                imageUrl={obj.url}
                                 renderRatings={true}
+                                stars={obj.ratings/10}
+                                starNum={obj.ratings}
                                 Distance={"2.1km"}
                                 RehabDistanceNumFlex={1}
                                 addressAdnDistanceFlexDirectio={"row"}
+                                {...obj}/>
                               
-                                 />
+                       
                         ))
                     }
                 </ScrollView>

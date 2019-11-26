@@ -11,6 +11,7 @@ const NavBarStyles = StyleSheet.create({
         shadowColor: 'black',
         shadowRadius:12,
         shadowOpacity: 0.25,
+    
 
     }
 

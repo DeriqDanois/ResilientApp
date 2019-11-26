@@ -24,17 +24,13 @@ const DetailsCardStyles = StyleSheet.create({
 
     }, 
     HeaderText:{
-        alignSelf:"center",
-        fontSize:16,
-        fontWeight:'bold',
+        textAlign:"left",
+        marginLeft:"5%",
+        margin:9,
+        fontSize:17,
+        fontWeight:'500',
    
     }, 
-
-    TypeofCenter:{
-        left: "10%",
-        fontSize:12,
-       color:'grey',
-    },
 
    
     containertwo: {

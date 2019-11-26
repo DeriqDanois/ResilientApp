@@ -5,19 +5,21 @@ const EmergencyContactStyles = StyleSheet.create({
     HeaderText: {
         marginTop:'5%',
         flex:1,
-        color: "#568C9E",
+        color: "black",
         fontSize: 23,
         textAlign: "left",
+        fontWeight: "600"
     },
     
     HeaderTextSmall: {
         marginTop:"1%",
         letterSpacing: 0.7,
-        fontSize:12,
+        fontSize:16,
         textAlign: 'left',
         left: 5,
         flex: 1,
         width:"100%",
+        color:"grey"
     },
 
     inputStyle: {
@@ -43,6 +45,7 @@ const EmergencyContactStyles = StyleSheet.create({
     buttonsText: {
         fontSize: 18,
         color: "white",
+        fontWeight: "bold"
     },
 
     buttons: {
@@ -54,7 +57,7 @@ const EmergencyContactStyles = StyleSheet.create({
         alignSelf:"center",
         justifyContent: "center",
         marginBottom:20,
-        height: "47%",
+        height: "35%",
         width:"60%",
         backgroundColor:"#568C9E",
         // shadowColor: 'black',

@@ -27,6 +27,7 @@ const DiscussionPage = props => {
                 border={1}
                 Header={"Discussions"}
                 renderBookmark={false}
+
    
             />
             <ScrollView

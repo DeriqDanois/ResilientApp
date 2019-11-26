@@ -13,7 +13,7 @@ var longDescriptionStatic = "Founded in 1993 and located in both Metro Vancouver
 
 // Main Card
 
-function DetailsCard(props) {
+function DetailsCard({ description, stars, starNum, address, phonenum, websitelink, name, type, ...props}) {
 
     const [overview, SetOverView] = useState(0)
     const [facilities, SetFacilities] = useState(0)
@@ -40,8 +40,9 @@ function DetailsCard(props) {
 
 
 
-                        <Text style={DetailsCardStyles.TypeofCenter}>{props.Type}</Text>
-                        <Text style={DetailsCardStyles.HeaderText}>{props.Name}</Text>
+                 
+                        <Text style={DetailsCardStyles.HeaderText}>{name}</Text>
+
 
                     </View>
 
@@ -93,11 +94,13 @@ function DetailsCard(props) {
                     {/* Show OverView if OverView is clicked if else show nothing */}
                     {
                         (overview === 1) ? <OverView
-                            PhoneNumber={"250-714-8000"}
-                            LongDescription={longDescriptionStatic}
-                            Direction={"1789 Willingdon ave"}
-                            ReviewNum={"(50 Reviews)"}
-                            WebsiteLink={"facebook"}
+                            PhoneNumber={phonenum}
+                            LongDescription={description}
+                            Direction={address}
+                            reviewNum={stars}
+                            WebsiteLink={websitelink}
+                            ratingNum={starNum}
+                            starsCount={starNum}
                         /> : null
                     }
                     {/* Show facility if facility is clicked if else show nothing */}

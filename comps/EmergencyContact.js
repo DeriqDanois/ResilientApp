@@ -1,7 +1,7 @@
 
                        
-import React, { useState, useEffect, Linking } from 'react';
-import { View, Text, TextInput, TouchableOpacity, Image, SafeAreaView, ScrollView } from 'react-native';
+import React, { useState, useEffect } from 'react';
+import { View, Text, TextInput, TouchableOpacity, Image, SafeAreaView, ScrollView, Linking, Alert, Platform} from 'react-native';
 import SosPageStyles from '../styles/PageStyles/SosPageStyles';
 import BackButtonHeader from '../comps/BackButtonHeader';
 import * as icon from '../comps/Svgs'
@@ -31,10 +31,12 @@ const EmergencyContact = props => {
             <TouchableOpacity
                 style={{marginTop:"8%"}}
                 onPress={() => {
-                    alert("hello")
+                 
+                    callNumber("250-713-8300")
+                    
                 }}>
                 <View style={SosPageStyles.contactJohn}>
-            <Text style={{ textAlign:'center', color: 'white', fontSize:24, fontWeight: 'bold' }}>CONTACT {props.contactName}</Text>
+            <Text style={{ textAlign:'center', color: 'white', fontSize:24, fontWeight: 'bold' }}>Contact {props.contactName}</Text>
                 </View>
             </TouchableOpacity>
         </View>

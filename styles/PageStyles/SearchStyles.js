@@ -5,11 +5,13 @@ import { StyleSheet } from 'react-native';
 const SearchStyles = StyleSheet.create({
 
     HeaderText: {
-        color: "#568C9E",
-        fontSize: 24,
+        color: "black",
+        fontSize: 20,
         textAlign: 'left',
         width: '70%',
         marginTop: 18,
+        fontWeight: "500",
+        marginBottom: "2%"
     },
 
 

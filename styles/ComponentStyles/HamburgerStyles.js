@@ -6,7 +6,7 @@ const HamburgerStyles = StyleSheet.create({
     container: {
       flex: 1,
       backgroundColor: 'white',
-      padding: 25,
+   
       justifyContent: 'space-around',
     },
     EditProfileText: {
@@ -15,7 +15,7 @@ const HamburgerStyles = StyleSheet.create({
       paddingVertical: 6
     },
     UsernameText: {
-      fontSize: 30,
+      fontSize: 22,
       letterSpacing: 0.4,
     },
 

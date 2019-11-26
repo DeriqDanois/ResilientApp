@@ -43,11 +43,14 @@ const AppNavigator = createStackNavigator(
    
     
   },
-  {
-    //Initial Screen
+  {   //DrawerNavigatorConfig
+    initialRouteName: 'Login',
     headerMode: 'none',
-    initialRouteName: 'RehabPage'
-  },
+    contentOptions: {
+    },
+    drawerWidth: 280,
+    drawerPosition: 'left',
+}
 );
 
 //hamburger menu

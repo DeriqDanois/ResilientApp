@@ -15,6 +15,7 @@ const DiscussionCardStyles = StyleSheet.create({
     shadowColor: 'black',
     shadowOpacity: 0.5,
     shadowRadius: 20,
+    backgroundColor:'white',
     width:"70%",
     margin:"auto"
     }

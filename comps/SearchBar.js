@@ -18,10 +18,14 @@ function SearchBar(props) {
     var userInput = ""
 
     return (
+        
 
         <View style={SearchBarStyles.HeaderContainer}>
 
+           
+
             <TextInput 
+            placeholder = "Try 'injection' site"
                 onChangeText={(val) => { 
                     userInput = val,
                  console.log(userInput) 

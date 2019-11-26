@@ -19,15 +19,13 @@ const AddEmergencyContact = props => {
                         <Text style={EmergencyContactStyles.HeaderText}>Add a Emergency Contact</Text>
 
                         <Text style={EmergencyContactStyles.HeaderTextSmall}>
-                            Resilient Helps send alerts to your friends
-                            or loved ones in case of an emergency
+                        Resilient helps send alert to your friends or loved ones in case of an emergency
                         </Text>
 
-                        <Text style={EmergencyContactStyles.HeaderTextSmall}>All confedential</Text>
+                        <Text style={EmergencyContactStyles.HeaderTextSmall}>All information is confidential</Text>
 
                         <Text style={EmergencyContactStyles.HeaderTextSmall}>
-                            Resilient Helps send alerts to your friends
-                             or loved ones in case of an emergency
+                        You can always add or edit the contact information later
                         </Text>
 
                     </View>
@@ -52,7 +50,8 @@ const AddEmergencyContact = props => {
                                         alert("911 added as emergency contact")
                                     }}
                                 style={EmergencyContactStyles.RecommendedButton}>
-                                <Text style={{textAlign:'center', color:'#568C9E', fontWeight:'bold'}}>add 911 as Contact</Text>
+                                <Text style={{textAlign:'center', color:'#568C9E', fontWeight:'bold'}}>
+                                    Add 911 as an Emergency Contact (Recommended)</Text>
                             </TouchableOpacity>
                         </View>
 
@@ -61,7 +60,7 @@ const AddEmergencyContact = props => {
                                 style={EmergencyContactStyles.buttons}
                                 onPress={() =>
                                     props.navigation.navigate('Search')}>
-                                <Text style={EmergencyContactStyles.buttonsText}>Add Emergency Contact</Text>
+                                <Text style={EmergencyContactStyles.buttonsText}>SIGN UP</Text>
                             </TouchableOpacity>
                         </View>
 

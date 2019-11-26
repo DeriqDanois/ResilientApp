@@ -9,9 +9,10 @@ import RehabResultsStyle from '../styles/ComponentStyles/ResultsComponentStyle';
 
 
 
-function RehabResultsComponent({ renderBookmark = true, renderRatings = true, ...props }){
+function RehabResultsComponent({ renderBookmark = true, renderRatings = true, starsOfFive, distance, description, name, imgurl, address, stars, starNum, websitelink, phonenum, type, ...props }){
 
     const iconDim = 20
+    
   
     return (
         
@@ -35,7 +36,20 @@ function RehabResultsComponent({ renderBookmark = true, renderRatings = true, ..
       
          <TouchableOpacity style={{width:"100%", height:props.imageHeight}}
             onPress= {() => 
-                props.navigation.navigate("RehabPage")}>
+
+                // Pass data of indavidual rehabs to rehab page
+                props.navigation.navigate("RehabPage", {
+                    name1:name, 
+                    image:imgurl, 
+                    address:address, 
+                    star:stars, 
+                    starNum1:starNum,
+                    description1:description,
+                    phonenum1:phonenum,
+                    websitelink1:websitelink,
+                    type1:type
+                  
+                    })}>
 
                 <Image style={{
                         flex: 1,
@@ -45,16 +59,17 @@ function RehabResultsComponent({ renderBookmark = true, renderRatings = true, ..
                         borderTopRightRadius:props.BorderRadiusRight,
                         height:props.imageHeight
                         }} 
-                         source={{uri:props.imageUrl}} />
-                         
-                <Text style={RehabResultsComponenetStyle.RehabName}>{props.rehabName}</Text>
+                         source={{uri:imgurl}} />
+                         {/* Passing Address from db  */}
+                <Text style={RehabResultsComponenetStyle.RehabName}>{name}</Text>
                 
           
         <View style={{marginTop:10, marginLeft:"4%", flex:1}}>  
                 <View style={RehabPageStyles.AddressAndKm}>
                     {/* AdddressAnd Km */}
-                    <Text style={RehabResultsComponenetStyle.rehabAddress}>{props.description}</Text>
-                    <Text style={RehabResultsStyle.RehabDistance}>{props.Distance}</Text>
+                    <Text style={RehabResultsComponenetStyle.rehabAddress}>{address}</Text>
+                    <Text style={RehabResultsStyle.RehabDistance}>{distance}</Text>
+                    <Text></Text>
                 </View>
    
 
@@ -63,19 +78,18 @@ function RehabResultsComponent({ renderBookmark = true, renderRatings = true, ..
         {
             renderRatings && (
                 <View style={RehabPageStyles.RatingContainer}>
-                       <Text style={RehabPageStyles.RatingNum}>{"4.0"}</Text>
+                       <Text style={RehabPageStyles.RatingNum}>{stars}</Text>
                        
                        <AirbnbRating
                         style={{flex:1}}
-                       count={props.StarCount} 
-                       defaultRating={props.Rating}
+                       defaultRating={stars}
                        size={10}
                        selectedColor={'#002F43'}
                        showRating={false}
                        isDisabled={true}
                        /> 
 
-                        <Text style={{flex:1, fontSize:12, marginLeft:'3%'}}>{"(50)"}</Text>
+                        <Text style={{flex:1, fontSize:12, marginLeft:'3%'}}>{"(" + starNum + ")"}</Text>
                    </View> 
             )
         }

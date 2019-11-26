@@ -4,6 +4,8 @@ import SearchStyles from '../styles/PageStyles/SearchStyles';
 import NavBar from '../comps/NavBar';
 import RehabResultsComponent from '../comps/RehabResultsComponent';
 import SearchBar from '../comps/SearchBar'
+import axios from '../axios'
+
 
 
 
@@ -15,13 +17,15 @@ import SearchBar from '../comps/SearchBar'
 const Search = props => {
 
 
-    const [imageUrl, setImgUrl] = useState([]);
+    const [rehabs, setRehabs] = useState([]);
+    const [object, setObject] = useState([]);
 
     const getRehab = async () => {
-        var resp = await fetch("https://api.thecatapi.com/v1/images/search?limit=5");
-        var json = await resp.json();
+        var data = await axios('rehab_read', {});
+        console.log(data)
         // console.log(json);
-        setImgUrl(json);
+        // setRehabs(json);
+        setRehabs(data);
     }
 
     // Handle 
@@ -37,7 +41,7 @@ const Search = props => {
             <SafeAreaView style={SearchStyles.containertwo}>
 
                 <SearchBar />
-                {/* hAMBURGER end */}
+                {/* HAMBURGER end */}
 
                 <ScrollView
                     horizontal={false}
@@ -47,7 +51,7 @@ const Search = props => {
                     {/* The image text and short description from google places api will go into these below */}
 
                     {/* Header #1 */}
-                    <Text style={SearchStyles.HeaderText}>Safe Injection Sight</Text>
+                    <Text style={SearchStyles.HeaderText}>Safe Injection Sites</Text>
 
                     {/* Safe Injection site Results */}
                     <View style={{ flex: 1, flexDirection: "row" }}>
@@ -58,7 +62,7 @@ const Search = props => {
                             {/* Rehab results from api below*/}
 
                             {
-                                imageUrl.map((obj, i) => (
+                               rehabs.map((obj, i) => (
                                     <RehabResultsComponent
                                         key={i}
                                         width={Dimensions.get("window").width/2.58}
@@ -68,11 +72,10 @@ const Search = props => {
                                         renderRatings={false}
                                         BorderRadiusLeft={14}
                                         BorderRadiusRight={14}
-                                        description={obj.id}
-                                        rehabName={"hello"}
-                                        imageUrl={obj.url}
-                                        // Distance={"4.0km"}
-                                        RehabDistanceNumFlex={0.6} />
+                                        RehabDistanceNumFlex={0.6}
+                                        stars={obj.ratings/10}
+                                        starNum={ "(" + obj.ratings + ")"}
+                                        {...obj}/>
                                 ))
                             }
 
@@ -88,22 +91,20 @@ const Search = props => {
                             showsHorizontalScrollIndicator={false}>
 
                             {
-                                imageUrl.map((obj, i) => (
+                               rehabs.map((obj, i) => (
                                     <RehabResultsComponent
-                                        key={i}
-                                        width={Dimensions.get("window").width/2.58}
-                                        height={Dimensions.get("window").height/4.6}
-                                        imageHeight={"120%"}
-                                        renderBookmark={false}
-                                        renderRatings={false}
-                                        BorderRadiusLeft={14}
-                                        BorderRadiusRight={14}
-                                        description={obj.id}
-                                        rehabName={"hello"}
-                                        imageUrl={obj.url}
-                                        // Distance={"4.0km"} 
-                                        RehabDistanceNumFlex={0.6}
-                                        />
+                                    key={i}
+                                    width={Dimensions.get("window").width/2.58}
+                                    height={Dimensions.get("window").height/4.6}
+                                    imageHeight={"120%"}
+                                    renderBookmark={false}
+                                    renderRatings={false}
+                                    BorderRadiusLeft={14}
+                                    BorderRadiusRight={14}
+                                    RehabDistanceNumFlex={0.6}
+                                    stars={obj.ratings/10}
+                                    starNum={ "(" + obj.ratings + ")"}
+                                    {...obj}/>
                                 ))
                             }
 
@@ -120,22 +121,20 @@ const Search = props => {
                             showsHorizontalScrollIndicator={false}>
 
                             {
-                                imageUrl.map((obj, i) => (
+                               rehabs.map((obj, i) => (
                                     <RehabResultsComponent
-                                        key={i}
-                                        width={Dimensions.get("window").width/2.58}
-                                        height={Dimensions.get("window").height/4.6}
-                                        imageHeight={"120%"}
-                                        renderBookmark={false}
-                                        renderRatings={false}
-                                        BorderRadiusLeft={14}
-                                        BorderRadiusRight={14}
-                                        description={obj.id}
-                                        rehabName={"hello"}
-                                        imageUrl={obj.url}
-                                        // Distance={"4.0km"}
-                                        RehabDistanceNumFlex={0.6}
-                                         />
+                                    key={i}
+                                    width={Dimensions.get("window").width/2.58}
+                                    height={Dimensions.get("window").height/4.6}
+                                    imageHeight={"120%"}
+                                    renderBookmark={false}
+                                    renderRatings={false}
+                                    BorderRadiusLeft={14}
+                                    BorderRadiusRight={14}
+                                    RehabDistanceNumFlex={0.6}
+                                    stars={obj.ratings/10}
+                                    starNum={ "(" + obj.ratings + ")"}
+                                    {...obj}/>
                                 ))
                             }
 
