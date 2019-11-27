@@ -10,9 +10,9 @@ const SearchBarStyles = StyleSheet.create({
         justifyContent: "center",
         flex:1,  
         borderRadius: 20,
-        textAlign:'center',
-        fontSize:16,
-       
+        textAlign:'left',
+        paddingLeft:60,
+        fontSize:18,
         shadowOffset:{  width: 3,  height:3,  },
         shadowColor: 'black',
         shadowOpacity: 0.2,
@@ -29,7 +29,7 @@ const SearchBarStyles = StyleSheet.create({
         shadowOffset:{  width: 0,  height:0},
         shadowColor: 'black',
         shadowRadius:7,
-        shadowOpacity: 0.2,
+        shadowOpacity: 0.1,
       
     },
 
@@ -44,8 +44,18 @@ const SearchBarStyles = StyleSheet.create({
     HamburgerIcon: {
         margin:"2%",
         flex:1,
-        borderRadius:30,
         },
+
+    SearchIcon: {
+        flex:1,
+        width: 22,
+        height: 22,
+        alignItems:"center",
+        justifyContent:"center",
+        position:"absolute",
+        marginTop:18,
+        marginLeft:20
+    },
 
           
 
