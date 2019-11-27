@@ -22,14 +22,18 @@ const EditEmergencyPageStyles = StyleSheet.create({
         color:'grey', 
         paddingRight:'12%', 
         fontSize:16,
-        fontWeight:'bold'
+        fontWeight:'600',
+        lineHeight:25,
     },
     BodyLowerText: {
         color:'#587a8b', 
-        paddingTop:'10%', 
+        paddingTop:'7%', 
         paddingRight:'5%', 
         fontSize:16,
         marginBottom:"3%",
+        fontWeight:"500",
+        lineHeight:25,
+        paddingBottom:"10%",
      
     },
 
@@ -44,8 +48,8 @@ const EditEmergencyPageStyles = StyleSheet.create({
         paddingLeft:'8%'
     },
     ImageStyles: {
-        width: 30, 
-        height: 30, 
+        width: 25, 
+        height: 25, 
         marginTop:'20%'
     },
     EditButtonRow: {
@@ -53,9 +57,9 @@ const EditEmergencyPageStyles = StyleSheet.create({
     },
 
     AlertIconTop: {
-        width: 30, 
-        height: 30, 
-        marginLeft:'3%', 
+        width: 25, 
+        height: 25, 
+        marginLeft:'5%', 
         marginTop:'5%'
     },
     BodyStyles: {

@@ -8,37 +8,41 @@ const EmergencyContactStyles = StyleSheet.create({
         color: "black",
         fontSize: 23,
         textAlign: "left",
-        fontWeight: "600"
+        fontWeight: "600",
+        marginLeft:"2%"
     },
     
     HeaderTextSmall: {
         marginTop:"1%",
-        letterSpacing: 0.7,
+        marginBottom:"2%",
         fontSize:16,
         textAlign: 'left',
         left: 5,
         flex: 1,
         width:"100%",
-        color:"grey"
+        color:"#404040",
+        lineHeight:23
     },
 
     inputStyle: {
         alignSelf: "center",
         justifyContent: "center",
-        textAlign: "center",
-        width: '80%',
+        textAlign: "left",
+        paddingLeft:20,
+        width: '85%',
         height:"7%",
         borderColor: "#568C9E",
-        borderWidth: 1,
+        borderWidth: 1.5,
         borderRadius: 12,
         margin: "3.5%",
         borderRadius: 12,
+        fontSize:16
     },
 
     inputTextHeader: {
         color: "#568C9E",
-        fontSize: 15,
-        marginLeft:"10%",
+        fontSize: 16,
+        marginLeft:"7%",
         fontWeight:"bold",
     },
 
@@ -59,12 +63,7 @@ const EmergencyContactStyles = StyleSheet.create({
         marginBottom:20,
         height: "35%",
         width:"60%",
-        backgroundColor:"#568C9E",
-        // shadowColor: 'black',
-        // shadowOpacity: 1,
-        // elevation: 6,
-        // shadowRadius: 15 ,
-        // shadowOffset : { width: 56, height: 13},     
+        backgroundColor:"#568C9E",    
     },
     
 
@@ -84,11 +83,11 @@ const EmergencyContactStyles = StyleSheet.create({
     
     HeaderContainer: {
 
-       flex:0.49, 
-       marginRight:'20%',
+       flex:0.4, 
        marginLeft:'5%',
        marginTop:'15%',
-       width:"70%",    
+       width:"80%",
+       marginBottom:-40  
     },
 
     RecommendedButton: {
@@ -96,16 +95,15 @@ const EmergencyContactStyles = StyleSheet.create({
         alignSelf: "center",
         justifyContent: "center",
         textAlign: "center",
-        width: '80%',
-        height:"40%",
+        width: '85%',
+        height:"50%",
         borderColor: "#568C9E",
-        borderWidth: 1,
+        borderWidth: 1.5,
         borderRadius: 12,
-       
     },
     RecommendedInputText: {
         color: "#568C9E",
-        fontSize: 14,
+        fontSize: 16,
         fontWeight:"bold",
         textAlign: 'center',
     }

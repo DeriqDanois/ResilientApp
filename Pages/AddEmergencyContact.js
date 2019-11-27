@@ -16,13 +16,11 @@ const AddEmergencyContact = props => {
 
                     <View style={EmergencyContactStyles.HeaderContainer}>
 
-                        <Text style={EmergencyContactStyles.HeaderText}>Add a Emergency Contact</Text>
+                        <Text style={EmergencyContactStyles.HeaderText}>Add an Emergency Contact</Text>
 
                         <Text style={EmergencyContactStyles.HeaderTextSmall}>
                         Resilient helps send alert to your friends or loved ones in case of an emergency
                         </Text>
-
-                        <Text style={EmergencyContactStyles.HeaderTextSmall}>All information is confidential</Text>
 
                         <Text style={EmergencyContactStyles.HeaderTextSmall}>
                         You can always add or edit the contact information later
@@ -44,13 +42,13 @@ const AddEmergencyContact = props => {
                         <TextInput style={EmergencyContactStyles.inputStyle}></TextInput>
 
                         <View style={{ flex: 1, alignItems: 'center' }}>
-                            <Text style={{ marginBottom: 10 }}> And / or </Text>
+                            <Text style={{ marginTop: 10, marginBottom: 20, fontSize:16 }}> And / or </Text>
                             <TouchableOpacity
                                     onPress={()=>{
                                         alert("911 added as emergency contact")
                                     }}
                                 style={EmergencyContactStyles.RecommendedButton}>
-                                <Text style={{textAlign:'center', color:'#568C9E', fontWeight:'bold'}}>
+                                <Text style={{textAlign:'center', color:'#568C9E', fontWeight:'bold', fontSize:16}}>
                                     Add 911 as an Emergency Contact (Recommended)</Text>
                             </TouchableOpacity>
                         </View>

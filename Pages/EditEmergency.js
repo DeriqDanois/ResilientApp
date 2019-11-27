@@ -37,7 +37,7 @@ const EditEmergency = props => {
                             When CONTACT button is pressed,
                             Your Emergency contact will receive
                             an MMS Text of your current 
-                            location,and a call with our system 
+                            location, and a call with our system 
                             voice message:
                         </Text>
                         <Text style={EditEmergencyPageStyles.BodyLowerText}>
