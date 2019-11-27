@@ -9,7 +9,6 @@ import React from 'react';
 
 // Importing the screens
 import Login from './Pages/Login';
-import SignUp from './Pages/SignUp';
 import Search from './Pages/Search';
 import AddEmergencyContact from './Pages/AddEmergencyContact';
 import RehabPage from './Pages/RehabPage'
@@ -27,7 +26,6 @@ import OverView from './comps/OverView'
 const AppNavigator = createStackNavigator(
   {
     Login: { screen: Login },
-    SignUp: { screen: SignUp },
     AddEmergencyContact: { screen: AddEmergencyContact },
     Search: { screen:Search },
     RehabPage: { screen:RehabPage },

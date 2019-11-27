@@ -49,7 +49,7 @@ const stylesSignUp = StyleSheet.create({
     LoginBottamHalf: {
         alignItems:'center',
         justifyContent:'center',
-        flex: 0.85,
+        flex: 1,
         backgroundColor:'#002F43',      
     },
     Logo: {

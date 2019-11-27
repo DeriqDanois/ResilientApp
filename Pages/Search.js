@@ -18,13 +18,27 @@ const Search = props => {
 
 
     const [rehabs, setRehabs] = useState([]);
-    const [object, setObject] = useState([]);
+    const [inject, setInject] = useState([]);
+    const [detox, setDetox] = useState([]);
+    const [outpatient, setOutPatient] = useState([]);
 
     const getRehab = async () => {
         var data = await axios('rehab_read', {});
         console.log(data)
-        // console.log(json);
-        // setRehabs(json);
+        // Injection site below
+        var ins = data.filter((o,i) => {
+            return (o.type === "Safe Injection Site");
+        })
+        // Detox site below
+        var det = data.filter((o,i) => {
+            return (o.type === "Detox Centre");
+        })
+        var pat = data.filter((o,i) => {
+            return (o.type === "Outpatient Rehab");
+        })
+        setOutPatient(pat);
+        setDetox(det);
+        setInject(ins);
         setRehabs(data);
     }
 
@@ -62,7 +76,7 @@ const Search = props => {
                             {/* Rehab results from api below*/}
 
                             {
-                               rehabs.map((obj, i) => (
+                               inject.map((obj, i) => (
                                     <RehabResultsComponent
                                         key={i}
                                         width={Dimensions.get("window").width/2.58}
@@ -91,7 +105,7 @@ const Search = props => {
                             showsHorizontalScrollIndicator={false}>
 
                             {
-                               rehabs.map((obj, i) => (
+                               detox.map((obj, i) => (
                                     <RehabResultsComponent
                                     key={i}
                                     width={Dimensions.get("window").width/2.58}
@@ -121,7 +135,7 @@ const Search = props => {
                             showsHorizontalScrollIndicator={false}>
 
                             {
-                               rehabs.map((obj, i) => (
+                               outpatient.map((obj, i) => (
                                     <RehabResultsComponent
                                     key={i}
                                     width={Dimensions.get("window").width/2.58}
