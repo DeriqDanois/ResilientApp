@@ -11,6 +11,8 @@ const Login = props => {
   const iconDim = 174;
   const [login, setLogin ] = useState(true);
   const [signup, setSignUp ] = useState(false);
+  const [onlogin, setOnLogin ] = useState(1);
+  const [onsignup, setOnSignUp ] = useState(0.5);
 
 
 
@@ -37,28 +39,50 @@ const Login = props => {
             onPress={() =>{
               setLogin(true)
               setSignUp(false)
-            }}><Text style={LoginStyles.SignUpText}>LOGIN</Text>
+              setOnSignUp(0.5)
+              setOnLogin(1)
+            }}><Text 
+            style={{
+              color:'white', 
+              textAlign:'center',
+              fontSize:20, 
+              justifyContent:"center",
+              fontWeight:'bold',
+              opacity:onlogin
+            }}>LOGIN</Text>
           </TouchableOpacity>
 
           <TouchableOpacity style={{ flex: 1, }}
             onPress={() =>{
               setSignUp(true)
               setLogin(false)
-              }}><Text style={LoginStyles.SignUpText}>SIGN UP</Text>
+              setOnSignUp(1)
+              setOnLogin(0.5)
+              }}><Text
+               style={{
+                color:'white', 
+                textAlign:'center',
+                fontSize:20, 
+                justifyContent:"center",
+                fontWeight:'bold',
+                opacity:onsignup
+              }}>SIGN UP</Text>
           </TouchableOpacity>
 
       </View>
 
       {/* Inputs and button Below */}
 
-      <View style={{flex:0.85}}>
+      <KeyboardAvoidingView style={{flex:0.90}} behavior='padding' enabled>
+        
+        
       
         <LoginSignUpComponent
         renderLogin={login} 
         renderSignUp={signup} />
 
 
-        </View>
+        </KeyboardAvoidingView>
 
     
 

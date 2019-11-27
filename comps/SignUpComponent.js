@@ -43,7 +43,7 @@ const SignUpComponent = props => {
           }}
           autoCapitalize="none"
         placeholder="Username"
-        placeholderTextColor="rgba(255, 255, 255, 0.9)">
+        placeholderTextColor="rgba(200, 200, 200, 0.9)">
       </TextInput>
 
       <TextInput style={stylesSignUp.inputStyle}
@@ -52,7 +52,7 @@ const SignUpComponent = props => {
             
           }}
         placeholder="Email"
-        placeholderTextColor="rgba(255, 255, 255, 0.9)">
+        placeholderTextColor="rgba(200, 200, 200, 0.9)">
       </TextInput>
 
       <TextInput style={stylesSignUp.inputStyle}
@@ -65,7 +65,7 @@ const SignUpComponent = props => {
             }
           }}
         placeholder="Password"
-        placeholderTextColor="rgba(255, 255, 255, 0.9)">
+        placeholderTextColor="rgba(200, 200, 200, 0.9)">
       </TextInput>
        
 

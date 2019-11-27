@@ -12,8 +12,8 @@ const stylesSignUp = StyleSheet.create({
         height: 30,
         borderBottomColor: 'white',
         borderBottomWidth: 2,
-        marginBottom: 40,
-        fontSize:14,
+        marginBottom: 30,
+        fontSize:15,
         color:'white',
     },  
 
@@ -30,7 +30,6 @@ const stylesSignUp = StyleSheet.create({
         fontSize: 10,
         alignItems:"center",
         justifyContent: "center",
-        marginBottom:20,
         height:45,
         width:250,
         backgroundColor:'#002F43',     
@@ -64,18 +63,11 @@ const stylesSignUp = StyleSheet.create({
 
     // Login Signup bar
 
-    SignUpText:{
-        color:'white', 
-        textAlign:'center',
-        fontSize:20, 
-        justifyContent:"center",
-        fontWeight:'bold',
-    } ,
 
     OpaqueView: { 
         opacity:0.6,
         position: 'absolute',
-        top: "47.5%",
+        top: "46%",
         width:'100%',
         height:"7%",
         alignItems:'center',

@@ -22,16 +22,16 @@ const LoginComponent = props => {
           onChangeText={(t)=> {
             setUsername(t)
           }}
-            placeholder="USERNAME OR EMAIL"
-            placeholderTextColor="rgba(255, 255, 255, 0.9)">
+            placeholder="Username or Email"
+            placeholderTextColor="rgba(200, 200, 200, 0.9)">
           </TextInput>
 
           <TextInput style={LoignComponentStyles.inputStyle}
             onChangeText={(t)=> {
               setPassword(t)
             }}
-            placeholder="PASSWORD"
-            placeholderTextColor="rgba(255, 255, 255, 0.9)">
+            placeholder="Password"
+            placeholderTextColor="rgba(200, 200, 200, 0.9)">
           </TextInput>
           
 
