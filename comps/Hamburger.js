@@ -47,7 +47,7 @@ export function DrawerComponent({username, ...props}){
         <View style={{borderBottomColor:'grey', borderBottomWidth:1, width:"100%"}}>
   
 
-            {/* uSER INFO BOX */}
+            {/* USER INFO BOX */}
             <View style={{ flexDirection:'row'}}>
                 <View style={{flex:1}}>
                     <Image 

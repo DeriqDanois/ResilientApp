@@ -60,12 +60,12 @@ const SosPage = props => {
                         phoneNum={"+1(250)713-9999"} 
                         contactName={"Jim"}
                         contactFullName={"Jim Bean"}
-                        topMargin={"20%"}
+                        topMargin={"2%"}
                         />
                         <EmergencyContact
-                        phoneNum={"+1(250)713-9999"} 
-                        contactName={"Jim"}
-                        contactFullName={"Jim Bean"}
+                        phoneNum={"+1(778)324-8755"} 
+                        contactName={"Mary"}
+                        contactFullName={"Mary Jane"}
                         topMargin={"2%"}
                         />
 

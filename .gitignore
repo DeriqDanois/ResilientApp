@@ -58,3 +58,6 @@ buck-out/
 # CocoaPods
 /ios/Pods/
 ios
+ios
+android/app/src/main/assets/fonts
+android

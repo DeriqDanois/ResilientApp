@@ -33,7 +33,7 @@ function BackButtonHeader({renderBookmark = false, ...props})  {
                   //image for back button
                 }}>
 
-            <icon.BackArrow style={{width:25,height:25, margin: 20}}/>  
+            <icon.BackArrow style={{width:25, height:25, margin:20}}/>  
                 </TouchableOpacity>
 
        <Text style={BackButtonHeaderStyles.HeaderTextStyle}>{props.Header}</Text>
