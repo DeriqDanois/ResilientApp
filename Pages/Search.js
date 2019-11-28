@@ -129,7 +129,7 @@ const Search = props => {
                     </View>
 
                     {/* Header #3*/}
-                    <Text style={SearchStyles.HeaderText}> OutPatient Rehab</Text>
+                    <Text style={SearchStyles.HeaderText}>Outpatient Rehab</Text>
                     {/* Row Three Results */}
                     <View style={{ flex: 1, flexDirection: "row" }}>
 

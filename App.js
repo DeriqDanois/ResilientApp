@@ -63,7 +63,7 @@ const AppDrawerNavigator = createDrawerNavigator(
       }
     },
     "Emergency Contacts": {
-      screen: SosPage,
+      screen: EditEmergency,
       navigationOptions: {
       }
     },
@@ -89,11 +89,11 @@ const AppDrawerNavigator = createDrawerNavigator(
    
     contentOptions: {
       activeBackgroundColor: null,
-      activeTintColor: '#506BFB',
+      activeTintColor: '#568C9E',
 
       labelStyle: {
         fontSize: 19,
-       
+        fontWeight: "500",
       },
     }
   })

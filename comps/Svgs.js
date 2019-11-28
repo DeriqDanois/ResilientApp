@@ -113,8 +113,8 @@ export const HamBurgerIcon = props => (
   <Svg width={57} height={47} fill="none" {...props}>
     <Path fill="#fff" d="M0 0h57v47H0z" />
     <Path
-      stroke="#000"
-      d="M18.85 17.15h18.3M18.85 23.15h18.3M18.85 29.15h18.3"
+      stroke="#000" strokeWidth="2"
+      d="M18.85 19.15h22.3M18.85 26.15h22.3M18.85 33.15h22"
     />
   </Svg>
 )

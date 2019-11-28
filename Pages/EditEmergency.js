@@ -37,7 +37,7 @@ const EditEmergency = props => {
                             When CONTACT button is pressed,
                             Your Emergency contact will receive
                             an MMS Text of your current 
-                            location,and a call with our system 
+                            location, and a call with our system 
                             voice message:
                         </Text>
                         <Text style={EditEmergencyPageStyles.BodyLowerText}>
@@ -55,17 +55,21 @@ const EditEmergency = props => {
                              <EditEmergencyContacts
                              fullName={"John Doe"}
                              phoneNum={"+1(250)718-8870"}
-                             message={"Help! I maybe overdosing."}
+                             message={"Help! I maybe overdosing. Here is my current location:"}
                              />
                              <EditEmergencyContacts
                              fullName={"Jim Bean"}
                              phoneNum={"+1(250)718-111"}
-                             message={"Help! I maybe overdosing."}
+                             message={"Help! I maybe overdosing. Here is my current location:"}
                              />
                          
                            
                         {/* End of Row 2 */}
 
+                        <Image 
+            style={{alignItems:"center", marginTop:50, marginBottom:50, width:306, height:45}}
+            source={require('../Assets/PNGs/addMoreECbtn.png')}/>
+            
                     </View>
                 </View>
             </ScrollView>

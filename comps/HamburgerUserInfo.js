@@ -15,14 +15,14 @@ function HamburgerUserInfo({ avatar, username, ...props }) {
 
             <Image 
                 source={avatar}
-                style={{ width:80, height:80, margin:10, }}>
+                style={{ width:60, height:60, margin:10, }}>
             </Image>
 
             </View>
 
-            <View style={{flex:2}}>
+            <View style={{flex:1}}>
 
-                 <View style={{flexDirection:'column', marginTop:20}}>
+                 <View style={{flexDirection:'column', marginTop:10}}>
                             <Text style={HamburgerStyles.UsernameText}>{username}</Text>
 
                         <TouchableOpacity 

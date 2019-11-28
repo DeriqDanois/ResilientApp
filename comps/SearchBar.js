@@ -20,13 +20,20 @@ function SearchBar(props) {
 
         <View style={SearchBarStyles.HeaderContainer}>
 
+
             <TouchableOpacity style={{flex:1}}
             onPress={()=>{
             
             }}>
 
+        <Image
+            style={SearchBarStyles.SearchIcon}
+            source={require('../Assets/PNGs/greySearchIcon.png')}
+        />
+
+
             <TextInput 
-            placeholder = "Try 'injection' site"
+            placeholder = "Try 'injection site'"
                 onChangeText={(val) => { 
                     userInput = val,
                  console.log(userInput) 

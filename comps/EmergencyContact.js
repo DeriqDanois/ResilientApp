@@ -17,7 +17,7 @@ const EmergencyContact = props => {
         <View style={{ flex: 1, flexDirection: 'row' }}>
             <View style={{ paddingTop: '5%' }}>
                 <Image
-                    style={{ width: 20, height: 20 }}
+                    style={{ width: 20, height: 20, marginLeft:10 }}
                     source={require('../Assets/PNGs/personIcon.png')}
                 />
             </View>
@@ -28,7 +28,7 @@ const EmergencyContact = props => {
             </View>
         </View>
 
-        <View style={{alignContent:'center', paddingBottom:'30%',  borderBottomWidth:1, borderColor:"#DADADA"}}>
+        <View style={{alignContent:'center', paddingBottom:'25%'}}>
             <TouchableOpacity
                 style={{marginTop:"8%"}}
                 onPress={() => {

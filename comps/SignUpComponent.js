@@ -82,7 +82,7 @@ const SignUpComponent = props => {
         }
   
         }}>
-        <Text style={stylesSignUp.buttonsText}>Sign Up</Text>
+        <Text style={stylesSignUp.buttonsText}>SIGN UP</Text>
       </TouchableOpacity>
       
 

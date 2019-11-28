@@ -32,7 +32,7 @@ const ImageSlider = props => {
           onPress={()=>{
             props.navigation.goBack()}}>
         
-          <icon.BackArrow width={iconDim} height={iconDim} />
+        <icon.BackArrow style={{width:25,height:25, margin: 20}}/> 
           </TouchableOpacity>
 
       <Carousel

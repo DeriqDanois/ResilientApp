@@ -12,13 +12,13 @@ const stylesSignUp = StyleSheet.create({
         height: 30,
         borderBottomColor: 'white',
         borderBottomWidth: 2,
-        marginBottom: 30,
-        fontSize:15,
+        marginBottom: 40,
+        fontSize:18,
         color:'white',
     },  
 
     buttonsText: {
-        fontSize: 15,
+        fontSize: 16,
         color: "white",
         fontWeight:"bold"
     },

@@ -10,13 +10,15 @@ const HamburgerStyles = StyleSheet.create({
       justifyContent: 'space-around',
     },
     EditProfileText: {
-      fontSize: 14,
-      color: 'blue',
-      paddingVertical: 6
+      fontSize: 16,
+      color: '#568C9E',
+      paddingVertical: 6,
+      fontWeight:"500",
     },
     UsernameText: {
-      fontSize: 22,
+      fontSize: 28,
       letterSpacing: 0.4,
+      fontWeight: "600",
     },
 
   });

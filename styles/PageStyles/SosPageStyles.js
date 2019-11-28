@@ -53,7 +53,7 @@ const SosPageStyles = StyleSheet.create({
           phStyle: {
             paddingTop:13,
             fontSize:23,
-            marginLeft:"9%"
+            marginLeft:"9%",
           },
 
           johnDoeStyle: {
@@ -72,7 +72,7 @@ const SosPageStyles = StyleSheet.create({
             color: '#568c9e', 
             marginTop:'6%',
             marginLeft:'5%',
-            fontSize: 17 
+            fontSize: 17,
           }
 
 

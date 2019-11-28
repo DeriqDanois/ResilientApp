@@ -13,16 +13,18 @@ const ProfilePageStyles = StyleSheet.create({
 
 
           LinkText: {
-            textAlign:'center',
+            textAlign:'left',
             fontWeight:'bold',
             color: "teal",
-            flex:1,
+            flex:0.7,
+            fontSize:20,
+            marginLeft:"20%"
     
          
           },
           LinkBox: {
             flex:1,
-            alignSelf:'center'
+            alignSelf:'center',
             
          
           },
@@ -48,14 +50,16 @@ const ProfilePageStyles = StyleSheet.create({
           },
           
           DeleteText: {
-            textAlign:'center',
+            textAlign:'left',
             fontWeight:'bold',
             color: "red",
             flex:1,
+            fontSize:20,
+            marginLeft:"20%"
           },
 
           AvatarAndUserName: {
-            flex:2,
+            flex:1.7,
             flexDirection:'row',
             width:"100%"
           }

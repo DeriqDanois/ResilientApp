@@ -55,12 +55,17 @@ const GooglePlacesInput = () => {
                 style={SearchBarStyles.SearchInputStyle}>
             </TextInput>
 
+            <Image
+            style={SearchBarStyles.SearchIcon}
+            source={require('../Assets/PNGs/greySearchIcon.png')}
+        />
+
             <TouchableOpacity style={{flex:0.25}}
                 onPress={() => {
                  
                 }}>
                {/* Hamburger  */}
-             <icon.HamBurgerIcon  style={SearchBarStyles.HamburgerIcon} />
+  
             
             </TouchableOpacity>
         </View>
