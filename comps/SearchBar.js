@@ -14,38 +14,36 @@ function SearchBar(props) {
 
 
 
-
     var userInput = ""
 
     return (
-        
 
         <View style={SearchBarStyles.HeaderContainer}>
 
-           
+            <TouchableOpacity style={{flex:1}}
+            onPress={()=>{
+            
+            }}>
 
             <TextInput 
             placeholder = "Try 'injection' site"
                 onChangeText={(val) => { 
                     userInput = val,
                  console.log(userInput) 
+                 props.navigation.navigate("SearchBarResults")
                 }}
                 style={SearchBarStyles.SearchInputStyle}>
             </TextInput>
 
+            </TouchableOpacity>
 
-            <TouchableOpacity
+            <TouchableOpacity style={{flex:0.25}}
                 onPress={() => {
                     props.navigation.dispatch(DrawerActions.openDrawer());
-
                 }}>
-
                {/* Hamburger  */}
              <icon.HamBurgerIcon  style={SearchBarStyles.HamburgerIcon} />
             
-
-
-
             </TouchableOpacity>
         </View>
 

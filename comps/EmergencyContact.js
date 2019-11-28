@@ -5,6 +5,7 @@ import { View, Text, TextInput, TouchableOpacity, Image, SafeAreaView, ScrollVie
 import SosPageStyles from '../styles/PageStyles/SosPageStyles';
 import BackButtonHeader from '../comps/BackButtonHeader';
 import * as icon from '../comps/Svgs'
+import SendSMS from 'react-native-sms'
 
 
 
@@ -32,7 +33,16 @@ const EmergencyContact = props => {
                 style={{marginTop:"8%"}}
                 onPress={() => {
                  
-                    callNumber("250-713-8300")
+                    SendSMS.send({
+                        body: 'The default body of the SMS!',
+                        recipients: ['2507138300'],
+                        successTypes: ['sent', 'queued'],
+                        allowAndroidSendWithoutReadPermission: true
+                    }, (completed, cancelled, error) => {
+                 
+                        console.log('SMS Callback: completed: ' + completed + ' cancelled: ' + cancelled + 'error: ' + error);
+                 
+                    });
                     
                 }}>
                 <View style={SosPageStyles.contactJohn}>

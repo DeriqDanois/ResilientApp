@@ -5,7 +5,6 @@ import RehabResultsComponent from './RehabResultsComponent';
 import NavBar from './NavBar';
 import DetailsCard from './DetailsCard';
 import DiscussionCard from './DiscussionCard';
-import SignUp from '../Pages/SignUp';
 import Login from '../Pages/Login';
 import AddEmergencyContact from '../Pages/AddEmergencyContact';
 import Search from '../Pages/Search';
@@ -64,9 +63,6 @@ storiesOf("Navigation Components", module)
 storiesOf("Pages", module)
     .add("Login", ()=>{
         return <Login/>  
-    })
-    .add("SignUp", ()=>{
-        return <SignUp/>
     })
     .add("AddEmergencyContact", ()=>{
         return <AddEmergencyContact/>

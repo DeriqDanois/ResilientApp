@@ -15,7 +15,7 @@ function OverView(props){
         <View style={{flex: 1, marginLeft:'3%', marginRight:'3%'}}>
                    <View style={{ marginLeft:"5%", flex: 1, flexDirection:'row', marginTop:30}}>
 
-    <Text style={{flex:0.21, fontSize:16, justifyContent:'center'}}>{props.ratingNum}</Text>
+    <Text style={{flex:0.21, fontSize:16, justifyContent:'center'}}>{"(" + props.ratingNum + ")"}</Text>
                        
                        <AirbnbRating
                         style={{flex:1}}

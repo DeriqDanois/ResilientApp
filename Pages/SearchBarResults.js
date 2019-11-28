@@ -1,79 +1,99 @@
-import React from 'react';
-import { View, Text, TextInput, TouchableOpacity, Image, SafeAreaView, ScrollView, FlatList, Button } from 'react-native';
-import SearchBarResultsStyles from '../styles/PageStyles/SearchBarResultsStyles';
-import { KeyboardAvoidingView } from 'react-native';
-import SearchBar from '../comps/SearchBar'
-import BackButtonHeader from '../comps/BackButtonHeader'
-
-const homePlace = { description: 'Home', geometry: { location: { lat: 48.8152937, lng: 2.4597668 } } };
-const workPlace = { description: 'Work', geometry: { location: { lat: 48.8496818, lng: 2.2940881 } } };
-
-
-
-const SearchBarResults = ({ }) => {
+import React, { useEffect, useState } from 'react';
+import {View, Image, Text, SafeAreaView, TextInput, TouchableOpacity} from 'react-native';
+import * as icon from '../comps/Svgs'
+import axios from '../axios'
+import SearchBarStyles from '../styles/ComponentStyles/SearchBarStyles';
+import { ScrollView } from 'react-native-gesture-handler';
+import BackButtonHeader from '../comps/BackButtonHeader';
+import { withNavigation } from 'react-navigation';
+import InputResults from '../comps/InputResult';
 
 
-  const DATA = [
-    {
-      id: 'bd7acbea-c1b1-46c2-aed5-3ad53abb28ba',
-      title: 'First Item',
-    },
-    {
-      id: '3ac68afc-c605-48d3-a4f8-fbd91aa97f63',
-      title: 'Second Item',
-    },
-    {
-      id: '58694a0f-3da1-471f-bd96-145571e29d72',
-      title: 'Third Item',
-    },
-  ];
 
 
-  return (
+const GooglePlacesInput = () => {
+
+  const [input, setInput] = useState('');
+  const [rehabs, setRehabs] = useState([]);
 
 
-    <KeyboardAvoidingView style={{ flex: 1 }} enabled>
-      <SafeAreaView style={SearchBarResultsStyles.containertwo}>
-
-        <BackButtonHeader
-          border={0}
-          height={100}
-          Header={""} 
-         />
-
-        <SearchBar />
-        {/* Results */}
-
-        <FlatList
-          data={DATA}
-          renderItem={({ item }) => <Item title={item.title} />}
-          keyExtractor={item => item.id} />
-
-      </SafeAreaView>
-    </KeyboardAvoidingView>
-
-  )
+  const GetPlaces =async()=>{
+    var data = await axios('rehab_read', {});
+    console.log(input)
+    // Injection site below filterd by type name or address client side filter
+    var results = data.filter((o,i) => {
+      if (!!~o.address.indexOf(input) || !!~o.name.indexOf(input) || !!~o.type.indexOf(input)){
+        return !!~o.address.indexOf(input) || !!~o.name.indexOf(input) || !!~o.type.indexOf(input);    
+      }
+    }); 
+    
+    setRehabs(results)
 }
 
-function Item({ title }) {
-
   return (
-    <TouchableOpacity>
-      <View style={SearchBarResultsStyles.item}>
-        <Text style={SearchBarResultsStyles.title}>{title}</Text>
-        <Text style={SearchBarResultsStyles.description}>{title}</Text>
-      </View>
-    </TouchableOpacity>
+
+    <SafeAreaView style={{flex:1}}>
+
+
+          <BackButtonHeader
+            borderBottomColor={'rgba(52, 52, 52, 0.1)'}
+            height={50}
+          />
+      
+        <View style={SearchBarStyles.HeaderContainer}>
+
+            <TextInput 
+              placeholder = "Try 'injection' site"
+                onChangeText={(text) => { 
+                  if (text.length >= 1){
+                  setInput(text)
+                    GetPlaces();
+                  }
+                
+                  //  console.log(input)
+                }}
+                style={SearchBarStyles.SearchInputStyle}>
+            </TextInput>
+
+            <TouchableOpacity style={{flex:0.25}}
+                onPress={() => {
+                 
+                }}>
+               {/* Hamburger  */}
+             <icon.HamBurgerIcon  style={SearchBarStyles.HamburgerIcon} />
+            
+            </TouchableOpacity>
+        </View>
+
+        <Text style={{marginLeft:25, marginBottom:15, color:'grey'}}>Search Results</Text>
+
+        <ScrollView style={{flex:1}}> 
+         {/*  */}
+            {
+            rehabs.map((obj, i) => (
+              <InputResults
+              key={i}
+              name={obj.name}
+              address={obj.address} 
+              starNum={obj.ratings}
+              stars={obj.ratings/10}
+              {...obj} />
+            ))
+            }
+          </ScrollView>
+
+        </SafeAreaView>
   );
 }
 
 
-export default SearchBarResults;
+export default withNavigation(GooglePlacesInput);
 
 
+        
+      
 
 
+      
 
-
-
-
+   

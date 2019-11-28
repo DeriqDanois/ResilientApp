@@ -6,13 +6,10 @@ const SearchBarStyles = StyleSheet.create({
 
   
     SearchInputStyle: {
-        alignSelf: "center",
-        justifyContent: "center",
         flex:1,  
         borderRadius: 20,
         textAlign:'center',
         fontSize:16,
-       
         shadowOffset:{  width: 3,  height:3,  },
         shadowColor: 'black',
         shadowOpacity: 0.2,

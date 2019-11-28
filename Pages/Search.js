@@ -44,6 +44,7 @@ const Search = props => {
 
     // Handle 
     useEffect(() => {
+     
         getRehab();
     }, []);
 
@@ -53,8 +54,10 @@ const Search = props => {
         <KeyboardAvoidingView style={{ flex: 1 }} enabled>
 
             <SafeAreaView style={SearchStyles.containertwo}>
+           
+            <SearchBar />
 
-                <SearchBar />
+        
                 {/* HAMBURGER end */}
 
                 <ScrollView
@@ -63,7 +66,7 @@ const Search = props => {
                     style={SearchStyles.scrollView}>
 
                     {/* The image text and short description from google places api will go into these below */}
-
+            
                     {/* Header #1 */}
                     <Text style={SearchStyles.HeaderText}>Safe Injection Sites</Text>
 

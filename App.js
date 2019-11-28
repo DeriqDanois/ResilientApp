@@ -21,6 +21,7 @@ import ProfilePage from './Pages/ProfilePage'
 import EditEmergency from './Pages/EditEmergency'
 import LeaveReview from './Pages/LeaveReviewPage'
 import OverView from './comps/OverView'
+import SearchBarResults from './Pages/SearchBarResults'
 
 
 const AppNavigator = createStackNavigator(
@@ -37,7 +38,8 @@ const AppNavigator = createStackNavigator(
     ProfilePage: { screen:ProfilePage },
     EditEmergency: { screen:EditEmergency },
     LeaveReview: {screen:LeaveReview},
-    OverView: {screen:OverView}
+    OverView: {screen:OverView},
+    SearchBarResults: {screen:SearchBarResults}
    
     
   },
