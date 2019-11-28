@@ -30,10 +30,12 @@ const SearchBarResultsStyles = StyleSheet.create({
   },
 
     title: {
-        fontSize: 23,
+        fontSize: 22,
+        margin: 5
     },
     description: {
-        fontSize: 14,
+        fontSize: 16,
+        margin: 5
     },
 
 

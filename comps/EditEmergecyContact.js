@@ -44,14 +44,26 @@ const EditEmergencyContacts = props => {
                     <View style={{flex:1}}>
                         <Button
                             title="Edit"
-                            color="#587a8b"
+                            color="#568C9E"
                             onPress={() => Alert.alert('Edit your Message')}/>
                     </View>
                 </View>
                     {/* Flex End */}
-                    <Text style={{fontSize:18, marginTop:'8%'}}>{props.message}</Text>
-                    <Text style={{fontSize:15, color:'#587a8b'}}>Here is my current Location:</Text>
-                    <Text  style={{fontSize:15,  color:'#587a8b'}}>(Your location at the time will be sent)"</Text>
+                    <Text style={{
+                        fontSize:18,
+                        width: "70%",
+                        lineHeight:28
+                        }}>"{props.message}</Text>
+                    <Text
+                    style={{
+                        fontSize:18,
+                        width: "70%",
+                        lineHeight:28,
+                        color:'#568C9E',
+                        fontWeight:"400"
+                        }}>
+                            (Your location at the time this text will be sent)."
+                            </Text>
                 </View>  
             </View>
             {/* End of Row 2 */}

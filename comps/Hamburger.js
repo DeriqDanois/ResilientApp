@@ -52,7 +52,7 @@ export function DrawerComponent({username, ...props}){
                 <View style={{flex:1}}>
                     <Image 
                         source={require('../Assets/avatars/PNGs/Girl3-3.png')}
-                        style={{ width:80, height:80, margin:10, }}>
+                        style={{ width:60, height:60, margin:20, }}>
                     </Image>
 
                 </View>

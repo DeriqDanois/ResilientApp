@@ -55,12 +55,12 @@ const EditEmergency = props => {
                              <EditEmergencyContacts
                              fullName={"John Doe"}
                              phoneNum={"+1(250)718-8870"}
-                             message={"Help! I maybe overdosing."}
+                             message={"Help! I maybe overdosing. Here is my current location:"}
                              />
                              <EditEmergencyContacts
                              fullName={"Jim Bean"}
                              phoneNum={"+1(250)718-111"}
-                             message={"Help! I maybe overdosing."}
+                             message={"Help! I maybe overdosing. Here is my current location:"}
                              />
                          
                            

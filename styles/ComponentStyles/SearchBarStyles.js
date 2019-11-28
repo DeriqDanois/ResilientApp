@@ -16,7 +16,6 @@ const SearchBarStyles = StyleSheet.create({
         shadowOffset:{  width: 3,  height:3,  },
         shadowColor: 'black',
         shadowOpacity: 0.2,
-     
         
     },
 
