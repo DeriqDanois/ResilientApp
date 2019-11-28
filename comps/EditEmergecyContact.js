@@ -65,6 +65,7 @@ const EditEmergencyContacts = props => {
                             (Your location at the time this text will be sent)."
                             </Text>
                 </View>  
+
             </View>
             {/* End of Row 2 */}
         </View>

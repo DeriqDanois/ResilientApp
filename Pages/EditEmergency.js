@@ -66,6 +66,10 @@ const EditEmergency = props => {
                            
                         {/* End of Row 2 */}
 
+                        <Image 
+            style={{alignItems:"center", marginTop:50, marginBottom:50, width:306, height:45}}
+            source={require('../Assets/PNGs/addMoreECbtn.png')}/>
+            
                     </View>
                 </View>
             </ScrollView>
