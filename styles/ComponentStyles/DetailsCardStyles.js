@@ -1,4 +1,4 @@
-import {StyleSheet} from 'react-native'
+import {StyleSheet, Dimensions} from 'react-native'
 
 
 const DetailsCardStyles = StyleSheet.create({
@@ -31,6 +31,21 @@ const DetailsCardStyles = StyleSheet.create({
         fontWeight:'500',
    
     }, 
+
+    bookMarkIcon: {
+        width:60, 
+        height:60, 
+        borderRadius:60, 
+        position:'absolute', 
+        backgroundColor:'white',
+        justifyContent:'center', 
+        alignItems:'center',
+        top:Dimensions.get('window').width/-7.8,
+        left:"75%",
+        shadowOffset:{  width: 3,  height:3,  },
+        shadowColor: 'black',
+        shadowOpacity: 0.2, 
+    },
 
    
     containertwo: {

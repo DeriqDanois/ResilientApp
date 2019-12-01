@@ -9,7 +9,7 @@ import RehabResultsStyle from '../styles/ComponentStyles/ResultsComponentStyle';
 
 
 
-function RehabResultsComponent({ renderBookmark = true, renderRatings = true, starsOfFive, distance, description, name, imgurl, address, stars, starNum, websitelink, phonenum, type, ...props }){
+function RehabResultsComponent({ renderBookmark = true, renderRatings = true, distance, description, name, imgurl, address, stars, starNum, websitelink, phonenum, type, ...props }){
 
     const iconDim = 20
     

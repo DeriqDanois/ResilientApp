@@ -1,18 +1,32 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect} from 'react';
 import { View, Text, TextInput, TouchableOpacity, Image, SafeAreaView, ScrollView } from 'react-native';
 import SavedDiscussionStyles from '../styles/PageStyles/SavedDiscussionStyles';
 import BackButtonHeader from '../comps/BackButtonHeader';
 import DiscussionCard from '../comps/DiscussionCard';
 import NavBar from '../comps/NavBar';
-
+import axios from '../axios';
 
 
 
 
 const SavedDiscussions = props => {
-    const [login, checkLogin] = useState(false);
+ 
+    const [saveddiscussion, setSavedDiscussion] = useState([]);
 
-    const contactName = "Saved Discussion";
+    const getRehab = async () => {
+        var data = await axios('discussionsaved_read', {});
+        console.log(data)
+        // console.log(json);
+        // setSavedRehab(json);
+        setSavedDiscussion(data);
+    }
+
+    // Handle 
+    useEffect(() => {
+            getRehab();
+    }, []);
+
+
 
     return (
 
@@ -35,20 +49,22 @@ const SavedDiscussions = props => {
                     style={SavedDiscussionStyles.scrollView}>
 
                 <View>
+                    {
+                    saveddiscussion.map((obj, i) => (
                     <DiscussionCard 
-                       DiscussionTitle={"Taken off pain meds after 10 years because people are..."}
-                       upVoteNum={"12"}
-                       answerNum={"2"}
-                       timePosted={"2 mins ago"}
-                       avatarImg={require('../Assets/avatars/PNGs/Girl3-3.png')}
+                       key={i}
+                       discussiontitle={obj.discussiontitle}
+                       upvotes={obj.upvotes}
+                       answers={obj.answers}
+                       timeposted={obj.timeposted}
+                       useravatar={obj.useravatar}
+                       discussionauthor={obj.discussionauthor}
+                 
                     />
-                    <DiscussionCard 
-                       DiscussionTitle={"Anyone here been addicted to painkillers?.."}
-                       upVoteNum={"14"}
-                       answerNum={"20"}
-                       timePosted={"2 mins ago"}
-                       avatarImg={require('../Assets/avatars/PNGs/Girl3-3.png')}
-                    />
+                    ))
+                    }
+
+                
                   
                 </View>
 

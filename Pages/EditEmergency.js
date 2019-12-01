@@ -1,15 +1,35 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Dimensions, View, Text, TextInput, TouchableOpacity, Image, SafeAreaView, ScrollView, Button, Alert } from 'react-native';
 import NavBar from '../comps/NavBar';
 import BackButtonHeader from '../comps/BackButtonHeader';
 import EditEmergencyContacts from '../comps/EditEmergecyContact';
 import EditEmergencyPageStyles from '../styles/PageStyles/EditEmergencyPageStyles';
+import axios from '../axios';
 
 const EditEmergency = props => {
     const [addContact, setContactAdded] = useState(false);
+    const [contacts, setContacts] = useState([])
+
+
+    const getEmergencyContact = async () => {
+        var data = await axios('emergencycontact_read', {});
+        if (data.length === 0){
+            setUserAvatarAndName({username:['none']})
+        } 
+        setContacts(data)
+    }
+    
+    // Handle 
+   
+    useEffect(() => {
+        getEmergencyContact();
+     []});
+
+
 
 
     return (
+        
         <SafeAreaView style={EditEmergencyPageStyles.box1}>
             <BackButtonHeader
                 borderBottomColor={'rgba(52, 52, 52, 0.1)'}
@@ -52,24 +72,28 @@ const EditEmergency = props => {
                 </View>
                         {/* Row 1  Contacts Name - Edit*/}
                         {/* FLEX Start FOR Emergency Contact and Edit Button */}
+                        { 
+                        contacts.map((obj, i) => (
                              <EditEmergencyContacts
-                             fullName={"John Doe"}
-                             phoneNum={"+1(250)718-8870"}
-                             message={"Help! I maybe overdosing. Here is my current location:"}
+                             key={i}
+                             fullName={obj.name}
+                             phoneNum={obj.phonenum}
+                             message={obj.message}
+                         
                              />
-                             <EditEmergencyContacts
-                             fullName={"Jim Bean"}
-                             phoneNum={"+1(250)718-111"}
-                             message={"Help! I maybe overdosing. Here is my current location:"}
-                             />
+                        ))
+                        }
                          
                            
                         {/* End of Row 2 */}
-
-                        <Image 
-            style={{alignItems:"center", marginTop:50, marginBottom:50, width:306, height:45}}
-            source={require('../Assets/PNGs/addMoreECbtn.png')}/>
-            
+                        <TouchableOpacity 
+                            onPress={()=>{
+                                props.navigation.navigate('AddEmergencyContact')
+                            }}>
+                            <Image 
+                            style={{alignItems:"center", marginTop:50, marginBottom:50, width:306, height:45}}
+                            source={require('../Assets/PNGs/addMoreECbtn.png')}/>
+                        </TouchableOpacity>
                     </View>
                 </View>
             </ScrollView>

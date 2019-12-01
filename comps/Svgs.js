@@ -127,7 +127,7 @@ export const BackArrow = props => (
 
 
 export const TabBar = props => (
-  <Svg viewBox="0 0 450 70.8" {...props}>
+  <Svg viewBox="0 0 450 73.8" {...props}>
     <Path
       d="M224.4 63.6c27.2 0 49.2-22 49.2-49.2 0-7.3 5.2-14.4 12.5-14.4h128.5C434.2 0 450 15.8 450 35.4c0 1 0 2-.1 3h.1v32.4H0V38.4h.1c-.1-1-.1-2-.1-3C0 15.8 15.8 0 35.4 0h127.3c7.3 0 12.5 7.1 12.5 14.4 0 27.2 22 49.2 49.2 49.2z"
       fillRule="evenodd"

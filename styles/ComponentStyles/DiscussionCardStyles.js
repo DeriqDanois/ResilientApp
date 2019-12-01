@@ -1,19 +1,18 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet, Dimensions } from 'react-native';
 
 
 const DiscussionCardStyles = StyleSheet.create({
 
     Bookmark: {
-    height:70,
-    width:70,
+     width:Dimensions.get("window").width/7,
+     height:Dimensions.get("window").height/14, 
     position:"absolute",
-    left:"78%",
+    left:"81%",
     top:"10%",
     zIndex:1
     },
 
     WhiteCard: {
-
     flex: 1,
     flexDirection:"column",
     backgroundColor:"white",
@@ -52,14 +51,16 @@ const DiscussionCardStyles = StyleSheet.create({
         fontWeight:"bold",
         color:"#568C9E",
         marginLeft: 5,
-        marginTop: 2
+        marginTop: 2,
+  
     },
 
     PostStatus: {
         fontWeight:"300",
         color:"grey",
-        marginRight:10,
-        marginLeft:10
+        marginRight:5,
+        marginLeft:5,
+        fontSize:13
     }
 
 

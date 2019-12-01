@@ -65,12 +65,6 @@ const ImageSlider = props => {
                     />
             </View>
 
-            <TouchableOpacity style={ImageSliderStyles.bookMarkIcon}
-            onPress={()=>{
-                alert("Added To Saved Rehabs")
-            }}>
-                <icon.BookMarkUnsavedIcon width={iconDim} height={iconDim} />
-            </TouchableOpacity>
 
             
            

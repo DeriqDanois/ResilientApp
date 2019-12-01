@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { View, Text, TextInput, TouchableOpacity, Image } from 'react-native';
 import stylesSignUp from '../styles/PageStyles/SignupStyles';
 import axios from 'axios';
@@ -12,6 +12,7 @@ const SignUpComponent = props => {
   const [ email, setEmail ] = useState("");
   const [ password, setPassword ] = useState("");
   const [error, setError ] = useState("");
+  const [avatar, setAvatar] = useState('../Assets/avatars/PNGs/Girl3-3.png');
 
   const CreateUser = async()=>{
     //fetch db to create users
@@ -22,7 +23,8 @@ const SignUpComponent = props => {
         data:{
             username:username,
             email:email,
-            password:password
+            password:password,
+            avatar:avatar
         }
     }
     var r = await axios.post("http://localhost:3001/post", obj);

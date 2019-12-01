@@ -38,6 +38,7 @@ const SavedRehabPageStyles = StyleSheet.create({
         width:35,
         height:25,
         flex:1,
+        
         },
 
         

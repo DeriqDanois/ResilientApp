@@ -1,5 +1,5 @@
 import React from 'react';
-import { TouchableOpacity, View, Text, Image, KeyboardAvoidingView } from 'react-native';
+import { TouchableOpacity, View, Text, Image, KeyboardAvoidingView, Dimensions } from 'react-native';
 import { withNavigation } from 'react-navigation';
 import NavBarStyles from '../styles/ComponentStyles/NavBarStyles';
 import * as icon from '../comps/Svgs'
@@ -9,17 +9,16 @@ import * as icon from '../comps/Svgs'
 
 const NavBar = props => {
 
-    const left = 0;
-    const right = 0;
-    const SosBottom = -219;
-    const SosButtonDim = 86;
-    const tabBarWidth = 400;
-    const tabBarHieght = 76;
-    const tabBarTop = 160;
-    const exploreLeft = 50;
-    const exploreTop = 94;
-    const DiscussionLeft = 287;
-    const DiscussionTop = 16;
+    const left = 0.25;
+    const SosBottom = Dimensions.get("window").height/-3.15;
+    const SosButtonDim = Dimensions.get("window").width/4.81;
+    const tabBarWidth = Dimensions.get("window").width/0.97;
+    const tabBarHieght = Dimensions.get("window").height/9.1;
+    const tabBarTop = Dimensions.get("window").height/4.2;
+    const exploreLeft = Dimensions.get("window").width/7.5;
+    const exploreTop = Dimensions.get("window").height/6.78;
+    const DiscussionLeft = Dimensions.get("window").width/1.35; 
+    const DiscussionTop = Dimensions.get("window").height/27;
 
 
     return (

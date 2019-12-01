@@ -22,6 +22,7 @@ import EditEmergency from './Pages/EditEmergency'
 import LeaveReview from './Pages/LeaveReviewPage'
 import OverView from './comps/OverView'
 import SearchBarResults from './Pages/SearchBarResults'
+import StartDiscussionPage from './Pages/StartDiscussionPage'
 
 
 const AppNavigator = createStackNavigator(
@@ -39,7 +40,8 @@ const AppNavigator = createStackNavigator(
     EditEmergency: { screen:EditEmergency },
     LeaveReview: {screen:LeaveReview},
     OverView: {screen:OverView},
-    SearchBarResults: {screen:SearchBarResults}
+    SearchBarResults: {screen:SearchBarResults},
+    StartDiscussionPage: {screen:StartDiscussionPage}
    
     
   },
@@ -57,7 +59,7 @@ const AppNavigator = createStackNavigator(
 const AppDrawerNavigator = createDrawerNavigator(
 
   {
-    'Search Page': {
+    ' ': {
       screen: AppNavigator,
       navigationOptions: {
       }

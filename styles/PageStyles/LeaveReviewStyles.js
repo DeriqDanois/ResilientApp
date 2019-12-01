@@ -30,7 +30,7 @@ const LeaveReviewStyles = StyleSheet.create({
         flex:1,
         height: 65,
         width: 65,
-        margin: 5,
+
         resizeMode:"contain"
     },
 
@@ -42,24 +42,25 @@ const LeaveReviewStyles = StyleSheet.create({
     infoAndAvatar: {
         flex:1, 
         flexDirection:"row", 
-        marginTop:"7%", 
-        marginLeft:"7%"
+        marginLeft:Dimensions.get('window').width/24,
+        marginTop:Dimensions.get('window').width/24
     },
 
     inputSubmitView: {
         flex:1, 
-        flexDirection:"row",  
         alignContent:'center', 
-        justifyContent:'center'
+        justifyContent:'center',
+        marginBottom:'10%'
     },
 
     submitButton: {
         borderRadius:18, 
-        width:140, 
-        height:40, 
-        marginTop:'5%', 
+        width:Dimensions.get('window').width/2.5, 
+        height:Dimensions.get('window').height/26, 
+
         backgroundColor:'#568c9e', 
-        justifyContent:'center'
+        justifyContent:'center',
+        alignItems:'center'
     },
 
     submitButtonText: {
@@ -67,11 +68,8 @@ const LeaveReviewStyles = StyleSheet.create({
         fontWeight:'bold', 
         color:'white', 
         fontSize:15,
+       
     },
-
-   
-
-
 
     inputStyles: {
         paddingLeft:'3%',
@@ -82,8 +80,8 @@ const LeaveReviewStyles = StyleSheet.create({
         borderWidth: 1.75, 
         borderRadius:10, 
         alignSelf:'center', 
-
-        
+        marginTop:Dimensions.get('window').height/60,
+        letterSpacing:0.9,    
        
 },
 
