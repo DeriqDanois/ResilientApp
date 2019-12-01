@@ -18,7 +18,7 @@ const BackButtonHeaderStyles = StyleSheet.create({
             fontSize:25,
             textAlign:'center',
             flex:0.85,
-            marginTop:'7.8%'
+            alignSelf:'center'
           },
 
           

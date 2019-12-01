@@ -62,8 +62,10 @@ const EditEmergencyPageStyles = StyleSheet.create({
         marginLeft:'5%', 
         marginTop:'5%'
     },
-    BodyStyles: {
-
+    MsgStyles: {
+        fontSize:18,
+        width: "70%",
+        lineHeight:26,
     }
 
 })

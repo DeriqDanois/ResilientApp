@@ -39,7 +39,7 @@ const SavedRehabsPage = props => {
 
             <BackButtonHeader
                 borderBottomColor={'rgba(52, 52, 52, 0.1)'}
-                height={100}
+                height={70}
                 border={1}
                 Header={"Saved Rehabs"}
             />
