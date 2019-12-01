@@ -2,47 +2,93 @@ import React from 'react'
 import { View, Text, TextInput, TouchableOpacity, Image, SafeAreaView, ScrollView } from 'react-native';
 import { useState, useEffect } from 'react'
 import DetailsCardStyles from '../styles/ComponentStyles/DetailsCardStyles';
+import * as icon from '../comps/Svgs'
 
 import { KeyboardAvoidingView } from 'react-native';
+import axios from 'axios'
 import OverView from './OverView';
 import Facility from './Facility';
 import Reviews from './Reviews';
 
 
+const iconDim = 30;
 var longDescriptionStatic = "Founded in 1993 and located in both Metro Vancouver and Vancouver Island, Together We Can - Addiction Recovery & Education Society is one of Canada's premier treatment centres for men battling alcohol and drug addiction. Our mission is to educate and support men and families who desire a new life in recovery. We provide over 300 men with an immersive 60-90 day recovery-based primary addiction treatment experience, followed by transitional housing in a therapeutic residential environment. Together We Can understands that long-term recovery is most successful when people are provided with health and wellness supports for physical, mental, emotional and spiritual healing. Our continuum of care includes residential and outpatient addiction treatment, transitional housing, continuing care, alumni initiatives, and a support program for families; the combination of these cornerstones forms our integrated approach to recovery."
 
 // Main Card
 
-function DetailsCard({ description, stars, starNum, address, phonenum, websitelink, name, type, ...props}) {
-
+function DetailsCard({ description, stars, starNum, address, phonenum, websitelink, name, type, image, ...props}) {
+    
     const [overview, SetOverView] = useState(0)
     const [facilities, SetFacilities] = useState(0)
     const [reviews, SetReviews] = useState(0)
+
+    const [savednum, SetSavedNum] = useState(phonenum);
+    const [savedaddress, SetSavedAddress] = useState(address);
+    const [saveddiscription, SetSavedDiscription] = useState(description);
+    const [savedstars, SetSavedStars] = useState(stars);
+    const [savedname, SetSavedName] = useState(name);
+    const [savedwebsitelink, SetSavedWebsiteLink] = useState(websitelink);
+    const [savedimage, SetSavedImageUrl] = useState(image);
 
     const [Background1, SetBackground1] = useState("white")
     const [Background2, SetBackground2] = useState("white")
     const [Background3, SetBackground3] = useState("white")
 
+    const CreateRehab= async()=>{
+       var starToInt = starNum*10;
+        //fetch db to create users
+        console.log('email & password', name, starToInt, phonenum, type, description, address, websitelink, image);
+        
+        var obj = {
+            key:"savedrehab_create",
+            data:{
+                name:name,
+                ratings:starToInt,
+                phonenum:phonenum,
+                type:type,
+                description:description,
+                address:address,
+                websitelink:websitelink,
+                imgurl:image,
+                
+
+            }
+        }
+        var r = await axios.post("http://localhost:3001/post", obj);
+        console.log(r.data);
+        
+    
+    }
+
     useEffect(() => {
         SetOverView(1)
         SetBackground1("#568C9E")
+        console.log(image)
+        console.log(type)
+        console.log(starNum*10)
     }, []);
+
+    
 
     return (
 
         <SafeAreaView>
 
             <View style={{ flex: 1 }}>
+                {/* BookMark Below */}
+                <TouchableOpacity style={DetailsCardStyles.bookMarkIcon}
+                    onPress={()=>{
+                        alert("Added To Saved Rehabs")
+                        CreateRehab();
+                    }}>
+                    <icon.BookMarkUnsavedIcon width={iconDim} height={iconDim} />
+                </TouchableOpacity>
 
                 <ScrollView style={{ flex: 1 }}>
 
                     <View style={{ flex: 0.75 }}>
-
-
-
-                 
+   
                         <Text style={DetailsCardStyles.HeaderText}>{name}</Text>
-
 
                     </View>
 

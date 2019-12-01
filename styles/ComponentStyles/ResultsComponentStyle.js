@@ -13,7 +13,7 @@ const RehabResultsStyle = StyleSheet.create({
 
     RehabName: {
         fontSize: 19,
-        margin: "2%",
+        margin:Dimensions.get("window").width/160,
     },
 
     AddressBox:{
@@ -23,41 +23,46 @@ const RehabResultsStyle = StyleSheet.create({
     },
     
     bookMarkIcon: {
-        width:25, 
-        height:25, 
+        width:Dimensions.get("window").width/30, 
+        height:Dimensions.get("window").height/60, 
         borderRadius:60, 
         position:'absolute', 
         backgroundColor:'white',
         justifyContent:'center', 
         alignItems:'center', 
-        margin:"2%",
+        margin:"4%",
         left:"83%",
-        shadowOffset:{  width: 5,  height:5,  },
+        top:-10,
+        shadowOffset:{  width: 1,  height:1,  },
         shadowColor: 'black',
-        shadowOpacity: 0.2, 
+        shadowOpacity: 0.4, 
+        shadowRadius:3,
     },
+
     RehabDescription:{
         fontSize:14,
-        flex:1,
-        
+        flex:1, 
     },
  
     RatingContainer:{
         flexDirection:'row', 
-        width:300, 
-        marginTop:6
+        justifyContent:'center',
+        margin:Dimensions.get("window").width/180,
+
     },
 
     RatingNum: {
-        flex:0.15, 
+        flex:0.12, 
         fontSize:12, 
         justifyContent:'center'
     },
 
     AddressAndKm: {
         flexDirection:"row", 
-        width:"100%",
+        
+ 
 
+        
         
     }
 

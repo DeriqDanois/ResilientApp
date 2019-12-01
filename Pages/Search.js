@@ -83,7 +83,7 @@ const Search = props => {
                                     <RehabResultsComponent
                                         key={i}
                                         width={Dimensions.get("window").width/2.58}
-                                        height={Dimensions.get("window").height/4.6}
+                                        height={Dimensions.get("window").height/4.4}
                                         imageHeight={"120%"}
                                         renderBookmark={false}
                                         renderRatings={false}
@@ -112,7 +112,7 @@ const Search = props => {
                                     <RehabResultsComponent
                                     key={i}
                                     width={Dimensions.get("window").width/2.58}
-                                    height={Dimensions.get("window").height/4.6}
+                                    height={Dimensions.get("window").height/4.4}
                                     imageHeight={"120%"}
                                     renderBookmark={false}
                                     renderRatings={false}
@@ -135,14 +135,16 @@ const Search = props => {
 
                         <ScrollView
                             horizontal={true}
-                            showsHorizontalScrollIndicator={false}>
+                            showsHorizontalScrollIndicator={false}
+                            style={{marginBottom:Dimensions.get('window').height/90}}>
+                            
 
                             {
                                outpatient.map((obj, i) => (
                                     <RehabResultsComponent
                                     key={i}
                                     width={Dimensions.get("window").width/2.58}
-                                    height={Dimensions.get("window").height/4.6}
+                                    height={Dimensions.get("window").height/4.4}
                                     imageHeight={"120%"}
                                     renderBookmark={false}
                                     renderRatings={false}
@@ -157,7 +159,6 @@ const Search = props => {
 
                         </ScrollView>
                     </View>
-
 
                 </ScrollView>
                 < NavBar />

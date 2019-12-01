@@ -1,24 +1,17 @@
 
-import { StyleSheet } from 'react-native';
+import { StyleSheet, Dimensions } from 'react-native';
 
 
 
 
 const BackButtonHeaderStyles = StyleSheet.create({
     
-       container: {
-          height:100, 
-          borderBottomColor:'rgba(0, 0, 0, 0.3)', 
-          borderBottomWidth:1,
-          justifyContent:'center',
-          
-       },
-
           HeaderTextStyle:{
             fontSize:25,
             textAlign:'center',
-            flex:0.85,
-            alignSelf:'center'
+            flex:0.4,
+            marginRight:Dimensions.get("window").width/20, 
+            
           },
 
           

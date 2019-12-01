@@ -51,6 +51,9 @@ const RehabPage = props => {
           websitelink={websitelink}  
           starNum={stars}
           stars={starNum} 
+          image={image}
+          type={type}
+          
           />
         </ScrollView>
     

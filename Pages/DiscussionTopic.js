@@ -3,9 +3,41 @@ import { View, Text, TextInput, TouchableOpacity, Image, SafeAreaView, ScrollVie
 import NavBar from '../comps/NavBar';
 import BackButtonHeader from '../comps/BackButtonHeader';
 import DiscussionTopicStyles from '../styles/PageStyles/DiscussionTopicStyles';
+import axios from 'axios';
+
 
 const DiscussionTopic = props => {
-    const [discussion, setDiscussion] = useState(false);
+  
+    var discussionauthor = props.navigation.getParam("discussionauthor");
+    var useravatar = props.navigation.getParam("useravatar");
+    var answers = props.navigation.getParam("answers");
+    var discussion = props.navigation.getParam("discussion");
+    var timeposted = props.navigation.getParam("timeposted");
+    var upvotes = props.navigation.getParam("upvotes");
+    var discussiontitle = props.navigation.getParam("discussiontitle");
+
+
+
+
+    const StartDiscussion = async()=>{
+        //fetch db to create saved discussion
+        var obj = {
+            key:"discussionsaved_create",
+            data:{
+                discussionauthor:discussionauthor,
+                timeposted:timeposted,
+                discussion:discussion,
+                discussiontitle:discussiontitle,
+                useravatar:useravatar,
+                upvotes:upvotes,
+                answers:answers,
+        
+            }
+        }
+
+    var r = await axios.post("http://localhost:3001/post", obj);
+    console.log(r.data);
+}
 
     return (
     
@@ -35,8 +67,8 @@ const DiscussionTopic = props => {
                 source={require('../Assets/avatars/PNGs/Girl3-3.png')}/>
             </View>
             <View style={DiscussionTopicStyles.UsernameAndTimeBox} >
-                <Text style={DiscussionTopicStyles.Username}> ChubbyEmu </Text>
-                <Text style={DiscussionTopicStyles.TimePosted} >Posted 10 mins ago</Text>
+                <Text style={DiscussionTopicStyles.Username}>{discussionauthor}</Text>
+                <Text style={DiscussionTopicStyles.TimePosted} >{timeposted}</Text>
             </View>
         </View>
 
@@ -45,11 +77,11 @@ const DiscussionTopic = props => {
         <View style={{flex:1, flexDirection:"column", marginTop:'3%'}}>
 
         <Text style={DiscussionTopicStyles.TopicText}>
-        Taken off pain meds after 10 years because people are dying from OxyContin. My Dr confirmed that I had done Nothing wrong to deserve this.
+        {discussiontitle}
         </Text>
 
         <Text style={DiscussionTopicStyles.DescText}>
-        So now I’m tortured with horrible pain every day. And people wonder why I want to just be dead?!?!
+        {discussion}
         </Text>
 
         </View> 
@@ -72,7 +104,7 @@ const DiscussionTopic = props => {
                     width:18,
                   }}
                   />
-                <Text style={DiscussionTopicStyles.UpVoteText}>Upvote 12</Text>
+<Text style={DiscussionTopicStyles.UpVoteText}>{upvotes + "  Upvote"}</Text>
             </TouchableOpacity>
 
            {/*  Save*/}
@@ -81,6 +113,8 @@ const DiscussionTopic = props => {
                 style={DiscussionTopicStyles.Save}
                 onPress={()=>{
                     alert("Save")
+                    StartDiscussion();
+
                 }}>
                 <Image
                 source={require('../Assets/PNGs/bookmarkIcon.png')}

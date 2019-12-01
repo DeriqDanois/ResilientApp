@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, TextInput, TouchableOpacity, Image } from 'react-native';
+import { View, TextInput, TouchableOpacity, Image, Text} from 'react-native';
 import SearchComponentStyles from '../styles/ComponentStyles/SearchBarStyles';
 import { DrawerActions } from 'react-navigation-drawer';
 import SearchBarStyles from '../styles/ComponentStyles/SearchBarStyles';
@@ -21,8 +21,12 @@ function SearchBar(props) {
         <View style={SearchBarStyles.HeaderContainer}>
 
 
-            <TouchableOpacity style={{flex:1}}
+            <TouchableOpacity 
+            style={{
+                flex:1, 
+                justifyContent:'center'}}
             onPress={()=>{
+                props.navigation.navigate("SearchBarResults")
             
             }}>
 
@@ -32,24 +36,24 @@ function SearchBar(props) {
         />
 
 
-            <TextInput 
-            placeholder = "Try 'injection site'"
-                onChangeText={(val) => { 
+            <View 
+                onPress={(val) => { 
                     userInput = val,
                  console.log(userInput) 
-                 props.navigation.navigate("SearchBarResults")
+                
                 }}
                 style={SearchBarStyles.SearchInputStyle}>
-            </TextInput>
+                    <Text style={{textAlign:'left', justifyContent:'center', color:'grey', fontSize:17}}>Click to search</Text>
+            </View>
 
             </TouchableOpacity>
 
-            <TouchableOpacity style={{flex:0.25}}
+            <TouchableOpacity style={{flex:0.30}}
                 onPress={() => {
                     props.navigation.dispatch(DrawerActions.openDrawer());
                 }}>
-               {/* Hamburger  */}
-             <icon.HamBurgerIcon  style={SearchBarStyles.HamburgerIcon} />
+                {/* Hamburger  */}
+                <icon.HamBurgerIcon  style={SearchBarStyles.HamburgerIcon} />
             
             </TouchableOpacity>
         </View>

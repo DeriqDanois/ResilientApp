@@ -1,11 +1,38 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, ScrollView, Image, KeyboardAvoidingView } from 'react-native';
 import EmergencyContactStyles from '../styles/PageStyles/AddEmergencyStyles';
-
+import axios from 'axios';
 
 
 const AddEmergencyContact = props => {
     const [addContact, setContactAdded] = useState(false);
+
+    const [ contactname, setContactName ] = useState("");
+    const [ contactphone, setContactPhone ] = useState("");
+    const [ contactmessage, setContactMessage ] = useState("");
+    const [ contactemail, setContactEmail ] = useState("");
+
+    const [error, setError ] = useState("");
+
+    const AddEmergencyContact = async()=>{
+        //fetch db to create users
+        console.log('email & password', contactmessage, contactname, contactphone, contactemail);
+
+        var obj = {
+            key:"emergencycontact_create",
+            data:{
+                phonenum:contactphone,
+                name:contactname,
+                message:contactmessage,
+                email:contactemail,
+            }
+        }
+
+    var r = await axios.post("http://localhost:3001/post", obj);
+    console.log(r.data);
+
+}
+
 
 
     return (
@@ -33,13 +60,23 @@ const AddEmergencyContact = props => {
                     <View style={{ flex: 1 }}>
 
                         <Text style={EmergencyContactStyles.inputTextHeader}>Name</Text>
-                        <TextInput style={EmergencyContactStyles.inputStyle}></TextInput>
+                        <TextInput style={EmergencyContactStyles.inputStyle}
+                        onChangeText={(t)=>{
+                            setContactName(t);
+
+                        }}></TextInput>
 
                         <Text style={EmergencyContactStyles.inputTextHeader}>Phone Number</Text>
-                        <TextInput style={EmergencyContactStyles.inputStyle}></TextInput>
+                        <TextInput style={EmergencyContactStyles.inputStyle}
+                        onChangeText={(t)=>{
+                            setContactPhone(t)
+                        }}></TextInput>
 
-                        <Text style={EmergencyContactStyles.inputTextHeader}>Email (Optional)</Text>
-                        <TextInput style={EmergencyContactStyles.inputStyle}></TextInput>
+                        <Text style={EmergencyContactStyles.inputTextHeader}>Message (Add Emergency Message)</Text>
+                        <TextInput style={EmergencyContactStyles.inputStyle}
+                        onChangeText={(t)=>{
+                            setContactMessage(t)
+                        }}></TextInput>
 
                         <View style={{ flex: 1, alignItems: 'center' }}>
                             <Text style={{ marginTop: 10, marginBottom: 20, fontSize:16 }}> And / or </Text>
@@ -56,9 +93,10 @@ const AddEmergencyContact = props => {
                         <View style={{ flex: 1, marginTop: "5%" }}>
                             <TouchableOpacity
                                 style={EmergencyContactStyles.buttons}
-                                onPress={() =>
-                                    props.navigation.navigate('Search')}>
-                                <Text style={EmergencyContactStyles.buttonsText}>SIGN UP</Text>
+                                onPress={() => {
+                                    AddEmergencyContact();
+                                    props.navigation.navigate('Search')}}>
+                                <Text style={EmergencyContactStyles.buttonsText}>Add Contact</Text>
                             </TouchableOpacity>
                         </View>
 

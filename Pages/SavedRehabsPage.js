@@ -14,20 +14,20 @@ import axios from '../axios'
 const SavedRehabsPage = props => {
 
 
-    const [imageUrl, setImgUrl] = useState([]);
+    const [savedrehabs, setSavedRehab] = useState([]);
 
 
     const getRehab = async () => {
-        var data = await axios('rehab_read', {});
+        var data = await axios('savedrehab_read', {});
         console.log(data)
         // console.log(json);
-        // setImgUrl(json);
-        setImgUrl(data);
+        // setSavedRehab(json);
+        setSavedRehab(data);
     }
 
     // Handle 
     useEffect(() => {
-        getRehab();
+            getRehab();
     }, []);
 
 
@@ -49,10 +49,10 @@ const SavedRehabsPage = props => {
                 <ScrollView
                     horizontal={false}
                     showsVerticalScrollIndicator={false}
-                    style={SavedRehabsPageStyle.scrollView}>
+                    style={{marginBottom:Dimensions.get('window').height/13, marginHorizontal:Dimensions.get('window').width/30}}>
 
                     {
-                        imageUrl.map((obj, i) => (
+                        savedrehabs.map((obj, i) => (
                             <RehabResultsComponent
                                 key={i}
                                 width={Dimensions.get("window").width/1.11}

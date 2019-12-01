@@ -3,14 +3,32 @@ import React, { useState, useEffect, Linking } from 'react';
 import { View, Text, TextInput, TouchableOpacity, Image, SafeAreaView, ScrollView } from 'react-native';
 import SosPageStyles from '../styles/PageStyles/SosPageStyles';
 import BackButtonHeader from '../comps/BackButtonHeader';
-import EmergencyContact from '../comps/EmergencyContact'
-import * as icon from '../comps/Svgs'
+import EmergencyContact from '../comps/EmergencyContact';
+import * as icon from '../comps/Svgs';
+import axios from '../axios';
 
 
 const SosPage = props => {
     const [login, checkLogin] = useState(false);
-
     const contactName = "Joe";
+    const [contacts, setContacts] = useState([])
+
+
+    const getEmergencyContact = async () => {
+        var data = await axios('emergencycontact_read', {});
+        if (data.length === 0){
+            setUserAvatarAndName({username:['none']})
+        } 
+        setContacts(data)
+    }
+    
+    // Handle 
+   
+    useEffect(() => {
+        getEmergencyContact();
+     []});
+
+
 
     // RNImmediatePhoneCall.immediatePhoneCall('0123456789');}
 
@@ -49,27 +67,20 @@ const SosPage = props => {
 
                    
                     {/* //contact component starts from here */}
-
+                    {
+                        contacts.map((obj, i) => (
                         <EmergencyContact
-                        phoneNum={"+1(250)719-2239"} 
-                        contactName={"John"}
-                        contactFullName={"John Doe"}
+                        key={i}
+                        phoneNum={obj.phonenum}
+                        phone={obj.phonenum}
+                        contactName={obj.name}
+                        contactFullName={obj.name}
                         topMargin={"2%"}
+                        message={obj.message}
                         />
-                        <EmergencyContact
-                        phoneNum={"+1(250)713-9999"} 
-                        contactName={"Jim"}
-                        contactFullName={"Jim Bean"}
-                        topMargin={"2%"}
-                        />
-                        <EmergencyContact
-                        phoneNum={"+1(778)324-8755"} 
-                        contactName={"Mary"}
-                        contactFullName={"Mary Jane"}
-                        topMargin={"2%"}
-                        />
-
-                    {/*  */}
+                        ))
+                    }
+                 
 
                 </ScrollView>
             </View>

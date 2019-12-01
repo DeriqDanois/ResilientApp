@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import {View, Image, Text, SafeAreaView, TextInput, TouchableOpacity} from 'react-native';
+import {View, Image, Text, SafeAreaView, TextInput, TouchableOpacity, } from 'react-native';
 import * as icon from '../comps/Svgs'
 import axios from '../axios'
-import SearchBarStyles from '../styles/ComponentStyles/SearchBarStyles';
+import SearchBarResultsStyles from '../styles/PageStyles/SearchBarResultsStyles';
 import { ScrollView } from 'react-native-gesture-handler';
 import BackButtonHeader from '../comps/BackButtonHeader';
 import { withNavigation } from 'react-navigation';
@@ -40,23 +40,23 @@ const GooglePlacesInput = () => {
             height={50}
           />
       
-        <View style={SearchBarStyles.HeaderContainer}>
+        <View style={SearchBarResultsStyles.HeaderContainer}>
 
             <TextInput 
               placeholder = "Try 'injection' site"
                 onChangeText={(text) => { 
-                  if (text.length >= 1){
+                  if (text.length > 1){
                   setInput(text)
                     GetPlaces();
                   }
                 
                   //  console.log(input)
                 }}
-                style={SearchBarStyles.SearchInputStyle}>
+                style={SearchBarResultsStyles.SearchInputStyle}>
             </TextInput>
 
             <Image
-            style={SearchBarStyles.SearchIcon}
+            style={SearchBarResultsStyles.SearchIcon}
             source={require('../Assets/PNGs/greySearchIcon.png')}
         />
 

@@ -75,7 +75,7 @@ export function DrawerComponent({username, ...props}){
 
     
 
-        <View style={{alignItems:'center', justifyContent:'center'}}>
+        <View style={{alignItems:'center',  marginTop:"-30%"}}>
             <DrawerItems {...props} />
         </View>
 

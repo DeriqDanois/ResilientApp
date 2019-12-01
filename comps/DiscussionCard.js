@@ -10,8 +10,8 @@ import { View,
 import DiscussionCardStyles from '../styles/ComponentStyles/DiscussionCardStyles';
 import { withNavigation } from 'react-navigation';
 
-function DiscussionCard({renderBookmark = true, ...props}){
-  
+function DiscussionCard({renderBookmark = true, timeposted, discussiontitle, discussionauthor,answers, useravatar, discussion, upvotes,...props}){
+
     return (
         
 <View>
@@ -27,7 +27,16 @@ function DiscussionCard({renderBookmark = true, ...props}){
         <TouchableOpacity
             style={{flex:1}}
             onPress={()=>{
-                props.navigation.navigate("DiscussionTopic")
+                props.navigation.navigate("DiscussionTopic", {
+                    discussionauthor:discussionauthor, 
+                    useravatar:useravatar, 
+                    upvotes:upvotes, 
+                    answers:answers, 
+                    discussiontitle:discussiontitle,
+                    discussion:discussion,
+                    timeposted:timeposted,
+
+                    })
             }}>
 
         
@@ -36,10 +45,10 @@ function DiscussionCard({renderBookmark = true, ...props}){
         <View style={{flex:4, flexDirection:"row"}}>
             <Image
             style={DiscussionCardStyles.Avatar}
-            source={props.avatarImg}/>
+            source={useravatar}/>
             
         <Text style={DiscussionCardStyles.Text}>
-            {props.DiscussionTitle}
+            {discussiontitle}
         </Text>
         </View> 
 
@@ -50,24 +59,25 @@ function DiscussionCard({renderBookmark = true, ...props}){
         }}
         source={require('../Assets/PNGs/upvoteIcon.png')}/>
        
-       <View style={{flex:1}}>
+       <View style={{flex:0.8}}>
            <Text style={DiscussionCardStyles.Upvote}>
-           {props.upVoteNum}
+           {upvotes}
            </Text>
         </View>
 
-    <View style={{flex:2, flexDirection:"row"}}>
+    <View style={{flex:5, flexDirection:"row"}}>
         <Text style={DiscussionCardStyles.PostStatus}>
-       {props.timePosted}
+       {timeposted}
        </Text>
 
        <Text style={DiscussionCardStyles.PostStatus}>
-       {props.answerNum} answers
+       {answers} answers
        </Text>
 
     </View>
 
 </View>
+    {/* <Text>{discussionauthor}</Text> */}
 
 </View>
 

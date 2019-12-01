@@ -9,7 +9,7 @@ const EditEmergencyContacts = props => {
 
 
     return (
-       <View style={{flex:1, borderBottomWidth:1, paddingBottom:"15%", paddingTop: "15%", borderColor:"#DADADA"}}>
+       <View style={{flex:1, borderBottomWidth:1, paddingBottom:"25%", paddingTop: "15%", borderColor:"#DADADA"}}>
             {/* Row 1  Contacts Name - Edit*/}
             {/* FLEX Start FOR Emergency Contact and Edit Button */}
                     <View style={{flex:1, flexDirection:'row'}}> 
@@ -53,7 +53,7 @@ const EditEmergencyContacts = props => {
                         fontSize:18,
                         width: "70%",
                         lineHeight:28
-                        }}>"{props.message}</Text>
+                        }}>{props.message}</Text>
                     <Text
                     style={{
                         fontSize:18,

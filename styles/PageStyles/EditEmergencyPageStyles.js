@@ -45,7 +45,8 @@ const EditEmergencyPageStyles = StyleSheet.create({
     PhoneNumber: {
         fontSize:18, 
         marginTop:'2%', 
-        paddingLeft:'8%'
+        paddingLeft:'8%',
+        height:'100%'
     },
     ImageStyles: {
         width: 25, 

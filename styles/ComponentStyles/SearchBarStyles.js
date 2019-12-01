@@ -1,4 +1,4 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet, Dimensions } from 'react-native';
 
 
 
@@ -14,12 +14,13 @@ const SearchBarStyles = StyleSheet.create({
         shadowOffset:{  width: 3,  height:3,  },
         shadowColor: 'black',
         shadowOpacity: 0.2,
+        justifyContent:'center'
         
     },
 
     HeaderContainer: {
-        margin:25,
-        height:"7%",   
+        margin:Dimensions.get("window").width/10,
+        height:Dimensions.get("window").height/14,
         backgroundColor:'white',
         borderRadius: 8,
         flexDirection:'row', 
@@ -30,30 +31,22 @@ const SearchBarStyles = StyleSheet.create({
       
     },
 
-    Logo: {
-        position:'absolute',
-        alignSelf:'center',
-        top:'25%',
+    SearchIcon: {
+        width: "11%",
+        height: "45%",
+        position:"absolute",
+        justifyContent:'center',
+        marginLeft:Dimensions.get("window").width/30,
+        resizeMode:"contain"
     },
 
 
 
     HamburgerIcon: {
-        margin:"2%",
-        flex:1,
+        margin:Dimensions.get('window').width/80,
+        resizeMode:'contain'
+        
         },
-
-    SearchIcon: {
-        flex:1,
-        width: 22,
-        height: 22,
-        alignItems:"center",
-        justifyContent:"center",
-        position:"absolute",
-        marginTop:18,
-        marginLeft:20
-    },
-
           
 
 })

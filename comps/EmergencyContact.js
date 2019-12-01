@@ -10,6 +10,7 @@ import SendSMS from 'react-native-sms'
 
 
 const EmergencyContact = props => {
+    
 
     return (    
         
@@ -34,8 +35,8 @@ const EmergencyContact = props => {
                 onPress={() => {
                  
                     SendSMS.send({
-                        body: 'The default body of the SMS!',
-                        recipients: ['2507138300'],
+                        body: props.message,
+                        recipients: [props.phone],
                         successTypes: ['sent', 'queued'],
                         allowAndroidSendWithoutReadPermission: true
                     }, (completed, cancelled, error) => {
