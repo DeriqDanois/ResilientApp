@@ -1,7 +1,5 @@
 rootProject.name = 'ResilientApp'
 
-include ':react-native-sms'
-project(':react-native-sms').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-sms/android')
 
 include ':react-native-svg'
 project(':react-native-svg').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-svg/android')

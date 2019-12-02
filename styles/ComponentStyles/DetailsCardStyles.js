@@ -10,15 +10,17 @@ const DetailsCardStyles = StyleSheet.create({
     DirectionText:{
         marginTop:10,
         marginLeft:'5%',
+        fontSize:16,
      
     }, 
     rowText:{
         alignSelf:'center',
+        fontSize:16,
         flex:1,
     }, 
     ButtonText:{
        textAlign:'center',
-       fontSize:12,
+       fontSize:14,
        color:'white',
        fontWeight:'bold'
 
@@ -27,7 +29,7 @@ const DetailsCardStyles = StyleSheet.create({
         textAlign:"left",
         marginLeft:"5%",
         margin:9,
-        fontSize:17,
+        fontSize:22,
         fontWeight:'500',
    
     }, 
@@ -64,7 +66,7 @@ const DetailsCardStyles = StyleSheet.create({
         marginTop:'10%', 
         marginLeft:"4%", 
         fontWeight:"bold", 
-        fontSize:15
+        fontSize:20
     },
 
     rowViews:{

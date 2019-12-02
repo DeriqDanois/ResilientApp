@@ -15,13 +15,13 @@ function Facility(props){
             <Text style={DetailsCardStyles.facilityTextHeader}>Types</Text>
                 <View style={DetailsCardStyles.rowViews}>
                     <View style={DetailsCardStyles.rowColumnViews}>
-                        <Text style={DetailsCardStyles.facilitiesText}>OutPatient Rehab</Text>
-                        <Text style={DetailsCardStyles.facilitiesText}>Sober living</Text>
+                        <Text style={DetailsCardStyles.facilitiesText}>Outpatient Rehab</Text>
+                        <Text style={DetailsCardStyles.facilitiesText}>Sober Living</Text>
                         <Text style={DetailsCardStyles.facilitiesText}>Family Support</Text>
                     </View>
                     <View style={DetailsCardStyles.rowColumnViews}>
-                        <Text style={DetailsCardStyles.facilitiesText}>Impatient Rehab</Text>
-                        <Text style={DetailsCardStyles.facilitiesText}>Detox Center</Text>
+                        <Text style={DetailsCardStyles.facilitiesText}>Inpatient Rehab</Text>
+                        <Text style={DetailsCardStyles.facilitiesText}>Detox Centre</Text>
                         <Text style={DetailsCardStyles.facilitiesText}>Therapy Programs</Text>
                     </View>
                 </View>
@@ -40,7 +40,7 @@ function Facility(props){
             </View>
             {/* third row */}
             <View style={{flex:0.5}}>
-            <Text style={DetailsCardStyles.facilityTextHeader}>Average price range</Text>
+            <Text style={DetailsCardStyles.facilityTextHeader}>Average Price Range</Text>
                 <View style={DetailsCardStyles.rowViews}>
                     <View style={DetailsCardStyles.rowColumnViews}>
                         <Text style={DetailsCardStyles.facilitiesText}>8,000-10,000</Text>

@@ -15,10 +15,12 @@ const  RehabPageStyles = StyleSheet.create({
           },
 
           type: {
-            fontSize:13,
+            fontSize:14,
+            paddingTop:10,
+            textTransform: 'uppercase',
+            fontWeight:"500",
             color:"grey",
             marginLeft:"5%",
-           
          
           }
 

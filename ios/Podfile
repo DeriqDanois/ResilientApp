@@ -35,7 +35,6 @@ target 'ResilientApp' do
   pod 'Folly', :podspec => '../node_modules/react-native/third-party-podspecs/Folly.podspec'
 
 
-  pod 'react-native-sms', :path => '../node_modules/react-native-sms'
 
   pod 'RNSVG', :path => '../node_modules/react-native-svg'
 

@@ -43,7 +43,7 @@ const GooglePlacesInput = () => {
         <View style={SearchBarResultsStyles.HeaderContainer}>
 
             <TextInput 
-              placeholder = "Try 'injection' site"
+              placeholder = "Try 'injection site'"
                 onChangeText={(text) => { 
                   if (text.length > 1){
                   setInput(text)

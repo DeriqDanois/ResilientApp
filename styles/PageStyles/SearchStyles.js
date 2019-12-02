@@ -23,7 +23,8 @@ const SearchStyles = StyleSheet.create({
 
     scrollView: {
          marginHorizontal: 15,
-         marginBottom:60
+         marginBottom:100,
+         marginTop:-20,
     
     },
 

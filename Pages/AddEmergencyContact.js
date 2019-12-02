@@ -82,7 +82,7 @@ const AddEmergencyContact = props => {
                             <Text style={{ marginTop: 10, marginBottom: 20, fontSize:16 }}> And / or </Text>
                             <TouchableOpacity
                                     onPress={()=>{
-                                        alert("911 added as Your Emergency Contact")
+                                        alert("911 is added as your Emergency Contact")
                                     }}
                                 style={EmergencyContactStyles.RecommendedButton}>
                                 <Text style={{textAlign:'center', color:'#568C9E', fontWeight:'bold', fontSize:16}}>

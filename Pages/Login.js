@@ -45,7 +45,7 @@ const Login = props => {
             style={{
               color:'white', 
               textAlign:'center',
-              fontSize:20, 
+              fontSize:18, 
               justifyContent:"center",
               fontWeight:'bold',
               opacity:onlogin
@@ -62,7 +62,7 @@ const Login = props => {
                style={{
                 color:'white', 
                 textAlign:'center',
-                fontSize:20, 
+                fontSize:18, 
                 justifyContent:"center",
                 fontWeight:'bold',
                 opacity:onsignup

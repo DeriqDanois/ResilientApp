@@ -100,7 +100,7 @@ const Search = props => {
                     </View>
 
                     {/* Header #2 */}
-                    <Text style={SearchStyles.HeaderText}>Detox Center</Text>
+                    <Text style={SearchStyles.HeaderText}>Detox Centre</Text>
                     {/* Row Two Results */}
                     <View style={{ flex: 1, flexDirection: "row" }}>
                         <ScrollView

@@ -73,7 +73,7 @@ const DiscussionPage = props => {
 
 
                 <TextInput
-                    placeholder={"Click To Type"}
+                    placeholder={"Search discussions"}
                     onChangeText={(text) => { 
                         if (text.length > 1){
                         setInput(text)

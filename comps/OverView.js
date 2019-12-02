@@ -56,7 +56,7 @@ function OverView(props){
                    {/* Seperation Line */}
                 <View style={{marginTop:'5%',  borderBottomColor:'grey', borderBottomWidth:0.7}}></View>
                {/* Long Description Below */}
-               <Text style={{margin:20, letterSpacing:1, lineHeight:20 }}>{props.LongDescription}</Text>
+               <Text style={{margin:20, letterSpacing:0.5, lineHeight:22, fontSize:16 }}>{props.LongDescription}</Text>
          </View>         
       
     )

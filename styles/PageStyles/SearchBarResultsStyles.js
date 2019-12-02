@@ -31,7 +31,7 @@ const SearchBarResultsStyles = StyleSheet.create({
     },
 
     title: {
-        fontSize: 22,
+        fontSize: 26,
         margin: 5
     },
     description: {
@@ -40,11 +40,11 @@ const SearchBarResultsStyles = StyleSheet.create({
     },
 
     SearchIcon: {
-        width: "8%",
+        width: "7%",
         height: "44%",
         position:"absolute",
         alignSelf:'center',
-        marginLeft:Dimensions.get("window").width/30,
+        marginLeft:Dimensions.get("window").width/20,
              resizeMode:"contain"
     },
 

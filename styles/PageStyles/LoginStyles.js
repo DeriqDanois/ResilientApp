@@ -13,7 +13,7 @@ const stylesSignUp = StyleSheet.create({
         borderBottomColor: 'white',
         borderBottomWidth: 2,
         marginBottom: 40,
-        fontSize:18,
+        fontSize:16,
         color:'white',
     },  
 
@@ -27,11 +27,11 @@ const stylesSignUp = StyleSheet.create({
         borderWidth: 2.5,
         borderColor:"white",
         borderRadius: 40,
-        fontSize: 10,
         alignItems:"center",
         justifyContent: "center",
         height:45,
         width:250,
+        marginTop:"5%",
         backgroundColor:'#002F43',     
     },
 

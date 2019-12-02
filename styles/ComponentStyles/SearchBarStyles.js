@@ -32,18 +32,18 @@ const SearchBarStyles = StyleSheet.create({
     },
 
     SearchIcon: {
-        width: "11%",
+        width: "9%",
         height: "45%",
         position:"absolute",
         justifyContent:'center',
-        marginLeft:Dimensions.get("window").width/30,
+        marginLeft:Dimensions.get("window").width/20,
         resizeMode:"contain"
     },
 
 
 
     HamburgerIcon: {
-        margin:Dimensions.get('window').width/80,
+        margin:Dimensions.get('window').width/70,
         resizeMode:'contain'
         
         },

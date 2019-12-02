@@ -180,7 +180,6 @@ android {
 
 dependencies {
 
-    implementation project(':react-native-sms')
 
     implementation project(':react-native-svg')
 

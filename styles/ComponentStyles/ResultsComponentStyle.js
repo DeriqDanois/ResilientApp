@@ -2,8 +2,8 @@ import { StyleSheet, Dimensions } from 'react-native';
 
 const RehabResultsStyle = StyleSheet.create({
     rehabAddress: {
-        fontSize: 11,
-        flex:2
+        fontSize: 14,
+        flex:2,
     },
 
     RehabDistance:{
@@ -12,7 +12,10 @@ const RehabResultsStyle = StyleSheet.create({
     },
 
     RehabName: {
-        fontSize: 19,
+        fontSize: 17,
+        fontWeight:"500",
+        padding:5,
+        marginLeft:"3%",
         margin:Dimensions.get("window").width/160,
     },
 

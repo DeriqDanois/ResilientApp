@@ -5,7 +5,6 @@ import android.content.Context;
 import com.facebook.react.PackageList;
 import com.facebook.react.ReactApplication;
 
-import com.tkporter.sendsms.SendSMSPackage;
 import com.horcrux.svg.SvgPackage;
 
 import com.facebook.react.ReactNativeHost;

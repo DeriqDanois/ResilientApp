@@ -101,7 +101,7 @@ const DiscussionForm = props => {
                     setDiscussionTitle(t);
 
                 }}
-                // how to do textinput border? border:1, borderColor:"#568C9E"
+                
                 style={{
                     paddingLeft:'3%',
                     height:Dimensions.get("window").height/17, 

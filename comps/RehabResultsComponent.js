@@ -64,7 +64,7 @@ function RehabResultsComponent({ renderBookmark = true, renderRatings = true, di
                 <Text style={RehabResultsComponenetStyle.RehabName}>{name}</Text>
                 
           
-        <View style={{marginTop:10, marginLeft:"4%", flex:1}}>  
+        <View style={{marginTop:2, marginLeft:"6%", flex:1, marginBottom:-5}}>  
                 <View style={RehabPageStyles.AddressAndKm}>
                     {/* AdddressAnd Km */}
                     <Text style={RehabResultsComponenetStyle.rehabAddress}>{address}</Text>

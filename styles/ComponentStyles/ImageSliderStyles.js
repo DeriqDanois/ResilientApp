@@ -1,7 +1,7 @@
 import { StyleSheet } from 'react-native'; 
 import { BookMarkUnsavedIcon } from '../../comps/Svgs';
 
-const NavBarStyles = StyleSheet.create({
+const ImageSliderStyles = StyleSheet.create({
     SliderContainer: {
         height:350,
         flex:1,
@@ -13,6 +13,7 @@ const NavBarStyles = StyleSheet.create({
         height:70,
         flex:1,
     },
+    
     sliderDotsContainer: {
         flexDirection:'row',
         flex:1,
@@ -38,4 +39,4 @@ const NavBarStyles = StyleSheet.create({
     }
 })
 
-export default NavBarStyles;
+export default ImageSliderStyles;
