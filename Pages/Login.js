@@ -31,7 +31,7 @@ const Login = props => {
           <View style={{
                 position:'absolute',
                 alignSelf:'center',
-                top:"10%"
+                top:"25%"
        
              
           }}>
@@ -82,7 +82,7 @@ const Login = props => {
 
       {/* Inputs and button Below */}
 
-      <KeyboardAvoidingView style={{flex:0.9}} behavior='padding' enabled>
+      <KeyboardAvoidingView style={{flex:0.9}} behavior='padding' keyboardVerticalOffset='-40' enabled>
         
         
       
