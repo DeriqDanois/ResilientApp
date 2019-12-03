@@ -29,9 +29,9 @@ const [reviews, setReviews] = useState([]);
     // Handle    
     useEffect(() => {
     getReviews();
-    console.log(name);
    
-    []});
+   
+    [5000]});
     
 
 
@@ -84,6 +84,7 @@ const [reviews, setReviews] = useState([]);
                         marginBottom:40,
                         flexDirection:'column',
                         justifyContent:'center', 
+                        marginTop:reviewheight/20
                         }}>
 
                         <View style={{ flex:1, margin:40, height:reviewheight, }}>
@@ -119,7 +120,7 @@ const [reviews, setReviews] = useState([]);
                                 <Text style={{flex:1, letterSpacing:0.6}}>{obj.message}</Text>
                          </View>
                         </View>
-                            <View style={{   marginBottom:reviewheight/5, borderBottomWidth:1, borderBottomColor:'#DADADA', flex:1,}}>
+                            <View style={{   marginBottom:reviewheight/20, borderBottomWidth:1, borderBottomColor:'#DADADA', flex:1,}}>
                         </View>
                 </View>
             ))

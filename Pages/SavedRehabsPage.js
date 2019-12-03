@@ -28,7 +28,7 @@ const SavedRehabsPage = props => {
     // Handle 
     useEffect(() => {
             getRehab();
-    }, []);
+    }, [5000]);
 
 
 
