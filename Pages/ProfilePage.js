@@ -34,7 +34,7 @@ const ProfilePage = props => {
 
 
           <Image
-            source={require('../Assets/avatars/PNGs/Girl1-1.png')}
+            source={require('../Assets/avatars/PNGs/Girl3-3.png')}
             style={ProfilePageStyles.UserIcon}></Image>
           <Text style={ProfilePageStyles.UserName}>Username</Text>
 

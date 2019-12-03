@@ -92,7 +92,7 @@ const DiscussionPage = props => {
                         props.navigation.dispatch(DrawerActions.openDrawer());
                     }}>
                     {/* Hamburger  */}
-                    <icon.HamBurgerIcon  style={SearchBarStyles.HamburgerIcon} />
+                    <icon.HamBurgerIcon  width={"100%"} height={"100%"} />
 
                 </TouchableOpacity>
 

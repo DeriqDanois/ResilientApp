@@ -70,7 +70,13 @@ function DiscussionCard({renderBookmark = true, timeposted, discussiontitle, dis
        {timeposted}
        </Text>
 
-       <Text style={DiscussionCardStyles.PostStatus}>
+       <Text style={{
+                fontWeight:"300",
+                color:"grey",
+                marginRight:5,
+                marginLeft:5,
+                fontSize:11
+       }}>
        {answers} answers
        </Text>
 

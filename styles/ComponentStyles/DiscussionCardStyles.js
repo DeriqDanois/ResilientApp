@@ -60,7 +60,7 @@ const DiscussionCardStyles = StyleSheet.create({
         color:"grey",
         marginRight:5,
         marginLeft:5,
-        fontSize:13
+        fontSize:10
     }
 
 

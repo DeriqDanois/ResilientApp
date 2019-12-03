@@ -42,12 +42,7 @@ const SearchBarStyles = StyleSheet.create({
 
 
 
-    HamburgerIcon: {
-        margin:Dimensions.get('window').width/80,
-        resizeMode:'contain'
-        
-        },
-          
+    
 
 })
 
