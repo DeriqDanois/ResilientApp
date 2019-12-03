@@ -174,6 +174,7 @@ function DetailsCard({ description, stars, starNum, address, phonenum, websiteli
                     {
                         (reviews === 1) ? <Reviews
                             Ratings={"5"}
+                            name={name}
                         /> : null
                     }
 
