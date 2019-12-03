@@ -112,6 +112,7 @@ const ReviewForm = props => {
             <View style={LeaveReviewStyles.inputSubmitView}>
                 <Text style={{fontSize:20, fontWeight:'bold'}}>Title</Text>
             <TextInput
+            multiline
                  onChangeText={(t)=>{
                     setReviewTitle(t);
                 }}
@@ -132,6 +133,7 @@ const ReviewForm = props => {
                 <Text style={{fontSize:20, fontWeight:'bold', marginTop:20}}>Review</Text>
 
                 <TextInput
+                multiline
                 onChangeText={(t)=>{
                     setReview(t);
 
