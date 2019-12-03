@@ -12,6 +12,7 @@ const SosPage = props => {
     const [login, checkLogin] = useState(false);
     const contactName = "Joe";
     const [contacts, setContacts] = useState([])
+    var location = "9191 barrard st"
 
 
     const getEmergencyContact = async () => {
@@ -80,7 +81,17 @@ const SosPage = props => {
                         />
                         ))
                     }
+
+                    <EmergencyContact
+                        phoneNum={"911"}
+                        phone={"911"}
+                        contactName={"911"}
+                        contactFullName={"Emergency Responders"}
+                        topMargin={"2%"}
+                        message={"Help I'm Oding my location is " + location}
+                        />
                  
+
 
                 </ScrollView>
             </View>

@@ -48,7 +48,7 @@ function SearchBar(props) {
 
             </TouchableOpacity>
 
-            <TouchableOpacity style={{flex:0.30, height:'100%', }}
+            <TouchableOpacity style={{flex:0.27, height:'100%', justifyContent:'center' }}
                 onPress={() => {
                     props.navigation.dispatch(DrawerActions.openDrawer());
                 }}>

@@ -1,18 +1,19 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet, Dimensions } from 'react-native';
 
 
 
 const SearchStyles = StyleSheet.create({
 
     HeaderText: {
-        color: "#568C9E",
-        fontSize: 26,
+        color: "black",
+        fontSize: Dimensions.get('window').width/18,
         textAlign: 'left',
         width: '70%',
         marginTop: 18,
         fontWeight: "500",
         marginBottom: "2%",
-        marginLeft:"3%"
+        marginLeft:"3%",
+        fontWeight:'700'
     },
 
 

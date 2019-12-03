@@ -110,7 +110,7 @@ export const TelephoneIcon = props => (
 )
 
 export const HamBurgerIcon = props => (
-  <Svg width={57} height={47} fill="none" {...props}>
+  <Svg width={57} height={57} fill="none" {...props}>
     <Path fill="#fff" d="M0 0h57v47H0z" />
     <Path
       stroke="#000" strokeWidth="2"

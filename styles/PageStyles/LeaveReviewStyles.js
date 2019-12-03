@@ -74,6 +74,9 @@ const LeaveReviewStyles = StyleSheet.create({
     inputStyles: {
         paddingLeft:'3%',
         paddingBottom:'30%',
+        paddingTop:6.9,
+    
+
         height:Dimensions.get("window").height/5, 
         width:Dimensions.get("window").width/1.1, 
         borderColor:"#568C9E",

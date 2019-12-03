@@ -60,6 +60,7 @@ const ReviewForm = props => {
 
     return (
     <SafeAreaView style={{flex:1}}>
+    
         
         <BackButtonHeader
                 borderBottomColor={'rgba(52, 52, 52, 0.1)'}
@@ -78,7 +79,7 @@ const ReviewForm = props => {
             <View style={{flex:1}}>
                 <Image
                 style={LeaveReviewStyles.Avatar}
-                source={require('../Assets/avatars/PNGs/Girl3-3.png')}/>
+                source={useravatar}/>
             </View>
 
             <View style={LeaveReviewStyles.UsernameAndTimeBox} >
@@ -153,6 +154,7 @@ const ReviewForm = props => {
             }}>
                 <Text style={LeaveReviewStyles.submitButtonText}>submit</Text>
                 </TouchableOpacity>
+                <View style={{height:120, flex:1, backgroundColor:'red'}}></View>
         </View>
 
   
@@ -164,7 +166,9 @@ const ReviewForm = props => {
 
 
         </ScrollView>
+   
         <NavBar />
+    
 </SafeAreaView>
           
     )
