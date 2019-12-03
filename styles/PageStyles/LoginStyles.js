@@ -53,6 +53,8 @@ const stylesSignUp = StyleSheet.create({
         position:'absolute',
         alignSelf:'center',
         top:'20%',
+        paddingBottom:40,
+  
     },
 
 

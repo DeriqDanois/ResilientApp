@@ -33,6 +33,10 @@ function DetailsCard({ description, stars, starNum, address, phonenum, websiteli
     const [Background1, SetBackground1] = useState("white")
     const [Background2, SetBackground2] = useState("white")
     const [Background3, SetBackground3] = useState("white")
+    const [textcolor1, SetTextColor1] = useState("white")
+    const [textcolor2, SetTextColor2] = useState("black")
+    const [textcolor3, SetTextColor3] = useState("black")
+ 
 
     const CreateRehab= async()=>{
        var starToInt = starNum*10;
@@ -95,7 +99,7 @@ function DetailsCard({ description, stars, starNum, address, phonenum, websiteli
                     <View style={{ marginTop: 10, flex: 1, height:50, borderWidth:0.7, borderColor:'#DADADA', flexDirection: "row", alignItems: 'center', justifyContent: 'center' }}>
 
                         <View style={{ flex: 1, borderLeftWidth:0.5, borderColor:'#DADADA', height:'100%', justifyContent:'center', backgroundColor: Background1 }}>
-                            <Text style={{ textAlign: 'center' }}
+                            <Text style={{ textAlign: 'center', color: textcolor1}}
                                 onPress={() => {
                                     SetOverView(1)
                                     SetFacilities(0)
@@ -104,12 +108,17 @@ function DetailsCard({ description, stars, starNum, address, phonenum, websiteli
                                     SetBackground1("#568C9E")
                                     SetBackground2("white")
                                     SetBackground3("white")
+                                    // Color of text in button
+                                    SetTextColor1("white")
+                                    SetTextColor2("black")
+                                    SetTextColor3("black")
+                                
 
                                 }}>Overview</Text>
                         </View>
 
                         <View style={{ flex: 1, borderLeftWidth:0.5, borderColor:'#DADADA', height:'100%', justifyContent:'center', backgroundColor: Background2 }}>
-                            <Text style={{ textAlign: 'center' }}
+                            <Text style={{ textAlign: 'center', color: textcolor2 }}
                                 onPress={() => {
                                     SetFacilities(1)
                                     SetOverView(0)
@@ -118,11 +127,15 @@ function DetailsCard({ description, stars, starNum, address, phonenum, websiteli
                                     SetBackground1("white")
                                     SetBackground2("#568C9E")
                                     SetBackground3("white")
+                                //    color of text in button
+                                    SetTextColor1("black")
+                                    SetTextColor2("white")
+                                    SetTextColor3("black")
                                 }}>Facility</Text>
                         </View>
 
                         <View style={{ flex: 1, borderLeftWidth:0.5, borderColor:'#DADADA', height:'100%', justifyContent:'center', backgroundColor: Background3 }}>
-                            <Text style={{ textAlign: 'center' }}
+                            <Text style={{ textAlign: 'center', color: textcolor3}}
                                 onPress={() => {
                                     SetReviews(1)
                                     SetOverView(0)
@@ -132,6 +145,10 @@ function DetailsCard({ description, stars, starNum, address, phonenum, websiteli
                                     SetBackground3("#568C9E")
                                     SetBackground2("white")
                                     SetBackground1("white")
+                                    //    color of text in button
+                                    SetTextColor1("black")
+                                    SetTextColor2("black")
+                                    SetTextColor3("white")
                                 }}>Review</Text>
                         </View>
                     </View>

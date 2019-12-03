@@ -28,13 +28,7 @@ const Login = props => {
             source={{ uri: 'https://bit.ly/2NMonRR' }}>
           </Image>
 
-          <View style={{
-                position:'absolute',
-                alignSelf:'center',
-                top:"25%"
-       
-             
-          }}>
+          <View style={LoginStyles.Logo}>
               <icon.LogoAndHexagon fill={'white'} height={iconDim} width={iconDim} />
           </View>
 
