@@ -13,22 +13,81 @@ const LoginComponent = props => {
   const [error, setError ] = useState("");
   const [Username, setUsername ] = useState("");
   const [password, setPassword ] = useState("");
+  const [hide, setHide ] = useState("");
+  const [shrinkwidth, setShrinkWidth] = useState(250);
+  const [shrinkheight, setShrinkHieght] = useState(30);
+  const [shrinkmargin, setShrinMargin] = useState(30);
+
 
   return (
 
       <View style={LoignComponentStyles.LoginBottamHalf}>
 
-          <TextInput style={LoignComponentStyles.inputStyle}
+          <TextInput style={{
+                  alignSelf: "center",
+                  justifyContent: "center",
+                  textAlign: "left",
+                  width: shrinkwidth,
+                  height: shrinkheight,
+                  borderBottomColor: 'white',
+                  borderBottomWidth: 2,
+                  marginBottom: 30,
+                  fontSize:18,
+                  color:'white',
+            
+          }}
+            onTouchStart={()=>{
+              setHide('none')
+              setShrinkHieght(17)
+              setShrinkWidth(230)
+              setShrinMargin(20)
+
+            }}
+            onSubmitEditing={()=>{
+              setHide('')
+              setShrinkHieght(30)
+              setShrinkWidth(250)
+              setShrinMargin(30)
+           
+        
+            }}
           onChangeText={(t)=> {
             setUsername(t)
+        
           }}
             placeholder="Username or Email"
             placeholderTextColor="rgba(200, 200, 200, 0.9)">
           </TextInput>
 
-          <TextInput style={LoignComponentStyles.inputStyle}
+          <TextInput style={{
+                  alignSelf: "center",
+                  justifyContent: "center",
+                  textAlign: "left",
+                  width: shrinkwidth,
+                  height: shrinkheight,
+                  borderBottomColor: 'white',
+                  borderBottomWidth: 2,
+                  marginBottom: 30,
+                  fontSize:18,
+                  color:'white',
+            
+          }}
+             onTouchStart={()=>{
+              setHide('none')
+              setShrinkHieght(17)
+              setShrinkWidth(230)
+              setShrinMargin(20)
+            }}
+            onEndEditing={()=>{
+              setHide('')
+              setShrinkHieght(30)
+              setShrinkWidth(250)
+              setShrinMargin(30)
+        
+            }}
             onChangeText={(t)=> {
               setPassword(t)
+
             }}
             placeholder="Password"
             placeholderTextColor="rgba(200, 200, 200, 0.9)">
@@ -36,7 +95,18 @@ const LoginComponent = props => {
           
 
           <TouchableOpacity
-            style={LoignComponentStyles.buttons}
+            style={{
+              borderWidth: 2.5,
+              borderColor:"white",
+              borderRadius: 40,
+              fontSize: 10,
+              alignItems:"center",
+              display:hide,
+              justifyContent: "center",
+              height:"15%",
+              width:250,
+              backgroundColor:'#002F43',  
+            }}
             onPress={() => {
                 props.navigation.navigate('Search')
             }}>

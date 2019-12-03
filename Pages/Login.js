@@ -13,6 +13,7 @@ const Login = props => {
   const [signup, setSignUp ] = useState(false);
   const [onlogin, setOnLogin ] = useState(1);
   const [onsignup, setOnSignUp ] = useState(0.5);
+  
 
 
 
@@ -27,7 +28,13 @@ const Login = props => {
             source={{ uri: 'https://bit.ly/2NMonRR' }}>
           </Image>
 
-          <View style={LoginStyles.Logo}>
+          <View style={{
+                position:'absolute',
+                alignSelf:'center',
+                top:"10%"
+       
+             
+          }}>
               <icon.LogoAndHexagon fill={'white'} height={iconDim} width={iconDim} />
           </View>
 
@@ -41,6 +48,7 @@ const Login = props => {
               setSignUp(false)
               setOnSignUp(0.5)
               setOnLogin(1)
+       
             }}><Text 
             style={{
               color:'white', 
@@ -58,6 +66,7 @@ const Login = props => {
               setLogin(false)
               setOnSignUp(1)
               setOnLogin(0.5)
+   
               }}><Text
                style={{
                 color:'white', 
@@ -73,7 +82,7 @@ const Login = props => {
 
       {/* Inputs and button Below */}
 
-      <KeyboardAvoidingView style={{flex:0.90}} behavior='padding' enabled>
+      <KeyboardAvoidingView style={{flex:0.9}} behavior='padding' enabled>
         
         
       

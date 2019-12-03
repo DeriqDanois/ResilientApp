@@ -48,12 +48,12 @@ function SearchBar(props) {
 
             </TouchableOpacity>
 
-            <TouchableOpacity style={{flex:0.30}}
+            <TouchableOpacity style={{flex:0.30, height:'100%', }}
                 onPress={() => {
                     props.navigation.dispatch(DrawerActions.openDrawer());
                 }}>
                 {/* Hamburger  */}
-                <icon.HamBurgerIcon  style={SearchBarStyles.HamburgerIcon} />
+                <icon.HamBurgerIcon width={"100%"} height={"100%"} />
             
             </TouchableOpacity>
         </View>

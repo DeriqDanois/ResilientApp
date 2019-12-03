@@ -38,7 +38,7 @@ const AddEmergencyContact = props => {
     return (
 
         <View style={EmergencyContactStyles.container}>
-            <KeyboardAvoidingView behavior='padding' enabled>
+            <KeyboardAvoidingView behavior='position' enabled>
                 <ScrollView contentContainerStyle={{ flex: 1 }}>
 
                     <View style={EmergencyContactStyles.HeaderContainer}>
@@ -78,9 +78,10 @@ const AddEmergencyContact = props => {
                             setContactMessage(t)
                         }}></TextInput>
 
-                        <View style={{ flex: 1, alignItems: 'center' }}>
-                            <Text style={{ marginTop: 10, marginBottom: 20, fontSize:16 }}> And / or </Text>
+                        <View style={{ flex: 0.9, alignItems: 'center' }}>
+                            <Text style={{ marginBottom:'1%', fontSize:16 }}> And / or </Text>
                             <TouchableOpacity
+                         
                                     onPress={()=>{
                                         alert("911 is added as your Emergency Contact")
                                     }}
@@ -90,7 +91,14 @@ const AddEmergencyContact = props => {
                             </TouchableOpacity>
                         </View>
 
-                        <View style={{ flex: 1, marginTop: "5%" }}>
+       
+                        </View>
+
+            
+                </ScrollView>
+            </KeyboardAvoidingView>
+
+            <View style={{ height:'7%', marginBottom:30, width:'88%', }}>
                             <TouchableOpacity
                                 style={EmergencyContactStyles.buttons}
                                 onPress={() => {
@@ -98,12 +106,9 @@ const AddEmergencyContact = props => {
                                     props.navigation.navigate('Search')}}>
                                 <Text style={EmergencyContactStyles.buttonsText}>Add Contact</Text>
                             </TouchableOpacity>
-                        </View>
-
+                           
                     </View>
 
-                </ScrollView>
-            </KeyboardAvoidingView>
 
         </View>
 

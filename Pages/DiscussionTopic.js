@@ -149,7 +149,7 @@ const DiscussionTopic = props => {
     <View style={{flex:1, flexDirection:"row",  alignContent:'center', justifyContent:'center'}}>
     <Image
         style={DiscussionTopicStyles.Avatar}
-        source={require('../Assets/avatars/PNGs/Man1-2.png')}/>
+        source={require('../Assets/avatars/PNGs/Girl3-3.png')}/>
 
     <TextInput
     // how to do textinput border? border:1, borderColor:"#568C9E"

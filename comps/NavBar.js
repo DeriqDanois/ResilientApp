@@ -45,13 +45,15 @@ const NavBar = props => {
          
 
            {/* Discussions Icon  */}
-            <icon.DiscussionIconInActive left={DiscussionLeft} top={DiscussionTop} fill={'white'} height={tabBarHieght} width={tabBarWidth} 
+            <icon.DiscussionIconInActive  left={DiscussionLeft} top={DiscussionTop} fill={'white'} height={tabBarHieght} width={tabBarWidth} 
                  onPress={()=>{
                     props.navigation.navigate('DiscussionPage')}} />
        
 
 
+<View style={{width:'100%', height:10, zIndex:-1, backgroundColor:'white'}}>
 
+</View>
 
         </View>
 

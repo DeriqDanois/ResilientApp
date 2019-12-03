@@ -91,7 +91,13 @@ const EditEmergency = props => {
                                 props.navigation.navigate('AddEmergencyContact')
                             }}>
                             <Image 
-                            style={{alignItems:"center", marginTop:50, marginBottom:50, width:306, height:45}}
+                            style={{
+                                alignItems:"center", 
+                                resizeMode:'contain',
+                                marginTop:50, 
+                                marginBottom:50, 
+                                width:Dimensions.get('window').width/1.4, 
+                                height:Dimensions.get('window').height/11}}
                             source={require('../Assets/PNGs/addMoreECbtn.png')}/>
                         </TouchableOpacity>
                     </View>
