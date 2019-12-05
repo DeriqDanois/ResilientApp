@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
-import { View, Text, TextInput, TouchableOpacity, Image, KeyboardAvoidingView } from 'react-native';
+import React, { useState, useEffect } from 'react';
+import { View, Text, TextInput, TouchableOpacity, Image, KeyboardAvoidingView, AsyncStorage } from 'react-native';
 import LoignComponentStyles from '../styles/PageStyles/LoginStyles';
 import * as icon from '../comps/Svgs'
 import { ScrollView } from 'react-native-gesture-handler';
-import axios from 'axios';
+import myaxios from '../axios';
 import { withNavigation } from 'react-navigation';
 
 
@@ -11,13 +11,30 @@ const LoginComponent = props => {
 
   const iconDim = 174;
   const [error, setError ] = useState("");
-  const [Username, setUsername ] = useState("");
+  const [username, setUsername ] = useState("");
   const [password, setPassword ] = useState("");
   const [hide, setHide ] = useState("");
   const [shrinkwidth, setShrinkWidth] = useState(250);
   const [shrinkheight, setShrinkHieght] = useState(30);
   const [shrinkmargin, setShrinMargin] = useState(30);
 
+
+
+
+
+  const getUsers = async () => {
+    var data = await myaxios('users_read', {username:username, password:password});
+    console.log(data);
+    await AsyncStorage.setItem("user_id", JSON.stringify(data[0].id));
+    if(data.length !== 0){
+      props.navigation.navigate('Search')
+    } 
+    if (data.length === 0) {
+      console.log('user does not exist');
+    }
+}
+
+// Handle    
 
   return (
 
@@ -108,7 +125,8 @@ const LoginComponent = props => {
               backgroundColor:'#002F43',  
             }}
             onPress={() => {
-                props.navigation.navigate('Search')
+              getUsers();
+              
             }}>
             <Text style={LoignComponentStyles.buttonsText}>LOGIN</Text>
         

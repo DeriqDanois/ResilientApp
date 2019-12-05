@@ -12,7 +12,6 @@ const NavBarStyles = StyleSheet.create({
         justifyContent:'flex-end',
         shadowRadius:12,
         shadowOpacity: 0.25,
-    
     }
     
 

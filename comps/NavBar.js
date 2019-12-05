@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { TouchableOpacity, View, Text, Image, KeyboardAvoidingView, Dimensions } from 'react-native';
 import { withNavigation } from 'react-navigation';
 import NavBarStyles from '../styles/ComponentStyles/NavBarStyles';
@@ -20,6 +20,9 @@ const NavBar = props => {
     const DiscussionLeft = Dimensions.get("window").width/1.35; 
     const DiscussionTop = Dimensions.get("window").height/27;
 
+    const [searchicon, setSearchIcon] = useState(require('../Assets/PNGs/ExploreTabBarIcon_Active.png'))
+    const [searchdiscussion, setDiscussion] = useState(require('../Assets/PNGs/DisTabBarIcon_Active.png'))
+
 
     return (
 
@@ -29,12 +32,15 @@ const NavBar = props => {
 
             {/* Sos Button  */}
 
+            {/* <Image source={searchdiscussion}></Image>
+            <Image source={searchicon}></Image> */}
+
              <icon.TabBarSosButton bottom={SosBottom} fill={'red'} height={SosButtonDim} width={SosButtonDim} 
                  onPress= {() => 
                     props.navigation.navigate('SosPage')}/>
-          
 
            {/* Tab Bar */}
+           
             <icon.TabBar left={left} top={tabBarTop} fill={'white'} height={tabBarHieght} width={tabBarWidth} />
           
            {/* * Explore Icon  */}        

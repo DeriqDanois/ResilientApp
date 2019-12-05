@@ -9,7 +9,7 @@ import * as icon from '../comps/Svgs'
 
 
 function SearchBar(props) {
-
+   
     const iconDim = 60
 
 

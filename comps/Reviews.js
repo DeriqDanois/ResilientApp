@@ -120,7 +120,7 @@ const [reviews, setReviews] = useState([]);
                                 <Text style={{flex:1, letterSpacing:0.6}}>{obj.message}</Text>
                          </View>
                         </View>
-                            <View style={{   marginBottom:reviewheight/20, borderBottomWidth:1, borderBottomColor:'#DADADA', flex:1,}}>
+                            <View style={{   marginBottom:reviewheight/16, borderBottomWidth:1, borderBottomColor:'#DADADA', flex:1,}}>
                         </View>
                 </View>
             ))

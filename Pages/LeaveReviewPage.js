@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { View, Text, TextInput, TouchableOpacity, Image, SafeAreaView, ScrollView, Dimensions} from 'react-native';
+import { View, Text, KeyboardAvoidingView, TextInput, TouchableOpacity, Image, SafeAreaView, ScrollView, Dimensions} from 'react-native';
 import NavBar from '../comps/NavBar';
 import BackButtonHeader from '../comps/BackButtonHeader';
 import LeaveReviewStyles from '../styles/PageStyles/LeaveReviewStyles';
@@ -53,13 +53,15 @@ const ReviewForm = props => {
             }
         }
 
-    var r = await axios.post("http://localhost:3001/post", obj);
+    var r = await axios.post("https://resilientdb.herokuapp.com/post", obj);
     console.log(r.data);
 }
             
 
     return (
     <SafeAreaView style={{flex:1}}>
+
+     <KeyboardAvoidingView behavior='padding' enabled>
     
         
         <BackButtonHeader
@@ -112,7 +114,7 @@ const ReviewForm = props => {
             <View style={LeaveReviewStyles.inputSubmitView}>
                 <Text style={{fontSize:20, fontWeight:'bold'}}>Title</Text>
             <TextInput
-            multiline
+            multiline={false}
                  onChangeText={(t)=>{
                     setReviewTitle(t);
                 }}
@@ -133,7 +135,7 @@ const ReviewForm = props => {
                 <Text style={{fontSize:20, fontWeight:'bold', marginTop:20}}>Review</Text>
 
                 <TextInput
-                multiline
+                multiline={true}
                 onChangeText={(t)=>{
                     setReview(t);
 
@@ -168,7 +170,7 @@ const ReviewForm = props => {
 
 
         </ScrollView>
-   
+        </KeyboardAvoidingView>
         <NavBar />
     
 </SafeAreaView>

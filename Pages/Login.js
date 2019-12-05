@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { View, Text, TextInput, TouchableOpacity, Image, KeyboardAvoidingView } from 'react-native';
 import LoginStyles from '../styles/PageStyles/LoginStyles';
 import * as icon from '../comps/Svgs'
@@ -13,8 +13,6 @@ const Login = props => {
   const [signup, setSignUp ] = useState(false);
   const [onlogin, setOnLogin ] = useState(1);
   const [onsignup, setOnSignUp ] = useState(0.5);
-  
-
 
 
   return (

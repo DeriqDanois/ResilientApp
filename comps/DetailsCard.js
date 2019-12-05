@@ -58,7 +58,7 @@ function DetailsCard({ description, stars, starNum, address, phonenum, websiteli
 
             }
         }
-        var r = await axios.post("http://localhost:3001/post", obj);
+        var r = await axios.post("https://resilientdb.herokuapp.com/post", obj);
         console.log(r.data);
         
     

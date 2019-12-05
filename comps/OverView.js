@@ -14,7 +14,7 @@ function OverView(props){
 
     return(
 
-        <View style={{flex: 1, marginLeft:'3%', marginRight:'3%'}}>
+        <ScrollView style={{flex: 1, marginLeft:'3%', marginRight:'3%'}}>
                    <View style={{ marginLeft:"5%", flex: 1, flexDirection:'row', marginTop:30}}>
 
     <Text style={{flex:0.21, fontSize:16, justifyContent:'center'}}>{"(" + props.ratingNum + ")"}</Text>
@@ -56,8 +56,8 @@ function OverView(props){
                    {/* Seperation Line */}
                 <View style={{marginTop:'5%',  borderBottomColor:'grey', borderBottomWidth:0.7}}></View>
                {/* Long Description Below */}
-               <Text style={{margin:20, letterSpacing:1, lineHeight:20 }}>{props.LongDescription}</Text>
-         </View>         
+               <Text style={{margin:20, letterSpacing:1, lineHeight:20, marginBottom:"30%" }}>{props.LongDescription}</Text>
+         </ScrollView>         
       
     )
    }

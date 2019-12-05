@@ -1,8 +1,9 @@
 import React, {useEffect, useState} from 'react';
-import { SafeAreaView, View, Text, StyleSheet, TouchableOpacity, Image } from 'react-native';
+import { SafeAreaView, View, Text, StyleSheet, TouchableOpacity, Image, AsyncStorage } from 'react-native';
 import { DrawerItems } from 'react-navigation-drawer';
 import HamburgerStyles from '../styles/ComponentStyles/HamburgerStyles';
-import axios from '../axios';
+import myaxios from '../axios';
+import axios from 'axios';
 
 
 
@@ -16,12 +17,13 @@ const Username = "Username"
 export function DrawerComponent({username, ...props}){
 
 
-    const [useravatarandname, setUserAvatarAndName] = useState({username:['fakl']});
+    const [useravatarandname, setUserAvatarAndName] = useState([]);
 
    
 
     const getRehab = async () => {
-        var data = await axios('users_read', {});
+        var user_id = await AsyncStorage.getItem("user_id");
+        var data = await myaxios('users_read', {id:user_id});
         // console.log(data)
         // console.log(json);
         // setUserAvatarAndName(json);
@@ -29,7 +31,7 @@ export function DrawerComponent({username, ...props}){
         if (data.length === 0){
             setUserAvatarAndName({username:['Guest']})
         } else {
-            setUserAvatarAndName(data[0]);
+            setUserAvatarAndName(data[0].username);
         }
 }
     
@@ -60,7 +62,7 @@ export function DrawerComponent({username, ...props}){
                 <View style={{flex:2}}>
 
                     <View style={{flexDirection:'column', marginTop:20}}>
-                        <Text style={HamburgerStyles.UsernameText}>{useravatarandname.username}</Text>
+                        <Text style={HamburgerStyles.UsernameText}>{useravatarandname}</Text>
 
                         <TouchableOpacity 
                             onPress={()=>{

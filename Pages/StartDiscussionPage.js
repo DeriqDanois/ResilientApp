@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { View, Text, TextInput, TouchableOpacity, Image, SafeAreaView, ScrollView, Dimensions, KeyboardAvoidingView} from 'react-native';
+import { View, Text, TextInput, TouchableOpacity, Image, SafeAreaView, ScrollView, Dimensions, KeyboardAvoidingView, AsyncStorage} from 'react-native';
 import NavBar from '../comps/NavBar';
 import BackButtonHeader from '../comps/BackButtonHeader';
 import LeaveReviewStyles from '../styles/PageStyles/LeaveReviewStyles';
@@ -13,11 +13,12 @@ const DiscussionForm = props => {
     const [ discussion, setDiscussion] = useState("");
     const [ useravatar, setUserAvatar] = useState("");
     var time = new Date().toLocaleString();
-    const [useravatarandname, setUserAvatarAndName] = useState({username:['fakl']});
+    const [useravatarandname, setUserAvatarAndName] = useState({});
 
 
     const getRehab = async () => {
-        var data = await myaxios('users_read', {});
+        var user_id = await AsyncStorage.getItem("user_id")
+        var data = await myaxios('users_read', {id:user_id});
         // console.log(data)
         // console.log(json);
         // setUserAvatarAndName(json);
@@ -54,7 +55,7 @@ const DiscussionForm = props => {
             }
         }
 
-    var r = await axios.post("http://localhost:3001/post", obj);
+    var r = await axios.post("https://resilientdb.herokuapp.com/post", obj);
     console.log(r.data);
 }
 
@@ -116,13 +117,11 @@ const DiscussionForm = props => {
                 placeholder="Add a comment" />
             </View>
 
-        
-
             <View style={LeaveReviewStyles.inputSubmitView}>
             <Text style={{fontSize:20, fontWeight:"600", marginTop:Dimensions.get('window').width/40}}>Discussion</Text>
 
-
                 <TextInput
+                multiline={true}
                 onChangeText={(t)=>{
                     setDiscussion(t);
 
