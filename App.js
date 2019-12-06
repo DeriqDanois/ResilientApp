@@ -23,11 +23,13 @@ import LeaveReview from './Pages/LeaveReviewPage'
 import OverView from './comps/OverView'
 import SearchBarResults from './Pages/SearchBarResults'
 import StartDiscussionPage from './Pages/StartDiscussionPage'
+import OnBoarding from './Pages/onBoarding'
 
 
 const AppNavigator = createStackNavigator(
   {
     Login: { screen: Login },
+    OnBoarding: { screen: OnBoarding },
     AddEmergencyContact: { screen: AddEmergencyContact },
     Search: { screen:Search },
     RehabPage: { screen:RehabPage },
@@ -46,7 +48,7 @@ const AppNavigator = createStackNavigator(
     
   },
   {   //DrawerNavigatorConfig
-    initialRouteName: 'Login',
+    initialRouteName: 'OnBoarding',
     headerMode: 'none',
     contentOptions: {
     },

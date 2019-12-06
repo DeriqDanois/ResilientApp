@@ -76,7 +76,9 @@ const LoginComponent = props => {
             placeholderTextColor="rgba(200, 200, 200, 0.9)">
           </TextInput>
 
-          <TextInput style={{
+          <TextInput
+          secureTextEntry={true}
+           style={{
                   alignSelf: "center",
                   justifyContent: "center",
                   textAlign: "left",

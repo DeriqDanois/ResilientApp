@@ -28,7 +28,7 @@ export function DrawerComponent({username, ...props}){
         // console.log(json);
         // setUserAvatarAndName(json);
         // setUserAvatarAndName(username['john'])
-        if (data.length === 0){
+        if (data.username === ""){
             setUserAvatarAndName({username:['Guest']})
         } else {
             setUserAvatarAndName(data[0].username);

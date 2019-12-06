@@ -35,7 +35,6 @@ function DiscussionCard({renderBookmark = true, timeposted, discussiontitle, dis
                     discussiontitle:discussiontitle,
                     discussion:discussion,
                     timeposted:timeposted,
-
                     })
             }}>
 

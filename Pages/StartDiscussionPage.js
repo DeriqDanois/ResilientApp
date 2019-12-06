@@ -11,7 +11,7 @@ import myaxios from '../axios';
 const DiscussionForm = props => {
     const [ discussiontitle, setDiscussionTitle] = useState("");
     const [ discussion, setDiscussion] = useState("");
-    const [ useravatar, setUserAvatar] = useState("");
+    const [ useravatar, setUserAvatar] = useState(require('../Assets/avatars/PNGs/Girl3-3.png'));
     var time = new Date().toLocaleString();
     const [useravatarandname, setUserAvatarAndName] = useState({});
 
@@ -33,8 +33,8 @@ const DiscussionForm = props => {
     
     // Handle    
     useEffect(() => {
-        getRehab();
-        setUserAvatar(require('../Assets/avatars/PNGs/Girl3-3.png'));   
+        setTimeout(function(){ getRehab(); }, 2000);
+
      []});
 
     const StartDiscussion = async()=>{
@@ -83,8 +83,9 @@ const DiscussionForm = props => {
         <View style={LeaveReviewStyles.infoAndAvatar}>
             <View style={{flex:1}}>
                 <Image
-                style={LeaveReviewStyles.Avatar}
-                source={useravatar}/>
+                    style={LeaveReviewStyles.Avatar}
+                    source={require('../Assets/avatars/PNGs/Girl3-3.png')}
+                />
             </View>
 
             <View style={LeaveReviewStyles.UsernameAndTimeBox} >

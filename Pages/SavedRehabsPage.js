@@ -27,8 +27,9 @@ const SavedRehabsPage = props => {
 
     // Handle 
     useEffect(() => {
-            getRehab();
-    }, [5000]);
+        setTimeout(function(){ getRehab(); }, 1000);
+       
+    }, []);
 
 
 

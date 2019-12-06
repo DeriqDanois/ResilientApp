@@ -21,7 +21,7 @@ const ReviewForm = props => {
 
     const getUsers = async () => {
         var data = await myaxios('users_read', {});
-       
+    
         if (data.length === 0){
             setUserAvatarAndName({username:['Guest']})
         } else {
@@ -32,8 +32,11 @@ const ReviewForm = props => {
     // Handle    
     useEffect(() => {
     getUsers();
-    setUserAvatar(require('../Assets/avatars/PNGs/Girl3-3.png'));   
+    setUserAvatar(require('../Assets/avatars/PNGs/Girl3-3.png'));  
+
     []});
+    
+       
     
  
     const LeaveReview = async()=>{
@@ -68,7 +71,7 @@ const ReviewForm = props => {
                 borderBottomColor={'rgba(52, 52, 52, 0.1)'}
                 border={1}
                 height={100}
-                Header={"Together We Can"}/>
+                Header={"Leave A Review"}/>
             <ScrollView
                 horizontal={false}
                 showsVerticalScrollIndicator={false}>

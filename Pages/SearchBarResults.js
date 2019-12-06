@@ -24,11 +24,16 @@ const GooglePlacesInput = () => {
     var results = data.filter((o,i) => {
       if (!!~o.address.indexOf(input) || !!~o.name.indexOf(input) || !!~o.type.indexOf(input)){
         return !!~o.address.indexOf(input) || !!~o.name.indexOf(input) || !!~o.type.indexOf(input);    
-      }
+      } 
     }); 
     
     setRehabs(results)
 }
+
+
+useEffect(() => {
+GetPlaces();
+}, []);
 
   return (
 

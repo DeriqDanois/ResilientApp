@@ -28,6 +28,8 @@ const DiscussionPage = props => {
         var results = data.filter((o,i) => {
             if (!!~o.discussiontitle.indexOf(input) || !!~o.discussiontitle.indexOf(input)){
               return !!~o.discussiontitle.indexOf(input) || !!~o.discussiontitle.indexOf(input);    
+            } else {
+                return o
             }
           }); 
  
@@ -75,7 +77,7 @@ const DiscussionPage = props => {
                 <TextInput
                     placeholder={"Click To Type"}
                     onChangeText={(text) => { 
-                        if (text.length > 1){
+                        if (text.length >= 0){
                         setInput(text)
                           getDiscussion();
                         }
@@ -124,7 +126,7 @@ const DiscussionPage = props => {
                     <DiscussionCard 
                     key={i}
                     renderBookmark={false}
-                
+                    useravatar={obj.useravatar}
                     {...obj}
                     />
                 ))

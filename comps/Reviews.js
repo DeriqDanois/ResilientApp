@@ -28,10 +28,11 @@ const [reviews, setReviews] = useState([]);
 
     // Handle    
     useEffect(() => {
-    getReviews();
+        setTimeout(function(){ getReviews(); }, 2000);
+       
+
    
-   
-    [5000]});
+    []});
     
 
 
