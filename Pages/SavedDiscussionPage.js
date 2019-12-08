@@ -23,7 +23,7 @@ const SavedDiscussions = props => {
 
     // Handle 
     useEffect(() => {
-        setTimeout(function(){ getRehab(); }, 1000);
+        setTimeout(function(){ getRehab(); }, 3000);
        
      
     }, []);

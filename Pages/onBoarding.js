@@ -100,7 +100,6 @@ function Pages({renderOne = false, renderTwo = false, renderThree = false, ...pr
     return (
     
     <View style={{flex:1}}>
-
     {
         renderOne && (
    <View style={{flex:1}}>

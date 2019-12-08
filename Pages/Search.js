@@ -159,6 +159,7 @@ const Search = props => {
 
                         </ScrollView>
                     </View>
+                    <View style={{margin:20}}></View>
 
                 </ScrollView>
                 < NavBar />
